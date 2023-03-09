@@ -1,20 +1,14 @@
-version: '3.3'
+version: '3.8'
 
 services:
   API:
-    image: ${DOCKER_REGISTRY-}mc2crudtestserver
-    build:
-      context: .
-      dockerfile: Presentation/SnowaTec.Test.API/Dockerfile
+    build: ./Presentation/SnowaTec.Test.API/Dockerfile
     ports: -5001:5001 -5002:5002
     depends_on:
       - db
 
   broker:
-    image: ${DOCKER_REGISTRY-}mc2crudtestbroker
-    build:
-      context: .
-      dockerfile: Presentation/SnowaTec.Test.Broker/Dockerfile
+    build: ./Presentation/SnowaTec.Test.Broker/Dockerfile
     ports: -5000:5000
 
   db:
