@@ -3,7 +3,7 @@ WORKDIR /app
 EXPOSE 5001
 EXPOSE 5002
 
-COPY ["../../Core/SnowaTec.Test.API/SnowaTec.Test.API.csproj", "SnowaTec.Test.API/"]
+COPY ["./SnowaTec.Test.API.csproj", "SnowaTec.Test.API/"]
 COPY ["../../Core/SnowaTec.Test.Domain/SnowaTec.Test.Domain.csproj", "SnowaTec.Test.Domain/"]
 COPY ["../../Core/SnowaTec.Test.Infrastructure/SnowaTec.Test.Infrastructure.csproj", "SnowaTec.Test.Infrastructure/"]
 COPY ["../../Core/SnowaTec.Test.Service/SnowaTec.Test.Service.csproj", "SnowaTec.Test.Service/"]
@@ -20,4 +20,4 @@ RUN dotnet publish "SnowaTec.Test.API/SnowaTec.Test.API.csproj" -c Release -o /a
 FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "SnowaTec.Test.API.dll"]
+ENTRYPOINT ["dotnet", "/publish/SnowaTec.Test.API.dll"]
