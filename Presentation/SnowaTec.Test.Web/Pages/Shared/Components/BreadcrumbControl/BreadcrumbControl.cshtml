@@ -1,0 +1,33 @@
+﻿@model Dictionary<string, string>
+
+@{
+    var lastKey = @Model.Keys.Last();
+    Model.Remove(lastKey);
+
+    if (lastKey.Contains('?'))
+        lastKey = lastKey.Substring(0, lastKey.IndexOf('?'));
+
+    //var lastValue= @Model.Values.Last();
+}
+
+<div class="content-header-left col-md-9 col-12 mb-2">
+    <div class="row breadcrumbs-top">
+        <div class="col-12">
+            <h2 class="content-header-title float-start mb-0">@lastKey</h2>
+            <div class="breadcrumb-wrapper">
+                <ol class="breadcrumb">
+                    @foreach (KeyValuePair<string, string> item in Model)
+                    {
+                        <li class="breadcrumb-item">
+                            <a href="@item.Value">@item.Key</a>
+                        </li>
+                    }
+                    <li class="breadcrumb-item active">
+                        @lastKey
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+

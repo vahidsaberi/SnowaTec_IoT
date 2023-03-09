@@ -1,0 +1,11 @@
+﻿@model List<SelectListItem>
+
+<label class="form-label" for="sectionId">فضا</label>
+<div class="input-group input-group-merge mb-2">
+    <select asp-items="@Model" class="select2 form-select select-input" id="sectionId"></select>
+</div>
+
+<label class="form-label" for="file">فایل</label>
+<div class="input-group input-group-merge form-password-toggle mb-2">
+    <input type="file" id="file" class="form-control">
+</div>

@@ -1,0 +1,138 @@
+﻿@page
+@using SnowaTec.Test.Domain.DTO.Security
+
+@model SnowaTec.Test.Web.Pages.Admin.User.PermissionsModel
+
+@{
+    ViewData["Title"] = "دسترسی ها";
+}
+
+@section csss{
+    <link rel="stylesheet" rel="stylesheet" href="~/Content/Library/vendors/css/extensions/jstree.min.css" asp-append-version="true">
+}
+
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper p-0">
+    <div class="content-header row">
+        @await Component.InvokeAsync("BreadcrumbControl")
+    </div>
+    <div class="content-body show-container">
+        <section id="basic-horizontal-layouts">
+            <input asp-for="@Model.UserId" type="hidden" value="@Model.UserId" />
+            <input asp-for="@Model.RoleId" type="hidden" value="@Model.RoleId" />
+
+            <div class="row" id="permissionContent">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">ذخیره تنظیمات</h4>
+                            </div>
+                            <div class="card-body">
+                                <form class="form">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-primary me-1" onclick="saveData()">ثبت</button>
+                                            <button type="button" class="btn btn-outline-secondary" onclick="returnToPreviousPage()">انصراف</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                @{
+                    if (Model.Permissions != null)
+                    {
+                        foreach (var permission in Model.Permissions)
+                        {
+                            await Html.RenderPartialAsync("_PermissionRow", permission);
+                        }
+                    }
+                }
+            </div>
+        </section>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript" src="~/Content/Library/vendors/js/extensions/jstree.min.js" asp-append-version="true"></script>
+
+    <script>
+        var trees;
+
+        function createTree() {
+            trees = $("div[id*='jstree-Permission']");
+            if (trees.length) {
+                $(trees).each(function(){
+                    $(this).jstree({
+                        core: {
+                            check_callback: true,
+                        },
+                        "checkbox": {
+                            "keep_selected_style": false
+                        },
+                        plugins: ['types', 'checkbox', 'wholerow']
+                    });
+
+                    $(this).find('li[orod-selected]').each(function(i, v){
+                        var val = $(v).attr('id');
+
+                        $(this).jstree('select_node', val);
+                    });
+                });
+            }
+        }
+
+        function saveData()
+        {
+            if (trees.length) {
+                var data = [];
+
+                $(trees).each(function () {
+                    var result = getDataForSave(this);
+                    if(result)
+                    {
+                        data.push(result);
+                    }
+                });
+
+                var userId = $('#UserId').val();
+                var roleId = $('#RoleId').val();
+
+                callAjax('Save', AjaxType.Post, { userId, roleId, data }).then(function (response) {
+                    if (response.succeeded)
+                    {
+                        showNotification("ثبت اطلاعات", response.message, NotificationType.Success);
+                        returnToPreviousPage();
+                    }
+                    else
+                    {
+                        showNotification("ثبت اطلاعات", response.message + '\n' + response.errors.join(" | "), NotificationType.Error);
+                    }
+                });
+            }
+        }
+
+        function returnToPreviousPage() {
+            var path = `/Admin/User`;
+            var returnUrl = window.location.protocol + "//" + window.location.host + path;
+
+            window.location.href = returnUrl;
+        }
+
+        function getDataForSave(tree) {
+            var key = $(tree).attr('id');
+            key = key.replace("jstree-Permission", "");
+
+            var UndeterminedLicenses = $(tree).jstree("get_undetermined", false);
+
+            var SelectedLicenses = $(tree).jstree("get_selected", false);
+
+            return { key, SelectedLicenses, UndeterminedLicenses };
+        }
+
+        $(function(){
+            createTree();
+        })
+    </script>
+}

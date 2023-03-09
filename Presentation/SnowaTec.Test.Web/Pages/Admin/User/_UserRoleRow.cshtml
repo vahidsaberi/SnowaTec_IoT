@@ -1,0 +1,89 @@
+﻿@using SnowaTec.Test.Domain.Common
+@using SnowaTec.Test.Domain.DTO.Security
+@using SnowaTec.Test.Domain.Entities.Security
+@using SnowaTec.Test.Domain.Enum;
+@using SnowaTec.Test.Web.Interfaces.Base
+
+@model RoleDto
+
+@inject ICallApiService _service;
+
+@{
+    string style = "";
+    if (Model.Id == 0)
+    {
+        style = "display:none;";
+    }
+
+    var token = Context.Request.Cookies["AccessToken"].ToString();
+
+    var roleSelect = new List<SelectListItem>();
+
+    var roles = await _service.Call<List<ApplicationRole>>(token, ApiRoutes.Roles.GetAll, SnowaTec.Test.Web.Enums.CallMethodType.Get);
+
+    if (roles.Succeeded && roles.Data.Count > 0)
+    {
+        if (!User.IsInRole(Roles.SuperAdmin.ToString()))
+        {
+            roles.Data.Remove(roles.Data.FirstOrDefault(x => x.Name == Roles.SuperAdmin.ToString()));
+        }
+
+        roleSelect = roles.Data.Select(x => new SelectListItem { Value = x.Id.ToString(), Text = x.Name }).ToList();
+    }
+
+    roleSelect.Insert(0, new SelectListItem { Value = "0", Text = "انتخاب کنید" });
+}
+
+<div data-repeater-item style="@style">
+    <div class="row d-flex align-items-end">
+
+        @Html.AntiForgeryToken()
+
+        <input asp-for="@Model.Id" type="hidden" value="@Model.Id" name="Roles[@Model.Order].Id" id="Roles[@Model.Order].Id" />
+        <input asp-for="@Model.UserId" type="hidden" value="@Model.UserId" name="Roles[@Model.Order].UserId" id="Roles[@Model.Order].UserId" />
+
+        <div class="col-md-11 col-11 row">
+            <div class="col-md-5 col-12">
+                <div class="mb-1 row">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(x => x.RoleId,new { @class = "form-label"})
+                    </div>
+                    <div class="col-sm-9">
+                        <select asp-for="@Model.RoleId" asp-items="@roleSelect" id="Roles[@Model.Order].RoleId" name="Roles[@Model.Order].RoleId" class="form-select select-input select-role">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            @if (Model.Id > 0)
+            {
+                <div class="col-md-3 col-12">
+                    <div class="mb-1">
+                        <button type="button" class="btn btn-flat-success hide setAdditionalPermissions" onclick="setPermission(@Model.UserId,@Model.RoleId)">تعیین مجوزهای اضافی</button>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="col-md-6 col-12">
+                    <div class="mb-1">
+                        <p class="text-warning hide setAdditionalPermissions">کاربر گرامی اعمال مجوزهای اضافی بعد از ثبت نهایی نمایش داده می شود</p>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="col-md-1 col-1">
+            <div class="col-md-2 col-12 mb-50">
+                <div class="mb-1">
+                    <button class="btn btn-outline-danger text-nowrap px-1 internal-delete-row-btn" data-repeater-delete type="button">
+                        <i data-feather="x" class="me-25"></i>
+                        <span>حذف</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr />
+</div>
+

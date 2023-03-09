@@ -1,0 +1,36 @@
+﻿<div class="modal fade delete-container">
+    <div class="modal-dialog modal-dialog-centered">
+        @using (Html.BeginForm("Delete", "Data"))
+        {
+            @Html.AntiForgeryToken()
+            <input type="hidden" id="hidden-id-delete" />
+            <input type="hidden" id="hidden-route-delete" />
+            <div class="modal-content">
+                <div class="modal-header bg-transparent">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="delete-modal-content">
+                    <h1 class="text-center mb-1" id="shareProjectTitle">حذف اطلاعات</h1>
+                    <p class="text-center">حذف اطلاعات در 2 حالت منطقی و کامل</p>
+                    <p class=text-center>
+                        <span style="font-size: 20px">آیا از حذف  </span>
+                        <span id="delete-modal-object" style="font-size: 22px; font-weight:bold; color: #800"></span>
+                        <span style="font-size: 20px">  اطمینان دارید؟</span>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <div class="delete-element w-100 text-center">
+                        <h5>حذف منطقی => امکان برگرداندن اطلاعات می باشد</h5>
+                        <button class="btn btn-warning waves-effect waves-float waves-light delete-btn" data-type="1">رکورد</button>
+                        <button class="btn btn-warning waves-effect waves-float waves-light delete-btn" data-type="2">رکورد + وابستگی ها</button>
+                    </div>
+                    <div class="delete-element w-100 text-center">
+                        <h5>حذف کامل => امکان بر گرداندن اطلاعات وجود ندارد</h5>
+                        <button class="btn btn-danger waves-effect waves-float waves-light delete-btn" data-type="3">رکورد</button>
+                        <button class="btn btn-danger waves-effect waves-float waves-light delete-btn" data-type="4">رکورد + وابستگی ها</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

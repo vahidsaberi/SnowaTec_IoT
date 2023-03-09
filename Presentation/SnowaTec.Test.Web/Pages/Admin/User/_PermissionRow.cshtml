@@ -1,0 +1,40 @@
+﻿@using SnowaTec.Test.Domain.DTO.Security
+
+@model PermissionDto
+
+@{
+    void MadeTree(IEnumerable<PermissionItemDto> permissions)
+    {
+        <ul>
+            @foreach (var permission in permissions)
+            {
+                var attr = "";
+                if (permission.Selected && !permission.Undetermined)
+                {
+                    attr = $"orod-selected='true'";
+                }
+
+                <li class="@(permission.SubPermissionItems.Count > 0 ? "jstree-open" : "")" id="@permission.Key" @attr>
+                    @permission.Title
+                    @if (permission.SubPermissionItems.Count > 0)
+                    {
+                        MadeTree(permission.SubPermissionItems);
+                    }
+                </li>
+            }
+        </ul>
+    }
+}
+
+<div class="col-md-6 col-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">@Model.Title</h4>
+        </div>
+        <div class="card-body">
+            <div id="jstree-Permission@(Model.Key)">
+                @{MadeTree(Model.PermissionItems);}
+            </div>
+        </div>
+    </div>
+</div>

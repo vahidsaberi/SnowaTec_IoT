@@ -1,0 +1,33 @@
+﻿@using SnowaTec.Test.Domain.Dtos.Test
+
+@model DeviceDto
+
+<div class="modal-dialog">
+    <form id="edit-form-modal" class="modal-content pt-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+        <div class="modal-header mb-1">
+            <h5 class="modal-title" id="exampleModalLabel">اتصال به دستگاه</h5>
+        </div>
+        <div class="modal-body">
+            <div class="card">
+                <div class="card-body text-center">
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(x => x.Id)
+
+                    <i data-feather="server" class="font-large-2 mb-1"></i>
+                    <h5 class="card-title">@Model.Name</h5>
+                    <p class="card-text">@Model.Description</p>
+                    <p id="device_ClientId" class="card-text">@Model.ClientId</p>
+                    <p id="device_Topic" class="card-text">@Model.Topic</p>
+
+                    <!-- modal trigger button -->
+                    <button id="connect_btn" type="button" class="connect-btn btn btn-primary">Connect</button>
+                    <button id="switch_btn" type="button" class="switch-btn btn btn-info">Turn On</button>
+                </div>
+            </div>
+
+            <br />
+            <button type="button" class="btn btn-outline-secondary waves-effect" data-bs-dismiss="modal">انصراف</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,19 @@
+﻿@page
+
+@model IndexModel
+
+@{
+    ViewData["Title"] = "صفحه اصلی";
+}
+
+<div id="contentView"></div>
+
+@section Scripts{
+    <script>
+        $(function(){
+            callAjax('Status', AjaxType.Get, { }, null, 'html').then(function (response) {
+                $('#contentView').html(response);
+            });
+        })
+    </script>
+}

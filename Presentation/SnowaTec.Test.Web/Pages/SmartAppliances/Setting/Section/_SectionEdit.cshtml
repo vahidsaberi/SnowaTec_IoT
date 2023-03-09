@@ -1,0 +1,35 @@
+﻿@using SnowaTec.Test.Domain.Dtos.Test
+
+@model SectionDto
+
+<div class="modal-dialog">
+    <form id="edit-form-modal" class="modal-content pt-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+        <div class="modal-header mb-1">
+            <h5 class="modal-title" id="exampleModalLabel">فضا <em id="form-header-text"></em></h5>
+        </div>
+        <div class="modal-body flex-grow-1">
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(x => x.Id)
+            @Html.HiddenFor(x => x.ParentId)
+            <div class="mb-1">
+                @Html.LabelFor(x => x.Code,new { @class = "form-label"})
+                @Html.TextBoxFor(x => x.Code,new { @class = "form-control"})
+                @Html.ValidationMessageFor(x => x.Code)
+            </div>
+            <div class="mb-1">
+                @Html.LabelFor(x => x.Title,new { @class = "form-label"})
+                @Html.TextBoxFor(x => x.Title,new { @class = "form-control"})
+                @Html.ValidationMessageFor(x => x.Title)
+            </div>
+            <div class="mb-1">
+                @Html.LabelFor(x => x.Description,new { @class = "form-label"})
+                @Html.TextBoxFor(x => x.Description,new { @class = "form-control"})
+                @Html.ValidationMessageFor(x => x.Description)
+            </div>
+            <br />
+            <button type="button" data-type="modal" class="save-btn btn btn-primary me-1 data-submit waves-effect waves-float waves-light">ثبت</button>
+            <button type="button" class="btn btn-outline-secondary waves-effect" data-bs-dismiss="modal">انصراف</button>
+        </div>
+    </form>
+</div>

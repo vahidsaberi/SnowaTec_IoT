@@ -1,0 +1,142 @@
+﻿@page "/managecustomers"
+@    using Blazored.Toast.Services;
+@    using SnowaTec.Test.Domain.Common;
+@    using SnowaTec.Test.Domain.Entities;
+@    using SnowaTec.Test.Presentation.Front.Enums;
+@    using SnowaTec.Test.Presentation.Front.Interfaces;
+
+@inject ICallApiService _service;
+@    using Newtonsoft.Json;
+@    using System.Text;
+@    using Blazored.Toast.Configuration
+@    using System.Web;
+@    using System.Linq.Expressions;
+    using SnowaTec.Test.Domain.Entities.Test;
+@inject IToastService  toastService
+
+<h3>Manage Customers</h3>
+
+<EditForm Model="@customer" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <div class="form-group">
+        <label for="FirstName">First Name</label>
+        <InputText @bind-Value=customer.Firstname class="form-control" id="FirstName" />
+    </div>
+    <div class="form-group">
+        <label for="LastName">Last Name</label>
+        <InputText @bind-Value=customer.Lastname class="form-control" id="LastName" />
+    </div>
+    <div class="form-group">
+        <label for="DateOfBirth">Date Of Birth</label>
+        <InputDate @bind-Value=customer.DateOfBirth class="form-control" id="DateOfBirth" />
+    </div>
+    <div class="form-group">
+        <label for="PhoneNumber">Phone Number (whith region code ex:+98 937 230 0727)</label>
+        <InputText @bind-Value=customer.PhoneNumber class="form-control" id="PhoneNumber" />
+    </div>
+    <div class="form-group">
+        <label for="EmailAddress">Email Address</label>
+
+        <InputText @onblur="@CheckEmailExist" @bind-Value=customer.Email class="form-control" id="EmailAddress" />
+        <span class="text-danger">@CustomerEmaileAddressMessage</span>
+    </div>
+    <div class="form-group">
+        <label for="BankAccountNumber">Bank Account Number</label>
+        <InputText @bind-Value=customer.BankAccountNumber class="form-control " id="BankAccountNumber" />
+    </div>
+    <br />
+    <input type="submit" class="btn btn-primary" value="Save" />
+</EditForm>
+
+<br/>
+
+@if (customers == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Birth Date</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Bank Account Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in customers.Data)
+            {
+                <tr>
+                    <td>@customer.Firstname</td>
+                    <td>@customer.Lastname</td>
+                    <td>@customer.DateOfBirth.ToShortDateString()</td>
+                    <td>@customer.PhoneNumber</td>
+                    <td>@customer.Email</td>
+                    <td>@customer.BankAccountNumber</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<BlazoredToasts Position="ToastPosition.BottomRight"
+                Timeout="10"
+                IconType="IconType.FontAwesome"
+                SuccessClass="success-toast-override"
+                SuccessIcon="fa fa-thumbs-up"
+                ErrorIcon="fa fa-bug" />
+
+@code {
+    private Response<List<Customer>>? customers;
+
+    Customer customer = new Customer();
+    string CustomerEmaileAddressMessage = string.Empty;
+    string CustomerSelectedEmaileAddress = string.Empty;
+    bool IsDuplicateEmail = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ReloadData();
+    }
+
+    private async Task ReloadData()
+    {
+        customers = await _service.Call<List<Customer>>(null, ApiRoutes.Customers.GetAll, CallMethodType.Get);
+    }
+
+    private async Task CheckEmailExist(FocusEventArgs args)
+    {
+        if (CustomerSelectedEmaileAddress.Equals(customer.Email))
+            return;
+
+        Expression<Func<Customer, bool>> expected = x => x.Email == customer.Email;
+        var find = await _service.Call<List<Customer>>(null, ApiRoutes.Customers.Filter, CallMethodType.Post, expected);
+
+        IsDuplicateEmail = (find.Data != null && find.Data.Count > 0);
+        CustomerEmaileAddressMessage = IsDuplicateEmail ? "Your Emaile Address Taken By another customer" : "";
+        CustomerSelectedEmaileAddress = customer.Email;
+    }
+
+    private async Task HandleValidSubmit(EditContext? editContex)
+    {
+        if (!editContex.Validate() || IsDuplicateEmail)
+            return;
+
+        var result = await _service.Call<Customer>(null, ApiRoutes.Customers.Create, CallMethodType.Post, customer);
+        if (result.Succeeded)
+        {
+            toastService.ShowSuccess(result.Message);
+            customer = new Customer();
+
+            await ReloadData();
+        }
+        else
+        {
+            toastService.ShowError(result.Message);
+        }
+    }
+}

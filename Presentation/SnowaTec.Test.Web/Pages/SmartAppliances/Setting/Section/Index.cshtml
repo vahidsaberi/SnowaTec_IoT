@@ -1,0 +1,233 @@
+﻿@page
+
+@using SnowaTec.Test.Web.Interfaces.Base
+
+@inject IPermission _permission;
+
+@model SnowaTec.Test.Web.Pages.SmartAppliances.Setting.Section.IndexModel
+
+@{
+    ViewData["Title"] = "فضاهای موجود";
+}
+
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper p-0">
+    <div class="content-header row">
+        @await Component.InvokeAsync("BreadcrumbControl")
+    </div>
+    <div class="content-body show-container">
+        <section id="">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header border-bottom">
+                            <h4 class="card-title">مشاهده اطلاعات</h4>
+                            <div class="dt-action-buttons text-end">
+                                <div class="dt-buttons d-inline-flex">
+                                    <div class="btn-group">
+                                        <button class="btn btn-secondary dropdown-toggle me-2" type="button" id="dropdownMenuButton6" data-bs-toggle="dropdown" aria-expanded="false">
+                                            امکانات
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
+                                            @if (await _permission.HasAccess("Section", Domain.Enum.PermissionType.Import))
+                                            {
+                                                <a class="dropdown-item import-btn" href="#">
+                                                    <i class="me-1" data-feather='chevrons-up'></i>
+                                                    <span class="align-middle">بارگذاری اطلاعات</span>
+                                                </a>
+                                            }
+                                            @if (await _permission.HasAccess("Section", Domain.Enum.PermissionType.Export))
+                                            {
+                                                <a class="dropdown-item export-btn" href="#" file-name="Section">
+                                                    <i class="me-1" data-feather='chevrons-down'></i>
+                                                    <span class="align-middle">واکشی اطلاعات</span>
+                                                </a>
+                                            }
+                                            <a class="dropdown-item" href="~/Content/ExcelTemplates/Section.xlsx">
+                                                <i class="me-1" data-feather='file'></i>
+                                                <span class="align-middle">دانلود قالب</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    @if (await _permission.RetentionOfPreviousData() && await _permission.HasAccess("Section", Domain.Enum.PermissionType.Recovery))
+                                    {
+                                        <button type="button" class="dt-button btn btn-gradient-info me-2 recovery-btn" data-type="in-page" data-schema="tst" data-tablename="Sections">
+                                            <span>
+                                                <i data-feather='clock'></i>
+                                                بازیابی اطلاعات 
+                                            </span>
+                                        </button>
+                                    }
+                                    <button class="dt-button btn btn-outline-secondary me-2 refresh-btn" type="button">
+                                        <span>
+                                            <i data-feather='rotate-cw'></i>
+                                            بروزرسانی
+                                        </span>
+                                    </button>
+                                    @if (await _permission.HasAccess("Section", Domain.Enum.PermissionType.Create))
+                                    {
+                                        <button class="dt-button new-btn btn btn-primary" data-pid="" data-type="modal" type="button">
+                                            <span>
+                                                <i data-feather='plus'></i>
+                                                فضا جدید
+                                            </span>
+                                        </button>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body mt-2">
+                            <div class="row g-1 mb-md-1">
+                                <div class="col-md-4">
+                                    <label class="form-label">نام فضا</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">
+                                            <i data-feather='search'></i>
+                                        </span>
+                                        <input type="text" class="form-control searchString" data-col-no="3" placeholder="..." aria-describedby="inputGroupPrepend">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">کد فضا</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">
+                                            <i data-feather='search'></i>
+                                        </span>
+                                        <input type="text" class="form-control searchString" data-col-no="4" placeholder="..." aria-describedby="inputGroupPrepend">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">توضیحات</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">
+                                            <i data-feather='search'></i>
+                                        </span>
+                                        <input type="text" class="form-control searchString" data-col-no="5" placeholder="..." aria-describedby="inputGroupPrepend">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-1">
+                                <div class="col-md-4">
+                                    <label class="form-label">نوع رکوردها</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">
+                                            <i data-feather='filter'></i>
+                                        </span>
+                                        <select id="recordtype" class="select2 form-select filterString" data-col-no="2" aria-describedby="inputGroupPrepend">
+                                            <option value="0">رکوردها</option>
+                                            <option value="1">حذف شده ها ( منطقی )</option>
+                                            <option value="">رکوردها + حذف شده ها ( منطقی )</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-datatable">
+
+                            <div class="breadcrumb-wrapper m-1">
+                                <ol class="breadcrumb row-parent-category">
+                                    <li class="breadcrumb-item" id="p-0" onclick="backward(0,this);">
+                                        <a href="javascript:void(0)">لیست فضاهای اصلی</a>
+                                    </li>
+                                </ol>
+                            </div>
+
+                            <table id="tabledata" class="table">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th></th>
+                                        <th>ردیف</th>
+                                        <th>حذف</th>
+                                        <th>کد</th>
+                                        <th>فضا</th>
+                                        <th>توضیحات</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        var columns =
+            [
+                {
+                    "class": "details-control text-center",
+                    "orderable": false,
+                    "data": null,
+                    render: function (data, type, row, meta) {
+                        return '<svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+                    },
+                    "width": 40
+                },
+                {
+                    data: 'id',
+                    render: function (data, type, row, meta) {
+                        return meta.row + meta.settings._iDisplayStart + 1;
+                    },
+                    "orderable": true,
+                    "width": 50
+                },
+                {
+                    data: 'deleted',
+                    visible: false,
+                },
+                {
+                    data: 'code',
+                },
+                {
+                    data: 'title',
+                },
+                {
+                    data: 'description'
+                },
+                {
+                    "class": "text-center",
+                    render: function (data, type, row, meta) {
+                        var btn = '<div class="text-nowrap">';
+                        if ('@await _permission.HasAccess("Section", Domain.Enum.PermissionType.Update)' == 'True') {
+                            btn += '<i class="mx-1 float-start cursor-pointer oicon2-pen edit-btn" data-type="modal" data-id="' + row.id + '"></i>';
+                        }
+                        btn += row.deleted === true ? '<i class="mx-1 float-start cursor-pointer oicon-recycle undelete-btn-show" data-id="' + row.id + '" data-name=" ' + row.title + '"></i>' : '';
+                        if ('@await _permission.HasAccess("Section", Domain.Enum.PermissionType.Delete)' == 'True') {
+                            btn += '<i class="mx-1 float-start cursor-pointer oicon-trash-can delete-btn-show" data-id="' + row.id + '" data-name=" ' + row.title + '"></i>';
+                        }
+                        //btn += '<i class="mx-1 float-start cursor-pointer oicon-eye view-btn-show" data-id="' + row.id + '" data-name=" ' + row.sTitle + '"></i>'
+                        btn += '<i style="transform:scaleX(-1)" class="mx-1 float-start cursor-pointer oicon-turn-down child-btn" data-id="' + row.id + '" data-name=" ' + row.title + '" onclick="subset(' + row.id + ',this);"></i>'
+                        btn += '</div>';
+
+                        return btn;
+                    },
+                    "orderable": false,
+                    "width": 200
+                }
+            ];
+
+        function format(data) {
+            return '<div class="detail"> کد: ' + data.code + '<br> نام فضا : ' + data.title + '</div>';
+        }
+
+        createDatatable('tabledata', columns, format);
+
+        function getDataOfImport() {
+            var formData = new FormData();
+            var file = $('#file')[0].files[0];
+            var employeeId = $('#sectionId').val();
+            formData.append("file", file);
+            formData.append("sectionId", employeeId);
+
+            return formData;
+        }
+    </script>
+}
+

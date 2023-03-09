@@ -1,0 +1,83 @@
+﻿/**
+*
+*	Name:			IRAN Sans-Serif Font
+*	Version:		5.0
+*	Author:			Moslem Ebrahimi (moslemebrahimi.com)
+*	Created on:		Dec 25, 2012
+*	Updated on:		Sep 01, 2017
+*	Website:		             http://fontiran.com
+*	Copyright:		Commercial/Proprietary Software
+--------------------------------------------------------------------------------------
+فونت های ایران سن سریف یک نرم افزار مالکیتی محسوب می شود. جهت آگاهی از قوانین استفاده از این فونت ها لطفا به وب سایت (فونت ایران دات کام) مراجعه نمایید
+--------------------------------------------------------------------------------------
+IRAN Sans-serif fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com 
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (.....)
+--------------------------------------------------------------------------------------
+*	
+**/
+@font-face {
+    font-family: iransans;
+    font-style: normal;
+    font-weight: 900;
+    src: url('/Content/Font/iransans/IRANSansWebFaNum_Black.eot');
+    src: url('/Content/Font/iransans/IRANSansWebFaNum_Black.eot?#iefix') format('embedded-opentype'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum_Black.woff2') format('woff2'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum_Black.woff') format('woff'),
+    url('/Content/Font/iransans/IRANSansWebFaNum_Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: iransans;
+    font-style: normal;
+    font-weight: bold;
+    src: url('/Content/Font/iransans/IRANSansWebFaNum_Bold.eot');
+    src: url('/Content/Font/iransans/IRANSansWebFaNum_Bold.eot?#iefix') format('embedded-opentype'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum_Bold.woff2') format('woff2'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum_Bold.woff') format('woff'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum_Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: iransans;
+    font-style: normal;
+    font-weight: 500;
+    src: url('/Content/Font/iransans/IRANSansWebFaNum_Medium.eot');
+    src: url('/Content/Font/iransans/IRANSansWebFaNum_Medium.eot?#iefix') format('embedded-opentype'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum_Medium.woff2') format('woff2'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum_Medium.woff') format('woff'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum_Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: iransans;
+    font-style: normal;
+    font-weight: 300;
+    src: url('/Content/Font/iransans/IRANSansWebFaNum_Light.eot');
+    src: url('/Content/Font/iransans/IRANSansWebFaNum_Light.eot?#iefix') format('embedded-opentype'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum_Light.woff2') format('woff2'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum_Light.woff') format('woff'),
+    url('/Content/Font/iransans/IRANSansWebFaNum_Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: iransans;
+    font-style: normal;
+    font-weight: 200;
+    src: url('/Content/Font/iransans/IRANSansWebFaNum_UltraLight.eot');
+    src: url('/Content/Font/iransans/IRANSansWebFaNum_UltraLight.eot?#iefix') format('embedded-opentype'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum_UltraLight.woff2') format('woff2'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum_UltraLight.woff') format('woff'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum_UltraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: iransans;
+    font-style: normal;
+    font-weight: normal;
+    src: url('/Content/Font/iransans/IRANSansWebFaNum.eot');
+    src: url('/Content/Font/iransans/IRANSansWebFaNum.eot?#iefix') format('embedded-opentype'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum.woff2') format('woff2'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum.woff') format('woff'), 
+    url('/Content/Font/iransans/IRANSansWebFaNum.ttf') format('truetype');
+}

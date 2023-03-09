@@ -1,0 +1,31 @@
+﻿@using SnowaTec.Test.Domain.Entities.Security;
+@using SnowaTec.Test.Domain.Enum
+
+@model List<SystemPart>
+
+@{
+    void MadeTree(IEnumerable<SystemPart> menus)
+    {
+        <ul>
+            @foreach (var menu in menus)
+            {
+                var sType = Enum.GetName(typeof(MenuType), menu.MenuType);
+
+                <li class="@(menu.SubSystemParts.Count > 0 ? "jstree-open" : "")" data-jstree='{"type":"@sType"}' id="@menu.Id">
+                    @menu.PersianTitle
+                    <i data-feather='@menu.IconName'></i>
+                    @if (menu.SubSystemParts.Count > 0)
+                    {
+                        MadeTree(menu.SubSystemParts);
+                    }
+                </li>
+            }
+        </ul>
+    }
+}
+
+<div id="jstree-SystemPart">
+    @{
+        MadeTree(Model);
+    }
+</div>

@@ -1,0 +1,49 @@
+﻿@using SnowaTec.Test.Domain.DTO.Security
+
+@model AvailabilityRoleDto
+
+<form id="edit-form-page" style="width:100%">
+    <div class="card">
+
+        <div class="card-header">
+            <h4 class="card-title"> نقش کاربری <em id="form-header-text"></em></h4>
+        </div>
+
+        <div class="card-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="baseInfo-tab" data-bs-toggle="tab" href="#baseInfo" aria-controls="baseInfo" role="tab" aria-selected="true"><i data-feather='info'></i> اطلاعات اصلی</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" id="field-tab" data-bs-toggle="tab" href="#availability" aria-controls="field" role="tab" aria-selected="false"><i data-feather='figma'></i> دسترسی ها </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="baseInfo" aria-labelledby="baseInfo-tab" role="tabpanel">
+                    <div class="row g-1 mb-md-1">
+                        @Html.HiddenFor(x=>x.Id)
+
+                        <div class="col-md-6">
+                            @Html.Label("نام نقش کاربری")
+                            @Html.TextBoxFor(x => x.Name,new { @class = "form-control",@placeholder="عنوان" })
+                            @Html.ValidationMessageFor(x => x.Name)
+                            <h5 class="text-danger">در نام نقش کاربری از کاراکتر زیر خط (_) استفاده نکنید.</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="availability" aria-labelledby="field-tab" role="tabpanel">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <div class="col-md-12">
+                <button type="button" data-type="in-page" class="save-btn btn btn-primary me-1 waves-effect waves-float waves-light">ثبت</button>
+                <button type="button" class="btn-close-inpage btn btn-outline-secondary waves-effect">انصراف</button>
+            </div>
+        </div>
+
+    </div>
+</form>

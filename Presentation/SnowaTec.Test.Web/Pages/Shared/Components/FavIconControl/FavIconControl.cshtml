@@ -1,0 +1,6 @@
+﻿@using Microsoft.Extensions.Options
+@using SnowaTec.Test.Web.Models
+
+@inject IOptions<APIServer> _server;
+
+<link rel="shortcut icon" type="image/x-icon" href="@(_server.Value.BaseAddress)api/v1/documents/GetFileByKey/FavIcon">

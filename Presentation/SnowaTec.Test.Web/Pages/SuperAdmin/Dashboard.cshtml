@@ -1,0 +1,65 @@
+﻿@page
+
+@model SnowaTec.Test.Web.Pages.SuperAdmin.DashboardModel
+
+@{
+    ViewData["Title"] = "داشبورد مدیر اصلی";
+}
+
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper container-xxl p-0">
+    <div class="content-header row">
+        @await Component.InvokeAsync("BreadcrumbControl")
+    </div>
+    <div class="content-body">
+        <section id="dashboard-ecommerce">
+            <div class="row match-height">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card card-browser-states">
+                        <div class="card-header">
+                            <div>
+                                <h4 class="card-title">Monthly</h4>
+                                <p class="card-text font-small-2">Total profit in last month</p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="monthlyChart" class="chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card card-browser-states">
+                        <div class="card-header">
+                            <div>
+                                <h4 class="card-title">Weekly</h4>
+                                <p class="card-text font-small-2">Total profit in last week</p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="weeklyChart" class="chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card card-browser-states">
+                        <div class="card-header">
+                            <div>
+                                <h4 class="card-title">Daily</h4>
+                                <p class="card-text font-small-2">Total profit in last day</p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="dailyChart" class="chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+@section Scripts{
+    <script type="text/javascript" src="~/Bundle/reportFiles.min.js" asp-append-version="true"></script>
+    <script src="~/Content/Structure/js/Stock-Compare_multiple_series.js"></script>
+}

@@ -1,0 +1,92 @@
+﻿
+<form id="edit-form-page" style="width:100%">
+    <div class="card">
+
+        <div class="card-header">
+            <h4 class="card-title"> بازیابی اطلاعات</h4>
+        </div>
+
+        <div class="card-body">
+            <table id="tabledata" class="table">
+                <thead class="table-light">
+                    <tr>
+                        <th></th>
+                        <th>ردیف</th>
+                        <th>حذف</th>
+                        <th>شناسه رکورد</th>
+                        <th>زمان ایجاد</th>
+                        <th>عملیات</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card-footer">
+            <div class="col-md-12">
+                <button type="button" class="btn-close-inpage btn btn-outline-secondary waves-effect">بازگشت</button>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+@section scripts{
+    <script>
+        var columns =
+            [
+                {
+                    "class": "details-control text-center",
+                    "orderable": false,
+                    "data": null,
+                    render: function (data, type, row, meta) {
+                        return '<svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+                    },
+                    "width": 40
+                },
+                {
+                    data: 'id',
+                    render: function (data, type, row, meta) {
+                        return meta.row + meta.settings._iDisplayStart + 1;
+                    },
+                    "orderable": true,
+                    "width": 50
+                },
+                {
+                    data: 'deleted',
+                    visible: false,
+                },
+                {
+                    data: 'key',
+                },
+                {
+                    data: 'persianCreateRowDate',
+                },
+                {
+                    data: 'actionTypeValue'
+                },
+                {
+                    "class": "text-center",
+                    render: function (data, type, row, meta) {
+                        var btn = '<div class="text-nowrap">';
+                        btn += '</div>';
+
+                        return btn;
+                    },
+                    "orderable": false,
+                    "width": 200
+                }
+            ];
+
+        function format(data) {
+            return '<div class="detail"> کد: ' + data.key + '<br> اطلاعات : ' + data.data + '</div>';
+        }
+
+        function callBackAfterRecovery(response)
+        {
+            createDatatable('tabledata', columns, format);
+        }
+    </script>
+}

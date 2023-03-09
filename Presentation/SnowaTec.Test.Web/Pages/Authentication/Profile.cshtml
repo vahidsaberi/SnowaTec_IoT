@@ -1,0 +1,240 @@
+﻿@page
+
+@using SnowaTec.Test.Domain.Enum
+
+@model SnowaTec.Test.Web.Pages.Authentication.ProfileModel
+
+@{
+    ViewData["Title"] = "پروفایل کاربر";
+
+    var backUrl = "";
+
+    if (User.IsInRole(Roles.SuperAdmin.ToString()))
+    {
+        backUrl = "/SuperAdmin/Dashboard";
+    }
+    else if (User.IsInRole(Roles.Admin.ToString()))
+    {
+        backUrl = "/Admin/Dashboard";
+    }
+    else if (User.IsInRole(Roles.Moderator.ToString()))
+    {
+        backUrl = "/Moderator/Dashboard";
+    }
+    else if (User.IsInRole(Roles.Basic.ToString()))
+    {
+        backUrl = "/Basic/Dashboard";
+    }
+}
+
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper p-0">
+    <div class="content-header row">
+        @await Component.InvokeAsync("BreadcrumbControl")
+    </div>
+    <div class="content-body">
+
+        <!-- account setting page -->
+        <section id="page-account-settings">
+            <div class="row">
+                <!-- left menu section -->
+                <div class="col-md-3 mb-2 mb-md-0">
+                    <ul class="nav nav-pills flex-column nav-left">
+                        <!-- general -->
+                        <li class="nav-item">
+                            <a class="nav-link active" id="account-pill-general" data-bs-toggle="pill" href="#account-vertical-general" aria-expanded="false">
+                                <i data-feather="user" class="font-medium-3 me-1"></i>
+                                <span class="fw-bold">مشخصات پرسنلی</span>
+                            </a>
+                        </li>
+                        <!-- change password -->
+                        <li class="nav-item">
+                            <a class="nav-link" id="account-pill-password" data-bs-toggle="pill" href="#account-vertical-password" aria-expanded="false">
+                                <i data-feather="lock" class="font-medium-3 me-1"></i>
+                                <span class="fw-bold">تغییر گذرواژه</span>
+                            </a>
+                        </li>
+                        <!-- notification -->
+                        <li class="nav-item">
+                            <a class="nav-link" id="account-pill-notifications" data-bs-toggle="pill" href="#account-vertical-notifications" aria-expanded="false">
+                                <i data-feather="bell" class="font-medium-3 me-1"></i>
+                                <span class="fw-bold">اعلانات</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/ left menu section -->
+                <!-- right content section -->
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="tab-content">
+                                <!-- general tab -->
+                                <div role="tabpanel" class="tab-pane active" id="account-vertical-general" aria-labelledby="account-pill-general" aria-expanded="true">
+                                    <!-- header section -->
+                                    <div class="d-flex">
+                                        <a href="#" class="me-25">
+                                            <img src="/Content/Image/avatar.jpg" id="account-upload-img" class="rounded me-50" alt="profile image" height="80" width="80" />
+                                        </a>
+                                        <!-- upload and reset button -->
+                                        <div class="mt-75 ms-1">
+                                            <label for="account-upload" class="btn btn-sm btn-primary mb-75 me-75">بارگذاری</label>
+                                            <input type="file" id="account-upload" hidden accept="image/*" />
+                                            @*<button class="btn btn-sm btn-outline-secondary mb-75">Reset</button>*@
+                                            <p>شما مجاز به آپلود عکس با پسوند JPG، GIF یا PNG تا 800 کیلوبایت هستید.</p>
+                                        </div>
+                                        <!--/ upload and reset button -->
+                                    </div>
+                                    <!--/ header section -->
+                                    <!-- form -->
+                                    <form id="formUser" class="validate-form mt-2">
+
+                                        <input asp-for="InputUser.Id" name="Id" hidden="hidden" />
+
+                                        <div class="row">
+                                            
+                                            <div class="col-12 col-sm-6">
+                                                <div class="mb-1">
+                                                    <label asp-for="InputUser.Prefix" class="form-label">جنسیت</label> <span class="text-danger"><b>*</b></span>
+                                                    <select asp-for="InputUser.Prefix" class="select2 select-input form-select">
+                                                        <option value="آقا">آقا</option>
+                                                        <option value="خانم">خانم</option>
+                                                        <option value="شرکت">شرکت</option>
+                                                    </select>
+                                                    <span asp-validation-for="InputUser.Prefix" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <div class="mb-1">
+                                                    <label asp-for="InputUser.FullName" class="form-label">نام و نام خانوادگی</label> <span class="text-danger"><b>*</b></span>
+                                                    <input type="text" asp-for="InputUser.FullName" name="FullName" class="form-control" placeholder="Full Name" required />
+                                                    <span asp-validation-for="InputUser.FullName" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <div class="mb-1">
+                                                    <label asp-for="InputUser.NickName" class="form-label">نام مستعار</label> <span class="text-danger"><b>*</b></span>
+                                                    <input type="text" asp-for="InputUser.NickName" name="NickName" class="form-control" placeholder="NickName" required />
+                                                    <span asp-validation-for="InputUser.NickName" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                
+                                                <input id="saveUser" type="submit" value="ویرایش" class="btn btn-primary me-1" />
+                                                <a asp-page="@backUrl" class="btn btn-outline-secondary">انصراف</a>
+
+                                            </div>
+                                        </div>
+
+                                        <br />
+
+                                        <div asp-validation-summary="All" class="text-danger"></div>
+                                    </form>
+                                    <!--/ form -->
+                                </div>
+                                <!--/ general tab -->
+                                <!-- change password -->
+                                <div class="tab-pane" id="account-vertical-password" role="tabpanel" aria-labelledby="account-pill-password" aria-expanded="false">
+                                    <!-- form -->
+                                    <form id="formPassword" class="validate-form">
+
+                                        <input asp-for="InputPassword.UserId" name="UserId" hidden="hidden" />
+
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6">
+                                                <div class="mb-1">
+                                                    <label asp-for="InputPassword.CurrentPassword" class="form-label">گذرواژه فعلی</label><span class="text-danger"><b>*</b></span>
+                                                    <div class="input-group form-password-toggle input-group-merge">
+                                                        <input type="password" asp-for="InputPassword.CurrentPassword" name="CurrentPassword" class="form-control" placeholder="Current password" required />
+                                                        <div class="input-group-text cursor-pointer"><i data-feather="eye"></i></div>
+                                                        <span asp-validation-for="InputPassword.CurrentPassword" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6">
+                                                <div class="mb-1">
+                                                    <label asp-for="InputPassword.NewPassword" class="form-label">گذرواژه جدید</label><span class="text-danger"><b>*</b></span>
+                                                    <div class="input-group form-password-toggle input-group-merge">
+                                                        <input type="password" asp-for="InputPassword.NewPassword" name="NewPassword" class="form-control" placeholder="New password" required />
+                                                        <div class="input-group-text cursor-pointer"><i data-feather="eye"></i></div>
+                                                        <span asp-validation-for="InputPassword.NewPassword" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <div class="mb-1">
+                                                    <label asp-for="InputPassword.ConfirmNewPassword" class="form-label">تایید گذرواژه جدید</label>
+                                                    <div class="input-group form-password-toggle input-group-merge">
+                                                        <input type="password" asp-for="InputPassword.ConfirmNewPassword" name="ConfirmNewPassword" class="form-control" placeholder="Confirm New Password" required />
+                                                        <div class="input-group-text cursor-pointer"><i data-feather="eye"></i></div>
+                                                        <span asp-validation-for="InputPassword.ConfirmNewPassword" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <input id="savePassword" type="submit" value="تغییر گذرواژه" class="btn btn-primary me-1" />
+                                                <a asp-page="@backUrl" class="btn btn-outline-secondary">انصراف</a>
+                                            </div>
+
+                                            <br />
+
+                                            <div asp-validation-summary="All" class="text-danger"></div>
+                                        </div>
+                                    </form>
+                                    <!--/ form -->
+                                </div>
+                                <!--/ change password -->
+                                <!-- notifications -->
+                                <div class="tab-pane fade" id="account-vertical-notifications" role="tabpanel" aria-labelledby="account-pill-notifications" aria-expanded="false">
+                                    <div class="row">
+                                        <h6 class="section-label mb-2">فعالیت ها</h6>
+                                    </div>
+                                </div>
+                                <!--/ notifications -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/ right content section -->
+            </div>
+        </section>
+        <!-- / account setting page -->
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(function(){
+            $(document).on('click', '#saveUser', function (e) {
+                e.preventDefault();
+
+                var form = $('#formUser');
+                var data = form.serialize();
+
+                callAjax('Profile', AjaxType.Post, data, null).then(function(result){
+                    if (result.succeeded)
+                        showNotification('Save Info', result.message, NotificationType.Success);
+                    else
+                        showNotification('Error', result.errors[0], NotificationType.Error);
+                });
+            });
+
+            $(document).on('click', '#savePassword', function (e) {
+                e.preventDefault();
+
+                var form = $('#formPassword');
+                var data = form.serialize();
+
+                callAjax('Password', AjaxType.Post, data, null).then(function (result) {
+                    if (result.succeeded)
+                        window.location.replace('/Authentication/Logout');
+                    else
+                        showNotification('Error', result.errors[0], NotificationType.Error);
+                });
+            });
+        })
+    </script>
+}

@@ -1,0 +1,164 @@
+﻿@page
+
+@model SnowaTec.Test.Web.Pages.Authentication.LoginModel
+
+@{
+	Layout = null;
+	ViewData["Title"] = "ورود";
+}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-textdirection="rtl">
+<head>
+	<title>@ViewData["Title"]</title>
+	@await Component.InvokeAsync("FavIconControl")
+	@*<meta charset="UTF-8" />
+	<meta name="description" content="@Model.Descript" />
+	<meta name="keywords" content="@Model.Keyword" />
+	<meta name="Copyright" content="OroDTD" />
+	<meta name="robots" content="@Model.Robot" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<meta property="og:type" content="@Model.UrlType">
+	<meta property="og:url" content="@Model.Url" />
+	<meta property="og:title" content="@Model.Title" />
+	<meta property="og:description" content="@Model.Descript" />
+	<meta property="og:image" content="@Model.BaseImage" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@Model.Url" />
+	<meta name="twitter:creator" content="OroDTD" />
+	<meta name="twitter:title" content="@Model.Title" />
+	<meta name="twitter:description" content="@Model.Descript" />
+	<meta name="twitter:image" content="@Model.BaseImage" />*@
+
+
+
+	@*<link href="~/Bundle/loginPanel.min.css" rel="stylesheet" asp-append-version="true" />*@
+	<link href="~/Bundle/loginPanel-rtl.min.css" rel="stylesheet" asp-append-version="true" />
+</head>
+<body class="vertical-layout vertical-menu-modern blank-page navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="blank-page">
+	<div class="app-content content">
+		<div class="content-overlay"></div>
+		<div class="header-navbar-shadow"></div>
+		<div class="content-wrapper">
+			<div class="content-header row">
+			</div>
+			<div class="content-body">
+				<div class="auth-wrapper auth-cover">
+					<div class="auth-inner row m-0">
+						<!-- Brand logo-->
+						<a class="brand-logo" href="/">
+							@await Component.InvokeAsync("LogoControl")
+						</a>
+						<!-- /Brand logo-->
+						<!-- Left Text-->
+						<div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
+							<div class="w-100 d-lg-flex align-items-center justify-content-center px-5">
+								<img class="img-fluid" src="/Content/Image/Pages/login-v2.svg" />
+							</div>
+						</div>
+						<!-- /Left Text-->
+						<!-- Login-->
+						<div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
+							<div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
+								<h2 class="card-title fw-bold mb-1">به @(Model.PortalInfo != null ? Model.PortalInfo.Title : "پرتال اسنوا") خوش آمدید 👋</h2>
+								<p class="card-text mb-2">لطفا وارد حساب کاربری خود شوید</p>
+								<form class="auth-login-form mt-2" method="POST">
+
+									<div asp-validation-summary="All" class="text-danger"></div>
+									<span class="text-danger">@Model.Message</span>
+
+									<ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+											<a class="nav-link active" id="loginUser-tab" data-bs-toggle="tab" href="#loginUser" aria-controls="user" role="tab" aria-selected="true"><i data-feather='user'></i> ورود با نام کاربری</a>
+                                        </li>
+                                        <li class="nav-item">
+											<a class="nav-link" id="loginMobile-tab" data-bs-toggle="tab" href="#loginMobile" aria-controls="mobile" role="tab" aria-selected="false"><i data-feather='airplay'></i> ورود با موبایل</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+										<div class="tab-pane active" id="loginUser" aria-labelledby="loginUser-tab" role="tabpanel">
+											<div class="mb-1">
+												<label class="form-label" for="Username">نام کاربری</label>
+												<input asp-for="UserInput.Username" type="text" class="form-control" placeholder="Username" aria-describedby="login-username" autofocus="" tabindex="1" />
+											</div>
+											<div class="mb-1">
+												<label class="form-label" for="login-password">گذرواژه</label>
+												<div class="input-group input-group-merge form-password-toggle">
+													<input asp-for="UserInput.Password" type="password" class="form-control form-control-merge" placeholder="············" aria-describedby="login-password" tabindex="2" /><span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane" id="loginMobile" aria-labelledby="loginMobile-tab" role="tabpanel">
+											<div class="mb-1">
+												<label class="form-label" for="PhoneNumber">شماره موبایل</label>
+												<input asp-for="MobileInput.PhoneNumber" type="text" class="form-control" placeholder="Mobile" autofocus="" tabindex="1" />
+											</div>
+											<div class="mb-1">
+												<label class="form-label" for="VerifyCode">کد ارسال شده</label>
+												<div class="input-group">
+													<input asp-for="MobileInput.VerifyCode" type="text" class="form-control pin-code-mask" placeholder="Code" maxlength="6" aria-describedby="getVerifyCode" />
+													<button type="button" class="btn btn-outline-info" id="getVerifyCode" onclick="callCreateVerifyCode();">درخواست کد</button>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+
+									<div class="mb-1">
+										<div class="form-check">
+											<input asp-for="UserInput.RememberMe" class="form-check-input" tabindex="3" />
+											<label class="form-check-label">مرا بخاطر بسپار</label>
+										</div>
+									</div>
+									<button class="btn btn-primary w-100" tabindex="4">ورود</button>
+								</form>
+
+							</div>
+						</div>
+						<!-- /Login-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="~/Bundle/loginPanel.min.js" asp-append-version="true"></script>
+	<script type="text/javascript" src="~/Content/Library/lottie/js/lottie-player.js" asp-append-version="true"></script>
+	<script type="text/javascript" src="~/Content/Structure/js/sg.stagedirection.js" asp-append-version="true"></script>
+
+	<script>
+		$(window).on('load', function () {
+			if (feather) {
+				feather.replace({
+					width: 14,
+					height: 14
+				});
+			}
+		})
+
+		var isRtl = $('html').attr('data-textdirection') === 'rtl';
+
+		function callCreateVerifyCode() {
+			var phoneNumber = $("#MobileInput_PhoneNumber").val();
+
+			if (phoneNumber == null || phoneNumber == undefined || phoneNumber.length == 0) {
+				showNotification("شماره موبایل", "شماره تماس را وارد کنید.", NotificationType.Error);
+				return;
+			}
+
+			callAjax('CreateVerifyCode', AjaxType.Post, { phoneNumber }, null, 'json').then(function (response) {
+				if (response.succeeded === true) {
+					showNotification("ارسال کد", response.message, NotificationType.Success);
+				}
+				else {
+					showNotification("ارسال کد", response.message, NotificationType.Error);
+				}
+			});
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+﻿@page
+
+@using SnowaTec.Test.Domain.Enum
+
+@model SnowaTec.Test.Web.Pages.Admin.Field.IndexModel
+
+@{
+    ViewData["Title"] = "فیلدها";
+}
+
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper p-0">
+    <div class="content-header row">
+        @await Component.InvokeAsync("BreadcrumbControl")
+    </div>
+    <div class="content-body show-container">
+        <section id="">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header border-bottom">
+                            <h4 class="card-title">مشاهده اطلاعات</h4>
+                            <div class="dt-action-buttons text-end">
+                                <div class="dt-buttons d-inline-flex">
+                                    <button class="dt-button btn btn-outline-secondary me-2 refresh-btn" type="button">
+                                        <span>
+                                            <i data-feather='rotate-cw'></i>
+                                            بروزرسانی
+                                        </span>
+                                    </button>
+                                    <button class="dt-button new-btn btn btn-primary" data-pid="" data-type="modal" type="button">
+                                        <span>
+                                            <i data-feather='plus'></i>
+                                            فیلد جدید
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body mt-2">
+                            <div class="row g-1 mb-md-1">
+                                <div class="col-md-4">
+                                    <label class="form-label">عنوان</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">
+                                            <i data-feather='search'></i>
+                                        </span>
+                                        <input type="text" class="form-control searchString" data-col-no="3" placeholder="..." aria-describedby="inputGroupPrepend">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">کلید / عنوان لاتین</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">
+                                            <i data-feather='search'></i>
+                                        </span>
+                                        <input type="text" class="form-control searchString" data-col-no="4" placeholder="..." aria-describedby="inputGroupPrepend">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-1">
+                                <div class="col-md-4">
+                                    <label class="form-label">نوع رکوردها</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">
+                                            <i data-feather='filter'></i>
+                                        </span>
+                                        <select id="recordtype" class="select2 form-select filterString" data-col-no="2" aria-describedby="inputGroupPrepend">
+                                            <option value="0">رکوردها</option>
+                                            <option value="1">حذف شده ها ( منطقی )</option>
+                                            <option value="">رکوردها + حذف شده ها ( منطقی )</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">نوع فیلد</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">
+                                            <i data-feather='filter'></i>
+                                        </span>
+                                        @Html.DropDownList("typeSelectFilter", FieldTypeFunction.ToSelectedListForSearch(),  new Dictionary<string, object> { {"class" , "filterString form-control select2" }, {"data-col-no","5" }})
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-datatable">
+
+                            <table id="tabledata" class="table">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th></th>
+                                        <th>ردیف</th>
+                                        <th>حذف</th>
+                                        <th>عنوان</th>
+                                        <th>کلید / نام لاتین</th>
+                                        <th>نوع مقدار</th>
+                                        <th>مقدار پیشفرض</th>
+                                        <th>تنظیمات</th>
+                                        <th>راهنما</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        var columns =
+            [
+                {
+                    "class": "details-control text-center",
+                    "orderable": false,
+                    "data": null,
+                    render: function(data, type, row, meta) {
+                        return '<svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+                    },
+                    "width": 40
+                },
+                {
+                    data: 'id',
+                    render: function(data, type, row, meta) {
+                        return meta.row + meta.settings._iDisplayStart + 1;
+                    },
+                    "orderable": true,
+                    "width": 50
+                },
+                {
+                    data: 'deleted',
+                    visible: false,
+                },
+                {
+                    data: 'title',
+                },
+                {
+                    data: 'key',
+                },
+                {
+                    data: 'type',
+                    render: function(data, type, row, meta) {
+                        return row.typeValue;
+                    }
+                },
+                {
+                    data: 'defaultValue',
+                    defaultContent: ''
+                },
+                {
+                    data: 'setting'
+                },
+                {
+                    data: 'tooltip'
+                },
+                {
+                    "class": "text-center",
+                    render: function(data, type, row, meta) {
+                        var btn = '<div class="text-nowrap">';
+                        btn += '<i class="mx-1 float-start cursor-pointer oicon2-pen edit-btn" data-type="modal" data-id="' + row.id + '"></i>';
+                        btn += row.deleted === true ? '<i class="mx-1 float-start cursor-pointer oicon-recycle undelete-btn-show" data-id="' + row.id + '" data-name=" ' + row.title + '"></i>' : '';
+                        btn += '<i class="mx-1 float-start cursor-pointer oicon-trash-can delete-btn-show" data-id="' + row.id + '" data-name=" ' + row.title + '"></i>';
+                        btn += '</div>';
+
+                        return btn;
+                    },
+                    "orderable": false,
+                    "width": 200
+                }
+            ];
+
+        function format(data) {
+            return '<div class="detail"> عنوان: ' + data.title + '<br> کلید : ' + data.key + '<br> راهنما : ' + data.tooltip + '</div>';
+        }
+
+        createDatatable('tabledata', columns, format);
+    </script>
+}
+

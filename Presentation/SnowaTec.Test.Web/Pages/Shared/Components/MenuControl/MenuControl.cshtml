@@ -1,0 +1,99 @@
+﻿@using Microsoft.AspNetCore.Html;
+@using SnowaTec.Test.Domain.Entities.Security
+@using SnowaTec.Test.Domain.Enum
+
+@model List<SystemPart>
+
+@{
+	void MadeMenu(IEnumerable<SystemPart> menus, string baseUrl)
+	{
+		if (baseUrl.Length > 0)
+			baseUrl += "/";
+
+		foreach (var menu in menus)
+		{
+			if (menu.MenuType == MenuType.Group)
+			{
+				<li class=" navigation-header"><span data-i18n="@menu.EnglishTitle">@menu.PersianTitle</span><i data-feather="more-horizontal"></i></li>
+
+				if (menu.SubSystemParts.Any(x => x.MenuType != MenuType.License))
+				{
+					MadeMenu(menu.SubSystemParts, baseUrl + menu.EnglishTitle);
+				}
+			}
+
+			if (menu.MenuType == MenuType.Menu)
+			{
+				<li class=" nav-item">
+					<a class="d-flex align-items-center @(menu.SubSystemParts.Any(x=>x.MenuType != MenuType.License) ? "no-loading": "")" href="/@baseUrl@menu.EnglishTitle">
+						<i data-feather="@menu.IconName"></i>
+						<span class="menu-title text-truncate" data-i18n="Typography">@menu.PersianTitle</span>
+					</a>
+					@if (menu.SubSystemParts.Any(x => x.MenuType != MenuType.License))
+					{
+						<ul class="menu-content">
+							@{
+								MadeMenu(menu.SubSystemParts, baseUrl + menu.EnglishTitle);
+							}
+						</ul>
+					}
+				</li>
+			}
+		}
+	}
+}
+
+<div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+	<div class="navbar-header">
+		<ul class="nav navbar-nav flex-row">
+			<li class="nav-item me-auto">
+				<a class="navbar-brand" href="/">
+					@await Component.InvokeAsync("LogoControl")
+				</a>
+			</li>
+			<li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0" data-bs-toggle="collapse"><i class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary" data-feather="disc" data-ticon="disc"></i></a></li>
+		</ul>
+	</div>
+	<div class="shadow-bottom"></div>
+	<div class="main-menu-content">
+		<ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+			<li class=" nav-item">
+				<a class="d-flex align-items-center" href="index">
+					<i data-feather="home"></i>
+					<span class="menu-title text-truncate" data-i18n="Dashboards">داشبورد</span>
+					<span class="badge badge-light-warning rounded-pill ms-auto me-1">8</span>
+				</a>
+				<ul class="menu-content">
+					@if (User.IsInRole(Roles.SuperAdmin.ToString()))
+					{
+						<li>
+							<a class="d-flex align-items-center" href="/SuperAdmin/Dashboard"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Analytics">مدیر پورتال</span></a>
+						</li>
+					}
+					@if (User.IsInRole(Roles.Admin.ToString()))
+					{
+						<li>
+							<a class="d-flex align-items-center" href="/Admin/Dashboard"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Analytics">مدیر</span></a>
+						</li>
+					}
+					@if (User.IsInRole(Roles.Moderator.ToString()))
+					{
+						<li>
+							<a class="d-flex align-items-center" href="/Moderator/Dashboard"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Analytics">مجری</span></a>
+						</li>
+					}
+					@if (User.IsInRole(Roles.Basic.ToString()))
+					{
+						<li>
+							<a class="d-flex align-items-center" href="/Basic/Dashboard"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Analytics">پایه</span></a>
+						</li>
+					}
+				</ul>
+			</li>
+			@if (Model != null || Model.Count() > 0)
+			{
+				MadeMenu(Model, "");
+			}
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,186 @@
+﻿@page
+
+@using SnowaTec.Test.Domain.Enum
+
+@model SnowaTec.Test.Web.Pages.Admin.Recovery.IndexModel
+
+@{
+    ViewData["Title"] = "بازیابی اطلاعات";
+}
+
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper p-0">
+    <div class="content-header row">
+        @await Component.InvokeAsync("BreadcrumbControl")
+    </div>
+    <div class="content-body show-container">
+        <section id="">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header border-bottom">
+                            <h4 class="card-title">مشاهده اطلاعات</h4>
+                            <div class="dt-action-buttons text-end">
+                                <div class="dt-buttons d-inline-flex">
+                                    <button class="dt-button btn btn-outline-secondary me-2 refresh-btn" type="button">
+                                        <span>
+                                            <i data-feather='rotate-cw'></i>
+                                            بروزرسانی
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body mt-2">
+                            <div class="row g-1 mb-md-1">
+                                <div class="col-md-4">
+                                    <label class="form-label">عنوان</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">
+                                            <i data-feather='search'></i>
+                                        </span>
+                                        <input type="text" class="form-control searchString" data-col-no="3" placeholder="..." aria-describedby="inputGroupPrepend">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">کلید / عنوان لاتین</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">
+                                            <i data-feather='search'></i>
+                                        </span>
+                                        <input type="text" class="form-control searchString" data-col-no="4" placeholder="..." aria-describedby="inputGroupPrepend">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-1">
+                                <div class="col-md-4">
+                                    <label class="form-label">نوع رکوردها</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">
+                                            <i data-feather='filter'></i>
+                                        </span>
+                                        <select id="recordtype" class="select2 form-select filterString" data-col-no="2" aria-describedby="inputGroupPrepend">
+                                            <option value="0">رکوردها</option>
+                                            <option value="1">حذف شده ها ( منطقی )</option>
+                                            <option value="">رکوردها + حذف شده ها ( منطقی )</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">نوع فیلد</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">
+                                            <i data-feather='filter'></i>
+                                        </span>
+                                        @Html.DropDownList("typeSelectFilter", FieldTypeFunction.ToSelectedListForSearch(),  new Dictionary<string, object> { {"class" , "filterString form-control select2" }, {"data-col-no","5" }})
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-datatable">
+
+                            <input asp-for="@Model.Schema" type="hidden" value="@Model.Schema" />
+                            <input asp-for="@Model.TableName" type="hidden" value="@Model.TableName" />
+
+                            <table id="tabledata" class="table">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th></th>
+                                        <th>ردیف</th>
+                                        <th>حذف</th>
+                                        <th>شناسه رکورد</th>
+                                        <th>زمان ایجاد</th>
+                                        <th>عملیات</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        var columns =
+            [
+                {
+                    "class": "details-control text-center",
+                    "orderable": false,
+                    "data": null,
+                    render: function (data, type, row, meta) {
+                        return '<svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+                    },
+                    "width": 40
+                },
+                {
+                    data: 'id',
+                    render: function (data, type, row, meta) {
+                        return meta.row + meta.settings._iDisplayStart + 1;
+                    },
+                    "orderable": true,
+                    "width": 50
+                },
+                {
+                    data: 'deleted',
+                    visible: false,
+                },
+                {
+                    data: 'key',
+                },
+                {
+                    data: 'persianCreateRowDate',
+                },
+                {
+                    data: 'actionTypeValue'
+                },
+                {
+                    "class": "text-center",
+                    render: function (data, type, row, meta) {
+                        var btn = '<div class="text-nowrap">';
+                        btn += '<i class="mx-1 float-start cursor-pointer oicon2-undo restore-btn" data-id="' + row.id + '"></i>';
+                        btn += row.deleted === true ? '<i class="mx-1 float-start cursor-pointer oicon-recycle undelete-btn-show" data-id="' + row.id + '" data-name=" ' + row.createRowDate + '"></i>' : '';
+                        btn += '<i class="mx-1 float-start cursor-pointer oicon-trash-can delete-btn-show" data-id="' + row.id + '" data-name=" ' + row.createRowDate + '"></i>';
+                        btn += '</div>';
+
+                        return btn;
+                    },
+                    "orderable": false,
+                    "width": 200
+                }
+            ];
+
+        function format(data) {
+            var i =1;
+            var evenRow='';
+            var oddRow='';
+
+            $.each(JSON.parse(data.data), function (k, v) {
+                if(i%2==0)
+                {
+                    oddRow += '<li class="list-group-item" ><span class="fw-bolder me-25" > ' + k + ' : </span>' + v + '</li>';
+                }
+                else{
+                    evenRow += '<li class="list-group-item" ><span class="fw-bolder me-25" > ' + k + ' : </span>' + v + '</li>';
+                }
+                i++;
+            });
+
+            var detail = '<div class="row"><div class="col-xl-6 col-12"><ul class="list-group" >' + evenRow + '</ul></div>';
+            detail += '<div class="col-xl-6 col-12"><ul class="list-group" >' + oddRow + '</ul></div></div>';
+
+            return '<div class="detail">' + detail + '</div>';
+        }
+
+        createDatatable('tabledata', columns, format, [{ key: "schema", value: $("#Schema").val() }, { key: "tableName", value: $("#TableName").val() }]);
+    </script>
+}
+
+

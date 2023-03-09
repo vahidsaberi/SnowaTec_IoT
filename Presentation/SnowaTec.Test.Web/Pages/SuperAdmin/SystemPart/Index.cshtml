@@ -1,0 +1,511 @@
+﻿@page
+@using SnowaTec.Test.Web.Interfaces.Base
+
+@model SnowaTec.Test.Web.Pages.SuperAdmin.SystemPart.IndexModel
+
+@inject IPermission _permission;
+
+@{
+    ViewData["Title"] = "بخش های سیستم";
+}
+
+@section csss{
+    <link rel="stylesheet" rel="stylesheet" href="~/Content/Admin/css/pages/app-file-manager.css" asp-append-version="true">
+    <link rel="stylesheet" rel="stylesheet" href="~/Content/Library/vendors/css/extensions/jstree.min.css" asp-append-version="true">
+}
+
+    @Html.AntiForgeryToken()
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper p-0">
+        <div class="content-header row">
+            @await Component.InvokeAsync("BreadcrumbControl")
+        </div>
+    </div>
+    <div class="content-body">
+        <section id="basic-horizontal-layouts">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">بخش های سیستم</h4>
+                            <div class="btn-group">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="align-middle">عملیات</span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#" onclick="loadCreateUpdateModal(1);"><i data-feather='book'></i> منو جدید</a>
+                                    <a class="dropdown-item" href="#" onclick="loadCreateUpdateModal(2);"><i data-feather='edit'></i> ویرایش منو</a>
+                                    <a class="dropdown-item" href="#" onclick="loadDeleteModal();"><i data-feather='delete'></i> حذف منو</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body" id="tree">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">اطلاعات بخش</h4>
+                        </div>
+                        <div class="card-body" id="SystemPart_info">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal fade" id="create_update_SystemPart">
+        <div class="modal-dialog modal-dialog-centered">
+            <form style="width:100%" class="form form-vertical" method="post">
+                @Html.AntiForgeryToken()
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"> ویرایش بخش </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <input asp-for="Input.Id" hidden="hidden" />
+
+                            <div class="col-12">
+                                <div class="mb-1">
+                                    <label asp-for="Input.ParentName" class="form-label">شاخه انتخاب شده</label>
+                                    <div class="input-group input-group-merge">
+                                        <input asp-for="Input.ParentId" hidden="hidden" />
+                                        <span class="input-group-text disabled"><i data-feather='paperclip'></i></span>
+                                        <input asp-for="Input.ParentName" type="text" class="form-control" placeholder="Root" disabled />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-1">
+                                    <label asp-for="Input.MenuType" class="form-label">نوع بخش</label>
+                                    <div class="input-group input-group-merge">
+                                        <span class="input-group-text"><i data-feather='box'></i></span>
+                                        <div class="position-relative">
+                                            <select asp-for="Input.MenuType" class="select2 form-select" onchange="changeMenuTypes(this);"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12" id="PersianTitle_object">
+                                <div class="mb-1">
+                                    <label asp-for="Input.PersianTitle" class="form-label">عنوان</label>
+                                    <div class="input-group input-group-merge">
+                                        <span class="input-group-text"><i data-feather='code'></i></span>
+                                        <input asp-for="Input.PersianTitle" type="text" class="form-control" placeholder="Title" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12" id="EnglishTitle_object">
+                                <div class="mb-1">
+                                    <label asp-for="Input.EnglishTitle" class="form-label">اتصال به بخش های موجود</label>
+                                    <div class="input-group input-group-merge">
+                                        <span class="input-group-text"><i data-feather='code'></i></span>
+                                        <div class="position-relative">
+                                            <select asp-for="Input.EnglishTitle" class="select2 form-select" onchange=""></select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12" id="EnglishTitle_object">
+                                <div class="mb-1">
+                                    <div class="form-check form-check-inline">
+                                        <input asp-for="Input.AdditionalPermissions" class="form-check-input" type="checkbox" checked="@(Model.Input != null && Model.Input.AdditionalPermissions ? "checked":"")" />
+                                        <label asp-for="Input.AdditionalPermissions" class="form-check-label" >مجوز های اضافی</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12" id="IconName_object">
+                                <div class="mb-1">
+                                    <label asp-for="Input.IconName" class="form-label">آیکون</label>
+                                    <div class="input-group input-group-merge">
+                                        <span class="input-group-text"><i data-feather='aperture'></i></span>
+                                        <div class="position-relative">
+                                            <select asp-for="Input.IconName" data-placeholder="Select..." class="select2-icons form-select"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary me-1 waves-effect waves-float waves-light" onclick="save(this);">ثبت</button>
+                        <button type="button" class="btn btn-outline-secondary waves-effect" data-bs-dismiss="modal">انصراف</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @section scripts{
+    <script type="text/javascript" src="~/Content/Admin/js/scripts/pages/app-file-manager.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/Content/Library/vendors/js/extensions/jstree.min.js" asp-append-version="true"></script>
+    <script>
+
+        //Load base data------------------------------------------------
+        function loadAllIcons(iconName) {
+            var icons = Object.keys(feather.icons),
+                iconsContainer = $('#Input_IconName');
+
+            if (icons.length) {
+                icons.map(function (icon) {
+                    if (iconsContainer.length) {
+                        if (iconName != undefined && iconName == icon) {
+                            iconsContainer.append(' <option value="' + icon + '" data-icon="' + icon + '" selected>' + icon + '</option>');
+                        }
+                        else {
+                            iconsContainer.append(' <option value="' + icon + '" data-icon="' + icon + '">' + icon + '</option>');
+                        }
+                    }
+                });
+            }
+        }
+
+        function loadAllDirectores(directoryName) {
+
+            var selected = $('#jstree-SystemPart').jstree(true).get_selected('full', true);
+
+            var parentId = 0;
+
+            if (selected.length > 0) {
+                parentId = selected[0].Id;
+            }
+
+            var data = {
+                path: "../Pages/",
+                parentId
+            };
+
+            callAjax('AllDirectores', AjaxType.Get, data, null).then(function (response) {
+                var container = $('#Input_EnglishTitle');
+                container.empty();
+
+                if (response.length) {
+                    response.map(function (item) {
+                        if (container.length) {
+                            if (directoryName != undefined && directoryName == item) {
+                                container.append('<option value="' + item + '" selected>' + item + '</option>');
+                            }
+                            else {
+                                container.append('<option value="' + item + '">' + item + '</option>');
+                            }
+                        }
+                    });
+                }
+            });
+        }
+
+        function loadAllPermissionTypes(permission) {
+            callAjax('AllPermissionTypes', AjaxType.Get, {}, null).then(function (response) {
+                var container = $('#Input_EnglishTitle');
+                container.empty();
+
+                if (response.length) {
+                    response.map(function (item) {
+                        if (container.length) {
+                            if (permission != undefined && permission == item.value) {
+                                container.append('<option value="' + item.value + '" selected>' + item.text + '</option>');
+                            }
+                            else {
+                                container.append('<option value="' + item.value + '">' + item.text + '</option>');
+                            }
+                        }
+                    });
+                }
+            });
+        }
+
+        function loadAllMenuTypes(menuType) {
+            callAjax('AllMenuTypes', AjaxType.Get, {}, null).then(function (response) {
+                var container = $('#Input_MenuType');
+                container.empty();
+
+                if (response.length) {
+                    response.map(function (item) {
+                        if (container.length) {
+                            if (menuType != undefined && menuType == item.value) {
+                                container.append('<option value="' + item.value + '" selected>' + item.text + '</option>');
+                            }
+                            else {
+                                container.append('<option value="' + item.value + '">' + item.text + '</option>');
+                            }
+                        }
+                    });
+                }
+            });
+        }
+
+        //On change-----------------------------------------------------
+
+        function changeMenuTypes(element) {
+            showForm($(element).val());
+        }
+
+        //Utils--------------------------------------------------------
+        function showForm(menuType) {
+            if (menuType == 1) {
+                loadAllDirectores();
+                $('#Input_EnglishTitle').text('System Parts');
+                $('#PersianTitle_object').show();
+                $('#IconName_object').hide();
+            }
+
+            if (menuType == 2) {
+                loadAllDirectores();
+                $('#Input_EnglishTitle').text('System Parts');
+                $('#PersianTitle_object').show();
+                $('#IconName_object').show();
+            }
+
+            if (menuType == 3) {
+                loadAllPermissionTypes();
+                $('#Input_EnglishTitle').text('License');
+                $('#PersianTitle_object').hide();
+                $('#IconName_object').hide();
+            }
+        }
+
+        function showIcon() {
+            var icon = $('#showIcon').html();
+            if (icon !== "") {
+                $('#showIcon').html(feather.icons[icon].toSvg());
+            }
+        }
+
+        function loadSystemPart(id) {
+            if (id == '0')
+                return;
+
+            callAjax('SystemPart', AjaxType.Get, { "id": id }, null, 'html').then(function (response) {
+                $('#SystemPart_info').html(response);
+                showIcon();
+            });
+        }
+
+        function createTree(response) {
+            $('#tree').html(response);
+            tree = $('#jstree-SystemPart');
+            if (tree.length) {
+                tree.jstree({
+                    core: {
+                        check_callback: true,
+                    },
+                    "conditionalselect": function (node, event) {
+                        loadSystemPart(node.id);
+                        $('#jstree-SystemPart').jstree("deselect_all");
+                        $('#jstree-SystemPart').jstree('select_node', node.id);
+                    },
+                    plugins: ['types', 'dnd', 'conditionalselect'],
+                    types: {
+                        default: {
+                            icon: 'oicon2-folder-1'
+                        },
+                        Group: {
+                            icon: 'oicon2-layers'
+                        },
+                        Menu: {
+                            icon: 'oicon2-th-list'
+                        },
+                        Access: {
+                            icon: 'oicon2-lock-filled'
+                        }
+                    }
+                });
+            }
+        }
+
+        //Methods------------------------------------------------------
+
+        function loadData() {
+            callAjax('SystemParts', AjaxType.Get, {}, null, 'html').then(function (response) {
+                createTree(response);
+            });
+        }
+
+        function loadCreateUpdateModal(actionType) {
+            var selected = $('#jstree-SystemPart').jstree(true).get_selected('full', true);
+
+            if (actionType == undefined)
+                return;
+
+            var data = new Object();
+
+            if (actionType == 1) // create
+            {
+                var parentId;
+
+                if (selected.length > 0) {
+                    if (selected[0].type == "Access") {
+                        Swal.fire({
+                            title: 'شما نمی توانید شاخه ای برای سطح دسترسی تعریف کنید.',
+                            customClass: {
+                                confirmButton: 'btn btn-primary'
+                            },
+                            buttonsStyling: false
+                        });
+
+                        return;
+                    }
+
+                    parentId = selected[0].id;
+                }
+
+                data = { id: null, parentId: parentId };
+            }
+
+            if (actionType == 2) // update
+            {
+                if (selected.length == 0) {
+                    toastr['error']("ابتدا شاخه ای را که می خواهید ویرایش کنید انتخاب کنید!", 'خطا', {
+                        closeButton: true,
+                        positionClass: 'toast-top-center',
+                        tapToDismiss: false,
+                        rtl: isRtl
+                    });
+
+                    return;
+                }
+
+                data = { id: selected[0].id, parentId: null }
+            }
+
+            callAjax('CreateUpdate', AjaxType.Get, data, null).then(function (response) {
+                $('#Input_Id').val(response.id);
+                $('#Input_ParentId').val(response.parentId);
+                $('#Input_ParentName').val(response.parentName);
+                $("#Input_AdditionalPermissions").prop('checked', response.additionalPermissions);
+
+                loadAllMenuTypes(response.menuType);
+                showForm(response.menuType);
+
+                $('#Input_PersianTitle').val(response.persianTitle);
+
+                if (response.menuType == 1 || response.menuType == 2) {
+                    loadAllDirectores(response.englishTitle);
+                }
+
+                if (response.menuType == 3) {
+                    loadAllPermissionTypes(response.englishTitle);
+                }
+
+                $('#Input_EnglishTitle').val(response.englishTitle);
+
+                loadAllIcons(response.iconName);
+                //$('#Input_sIconName').val(response.sIconName);
+
+                $('#create_update_SystemPart').modal('show');
+            });
+        }
+
+        function loadDeleteModal() {
+            var selected = $('#jstree-SystemPart').jstree(true).get_selected('full', true);
+
+            if (selected.length == 0) {
+                toastr['error']("ابتدا یک شاخه را برای ایجاد یک بخش جدید انتخاب کنید!", 'خطا', {
+                    closeButton: true,
+                    positionClass: 'toast-top-center',
+                    tapToDismiss: false,
+                    rtl: isRtl
+                });
+            }
+            else {
+                Swal.fire({
+                    title: '<strong>حذف</strong>',
+                    icon: 'erro',
+                    html: 'آیا حذف آیتم <b style="color:red;">' + selected[0].text + '</b> مطمئن هستید؟',
+                    showCloseButton: true,
+                    showCancelButton: true,
+                    focusConfirm: false,
+                    confirmButtonText: 'تایید',
+                    confirmButtonAriaLabel: '',
+                    cancelButtonText: 'انصراف',
+                    cancelButtonAriaLabel: '',
+                    customClass: {
+                        confirmButton: 'btn btn-primary',
+                        cancelButton: 'btn btn-outline-danger ms-1'
+                    },
+                    buttonsStyling: false
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        callAjax('DeleteSystemPart', AjaxType.Post, { id: selected[0].id }, null).then(function (response) {
+                            if (response.succeeded) {
+                                $('.new-SystemPart-container').modal('hide');
+
+                                loadData();
+
+                                showNotification('حذف', response.message, NotificationType.Success);
+                            }
+                            else {
+                                showNotification('حذف', response.errors, NotificationType.Error);
+                            }
+                        });
+                    }
+                    //else if (result.isDenied) {
+                    //    Swal.fire('Changes are not saved', '', 'info')
+                    //}
+                });
+            }
+        }
+
+        function save(element) {
+            $(element).addClass('disabled');
+
+            var id = $('#Input_Id').val();
+            var parentId = $("#Input_ParentId").val();
+            var menuType = $("#Input_MenuType").val();
+            var additionalPermissions = $("#Input_AdditionalPermissions").is(":checked");
+            var persianTitle = '';
+            var englishTitle = '';
+            var iconName = '';
+
+            if (menuType == 3) {
+                persianTitle = $("#Input_EnglishTitle option:selected").text().trim();
+                englishTitle = $("#Input_EnglishTitle").val().trim();
+            }
+            else {
+                persianTitle = $("#Input_PersianTitle").val().trim();
+                englishTitle = $("#Input_EnglishTitle").val().trim();
+
+                if (menuType == 2) {
+                    iconName = $("#Input_IconName").val().trim();
+                }
+            }
+
+            var data = {
+                Id: id,
+                ParentId: parentId,
+                persianTitle: persianTitle,
+                englishTitle: englishTitle,
+                menuType: menuType,
+                iconName: iconName,
+                additionalPermissions: additionalPermissions
+            };
+
+            callAjax('SaveSystemPart', AjaxType.Post, data, null).then(function (response) {
+                if (response.succeeded) {
+                    $('#create_update_SystemPart').modal('hide');
+
+                    loadData();
+
+                    showNotification('ایجاد', response.message, NotificationType.Success);
+                }
+                else {
+                    showNotification('ایجاد', response.errors, NotificationType.Error);
+                }
+            });
+
+            $(element).removeClass('disabled');
+        }
+
+        //-------------------------------------------------------------
+
+        $(function () {
+            loadData();
+        });
+    </script>
+}
+

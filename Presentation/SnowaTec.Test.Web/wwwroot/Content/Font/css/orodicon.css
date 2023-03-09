@@ -1,0 +1,6843 @@
+@font-face {
+  font-family: 'orodicon';
+  src:  url('/Content/Font/orodicon/orodicon.eot?ygtybb');
+  src:  url('/Content/Font/orodicon/orodicon.eot?ygtybb#iefix') format('embedded-opentype'),
+        url('/Content/Font/orodicon/orodicon.ttf?ygtybb') format('truetype'),
+        url('/Content/Font/orodicon/orodicon.woff?ygtybb') format('woff'),
+        url('/Content/Font/orodicon/orodicon.svg?ygtybb#orodicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+
+[class^="oicon-"], [class*=" oicon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'orodicon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.oicon-group:before {
+    content: "\e900";
+}
+
+.oicon-px:before {
+    content: "\e901";
+}
+
+.oicon-accessible-icon:before {
+    content: "\e902";
+}
+
+.oicon-accusoft:before {
+    content: "\e903";
+}
+
+.oicon-acquisitions-incorporated:before {
+    content: "\e904";
+}
+
+.oicon-adn:before {
+    content: "\e905";
+}
+
+.oicon-adversal:before {
+    content: "\e906";
+}
+
+.oicon-affiliatetheme:before {
+    content: "\e907";
+}
+
+.oicon-airbnb:before {
+    content: "\e908";
+}
+
+.oicon-algolia:before {
+    content: "\e909";
+}
+
+.oicon-alipay:before {
+    content: "\e90a";
+}
+
+.oicon-amazon:before {
+    content: "\e90b";
+}
+
+.oicon-amazon-pay:before {
+    content: "\e90c";
+}
+
+.oicon-amilia:before {
+    content: "\e90d";
+}
+
+.oicon-android:before {
+    content: "\e90e";
+}
+
+.oicon-angellist:before {
+    content: "\e90f";
+}
+
+.oicon-angrycreative:before {
+    content: "\e910";
+}
+
+.oicon-angular:before {
+    content: "\e911";
+}
+
+.oicon-apper:before {
+    content: "\e912";
+}
+
+.oicon-apple:before {
+    content: "\e913";
+}
+
+.oicon-apple-pay:before {
+    content: "\e914";
+}
+
+.oicon-app-store:before {
+    content: "\e915";
+}
+
+.oicon-app-store-ios:before {
+    content: "\e916";
+}
+
+.oicon-artstation:before {
+    content: "\e917";
+}
+
+.oicon-asymmetrik:before {
+    content: "\e918";
+}
+
+.oicon-atlassian:before {
+    content: "\e919";
+}
+
+.oicon-audible:before {
+    content: "\e91a";
+}
+
+.oicon-autoprefixer:before {
+    content: "\e91b";
+}
+
+.oicon-avianex:before {
+    content: "\e91c";
+}
+
+.oicon-aviato:before {
+    content: "\e91d";
+}
+
+.oicon-aws:before {
+    content: "\e91e";
+}
+
+.oicon-bandcamp:before {
+    content: "\e91f";
+}
+
+.oicon-battle-net:before {
+    content: "\e920";
+}
+
+.oicon-behance:before {
+    content: "\e921";
+}
+
+.oicon-behance-square:before {
+    content: "\e922";
+}
+
+.oicon-bilibili:before {
+    content: "\e923";
+}
+
+.oicon-bimobject:before {
+    content: "\e924";
+}
+
+.oicon-bitbucket:before {
+    content: "\e925";
+}
+
+.oicon-bitcoin:before {
+    content: "\e926";
+}
+
+.oicon-bity:before {
+    content: "\e927";
+}
+
+.oicon-blackberry:before {
+    content: "\e928";
+}
+
+.oicon-black-tie:before {
+    content: "\e929";
+}
+
+.oicon-blogger:before {
+    content: "\e92a";
+}
+
+.oicon-blogger-b:before {
+    content: "\e92b";
+}
+
+.oicon-bluetooth:before {
+    content: "\e92c";
+}
+
+.oicon-bluetooth-b:before {
+    content: "\e92d";
+}
+
+.oicon-bootstrap:before {
+    content: "\e92e";
+}
+
+.oicon-bots:before {
+    content: "\e92f";
+}
+
+.oicon-btc:before {
+    content: "\e930";
+}
+
+.oicon-buffer:before {
+    content: "\e931";
+}
+
+.oicon-buromobelexperte:before {
+    content: "\e932";
+}
+
+.oicon-buy-n-large:before {
+    content: "\e933";
+}
+
+.oicon-buysellads:before {
+    content: "\e934";
+}
+
+.oicon-canadian-maple-leaf:before {
+    content: "\e935";
+}
+
+.oicon-cc-amazon-pay:before {
+    content: "\e936";
+}
+
+.oicon-cc-amex:before {
+    content: "\e937";
+}
+
+.oicon-cc-apple-pay:before {
+    content: "\e938";
+}
+
+.oicon-cc-diners-club:before {
+    content: "\e939";
+}
+
+.oicon-cc-discover:before {
+    content: "\e93a";
+}
+
+.oicon-cc-jcb:before {
+    content: "\e93b";
+}
+
+.oicon-cc-mastercard:before {
+    content: "\e93c";
+}
+
+.oicon-cc-paypal:before {
+    content: "\e93d";
+}
+
+.oicon-cc-stripe:before {
+    content: "\e93e";
+}
+
+.oicon-cc-visa:before {
+    content: "\e93f";
+}
+
+.oicon-centercode:before {
+    content: "\e940";
+}
+
+.oicon-centos:before {
+    content: "\e941";
+}
+
+.oicon-chrome:before {
+    content: "\e942";
+}
+
+.oicon-chromecast:before {
+    content: "\e943";
+}
+
+.oicon-cloudflare:before {
+    content: "\e944";
+}
+
+.oicon-cloudscale:before {
+    content: "\e945";
+}
+
+.oicon-cloudsmith:before {
+    content: "\e946";
+}
+
+.oicon-cloudversify:before {
+    content: "\e947";
+}
+
+.oicon-cmplid:before {
+    content: "\e948";
+}
+
+.oicon-codepen:before {
+    content: "\e949";
+}
+
+.oicon-codiepie:before {
+    content: "\e94a";
+}
+
+.oicon-confluence:before {
+    content: "\e94b";
+}
+
+.oicon-connectdevelop:before {
+    content: "\e94c";
+}
+
+.oicon-contao:before {
+    content: "\e94d";
+}
+
+.oicon-cotton-bureau:before {
+    content: "\e94e";
+}
+
+.oicon-cpanel:before {
+    content: "\e94f";
+}
+
+.oicon-creative-commons:before {
+    content: "\e950";
+}
+
+.oicon-creative-commons-by:before {
+    content: "\e951";
+}
+
+.oicon-creative-commons-nc:before {
+    content: "\e952";
+}
+
+.oicon-creative-commons-nc-eu:before {
+    content: "\e953";
+}
+
+.oicon-creative-commons-nc-jp:before {
+    content: "\e954";
+}
+
+.oicon-creative-commons-nd:before {
+    content: "\e955";
+}
+
+.oicon-creative-commons-pd:before {
+    content: "\e956";
+}
+
+.oicon-creative-commons-pd-alt:before {
+    content: "\e957";
+}
+
+.oicon-creative-commons-remix:before {
+    content: "\e958";
+}
+
+.oicon-creative-commons-sa:before {
+    content: "\e959";
+}
+
+.oicon-creative-commons-sampling:before {
+    content: "\e95a";
+}
+
+.oicon-creative-commons-sampling-plus:before {
+    content: "\e95b";
+}
+
+.oicon-creative-commons-share:before {
+    content: "\e95c";
+}
+
+.oicon-creative-commons-zero:before {
+    content: "\e95d";
+}
+
+.oicon-critical-role:before {
+    content: "\e95e";
+}
+
+.oicon-css3:before {
+    content: "\e95f";
+}
+
+.oicon-css3-alt:before {
+    content: "\e960";
+}
+
+.oicon-cuttlefish:before {
+    content: "\e961";
+}
+
+.oicon-dailymotion:before {
+    content: "\e962";
+}
+
+.oicon-d-and-d:before {
+    content: "\e963";
+}
+
+.oicon-d-and-d-beyond:before {
+    content: "\e964";
+}
+
+.oicon-dashcube:before {
+    content: "\e965";
+}
+
+.oicon-deezer:before {
+    content: "\e966";
+}
+
+.oicon-delicious:before {
+    content: "\e967";
+}
+
+.oicon-deploydog:before {
+    content: "\e968";
+}
+
+.oicon-deskpro:before {
+    content: "\e969";
+}
+
+.oicon-dev:before {
+    content: "\e96a";
+}
+
+.oicon-deviantart:before {
+    content: "\e96b";
+}
+
+.oicon-dhl:before {
+    content: "\e96c";
+}
+
+.oicon-diaspora:before {
+    content: "\e96d";
+}
+
+.oicon-digg:before {
+    content: "\e96e";
+}
+
+.oicon-digital-ocean:before {
+    content: "\e96f";
+}
+
+.oicon-discord:before {
+    content: "\e970";
+}
+
+.oicon-discourse:before {
+    content: "\e971";
+}
+
+.oicon-dochub:before {
+    content: "\e972";
+}
+
+.oicon-docker:before {
+    content: "\e973";
+}
+
+.oicon-draft2digital:before {
+    content: "\e974";
+}
+
+.oicon-dribbble:before {
+    content: "\e975";
+}
+
+.oicon-dribbble-square:before {
+    content: "\e976";
+}
+
+.oicon-dropbox:before {
+    content: "\e977";
+}
+
+.oicon-drupal:before {
+    content: "\e978";
+}
+
+.oicon-dyalog:before {
+    content: "\e979";
+}
+
+.oicon-earlybirds:before {
+    content: "\e97a";
+}
+
+.oicon-ebay:before {
+    content: "\e97b";
+}
+
+.oicon-edge:before {
+    content: "\e97c";
+}
+
+.oicon-edge-legacy:before {
+    content: "\e97d";
+}
+
+.oicon-elementor:before {
+    content: "\e97e";
+}
+
+.oicon-ello:before {
+    content: "\e97f";
+}
+
+.oicon-ember:before {
+    content: "\e980";
+}
+
+.oicon-empire:before {
+    content: "\e981";
+}
+
+.oicon-envira:before {
+    content: "\e982";
+}
+
+.oicon-erlang:before {
+    content: "\e983";
+}
+
+.oicon-ethereum:before {
+    content: "\e984";
+}
+
+.oicon-etsy:before {
+    content: "\e985";
+}
+
+.oicon-evernote:before {
+    content: "\e986";
+}
+
+.oicon-expeditedssl:before {
+    content: "\e987";
+}
+
+.oicon-facebook:before {
+    content: "\e988";
+}
+
+.oicon-facebook-f:before {
+    content: "\e989";
+}
+
+.oicon-facebook-messenger:before {
+    content: "\e98a";
+}
+
+.oicon-facebook-square:before {
+    content: "\e98b";
+}
+
+.oicon-fantasy-flight-games:before {
+    content: "\e98c";
+}
+
+.oicon-fedex:before {
+    content: "\e98d";
+}
+
+.oicon-fedora:before {
+    content: "\e98e";
+}
+
+.oicon-figma:before {
+    content: "\e98f";
+}
+
+.oicon-firefox:before {
+    content: "\e990";
+}
+
+.oicon-firefox-browser:before {
+    content: "\e991";
+}
+
+.oicon-firstdraft:before {
+    content: "\e992";
+}
+
+.oicon-first-order:before {
+    content: "\e993";
+}
+
+.oicon-first-order-alt:before {
+    content: "\e994";
+}
+
+.oicon-flickr:before {
+    content: "\e995";
+}
+
+.oicon-flipboard:before {
+    content: "\e996";
+}
+
+.oicon-fly:before {
+    content: "\e997";
+}
+
+.oicon-font-awesome:before {
+    content: "\e998";
+}
+
+.oicon-fonticons:before {
+    content: "\e999";
+}
+
+.oicon-fonticons-fi:before {
+    content: "\e99a";
+}
+
+.oicon-fort-awesome:before {
+    content: "\e99b";
+}
+
+.oicon-fort-awesome-alt:before {
+    content: "\e99c";
+}
+
+.oicon-forumbee:before {
+    content: "\e99d";
+}
+
+.oicon-foursquare:before {
+    content: "\e99e";
+}
+
+.oicon-freebsd:before {
+    content: "\e99f";
+}
+
+.oicon-free-code-camp:before {
+    content: "\e9a0";
+}
+
+.oicon-fulcrum:before {
+    content: "\e9a1";
+}
+
+.oicon-galactic-republic:before {
+    content: "\e9a2";
+}
+
+.oicon-galactic-senate:before {
+    content: "\e9a3";
+}
+
+.oicon-get-pocket:before {
+    content: "\e9a4";
+}
+
+.oicon-gg:before {
+    content: "\e9a5";
+}
+
+.oicon-gg-circle:before {
+    content: "\e9a6";
+}
+
+.oicon-git:before {
+    content: "\e9a7";
+}
+
+.oicon-git-alt:before {
+    content: "\e9a8";
+}
+
+.oicon-github:before {
+    content: "\e9a9";
+}
+
+.oicon-github-alt:before {
+    content: "\e9aa";
+}
+
+.oicon-github-square:before {
+    content: "\e9ab";
+}
+
+.oicon-gitkraken:before {
+    content: "\e9ac";
+}
+
+.oicon-gitlab:before {
+    content: "\e9ad";
+}
+
+.oicon-git-square:before {
+    content: "\e9ae";
+}
+
+.oicon-gitter:before {
+    content: "\e9af";
+}
+
+.oicon-glide:before {
+    content: "\e9b0";
+}
+
+.oicon-glide-g:before {
+    content: "\e9b1";
+}
+
+.oicon-gofore:before {
+    content: "\e9b2";
+}
+
+.oicon-golang:before {
+    content: "\e9b3";
+}
+
+.oicon-goodreads:before {
+    content: "\e9b4";
+}
+
+.oicon-goodreads-g:before {
+    content: "\e9b5";
+}
+
+.oicon-google:before {
+    content: "\e9b6";
+}
+
+.oicon-google-drive:before {
+    content: "\e9b7";
+}
+
+.oicon-google-pay:before {
+    content: "\e9b8";
+}
+
+.oicon-google-play:before {
+    content: "\e9b9";
+}
+
+.oicon-google-plus:before {
+    content: "\e9ba";
+}
+
+.oicon-google-plus-g:before {
+    content: "\e9bb";
+}
+
+.oicon-google-plus-square:before {
+    content: "\e9bc";
+}
+
+.oicon-google-wallet:before {
+    content: "\e9bd";
+}
+
+.oicon-gratipay:before {
+    content: "\e9be";
+}
+
+.oicon-grav:before {
+    content: "\e9bf";
+}
+
+.oicon-gripfire:before {
+    content: "\e9c0";
+}
+
+.oicon-grunt:before {
+    content: "\e9c1";
+}
+
+.oicon-guilded:before {
+    content: "\e9c2";
+}
+
+.oicon-gulp:before {
+    content: "\e9c3";
+}
+
+.oicon-hacker-news:before {
+    content: "\e9c4";
+}
+
+.oicon-hacker-news-square:before {
+    content: "\e9c5";
+}
+
+.oicon-hackerrank:before {
+    content: "\e9c6";
+}
+
+.oicon-hips:before {
+    content: "\e9c7";
+}
+
+.oicon-hire-a-helper:before {
+    content: "\e9c8";
+}
+
+.oicon-hive:before {
+    content: "\e9c9";
+}
+
+.oicon-hooli:before {
+    content: "\e9ca";
+}
+
+.oicon-hornbill:before {
+    content: "\e9cb";
+}
+
+.oicon-hotjar:before {
+    content: "\e9cc";
+}
+
+.oicon-houzz:before {
+    content: "\e9cd";
+}
+
+.oicon-html5:before {
+    content: "\e9ce";
+}
+
+.oicon-hubspot:before {
+    content: "\e9cf";
+}
+
+.oicon-ideal:before {
+    content: "\e9d0";
+}
+
+.oicon-imdb:before {
+    content: "\e9d1";
+}
+
+.oicon-instagram:before {
+    content: "\e9d2";
+}
+
+.oicon-instagram-square:before {
+    content: "\e9d3";
+}
+
+.oicon-instalod:before {
+    content: "\e9d4";
+}
+
+.oicon-intercom:before {
+    content: "\e9d5";
+}
+
+.oicon-internet-explorer:before {
+    content: "\e9d6";
+}
+
+.oicon-invision:before {
+    content: "\e9d7";
+}
+
+.oicon-ioxhost:before {
+    content: "\e9d8";
+}
+
+.oicon-itch-io:before {
+    content: "\e9d9";
+}
+
+.oicon-itunes:before {
+    content: "\e9da";
+}
+
+.oicon-itunes-note:before {
+    content: "\e9db";
+}
+
+.oicon-java:before {
+    content: "\e9dc";
+}
+
+.oicon-jedi-order:before {
+    content: "\e9dd";
+}
+
+.oicon-jenkins:before {
+    content: "\e9de";
+}
+
+.oicon-jira:before {
+    content: "\e9df";
+}
+
+.oicon-joget:before {
+    content: "\e9e0";
+}
+
+.oicon-joomla:before {
+    content: "\e9e1";
+}
+
+.oicon-js:before {
+    content: "\e9e2";
+}
+
+.oicon-jsfiddle:before {
+    content: "\e9e3";
+}
+
+.oicon-js-square:before {
+    content: "\e9e4";
+}
+
+.oicon-kaggle:before {
+    content: "\e9e5";
+}
+
+.oicon-keybase:before {
+    content: "\e9e6";
+}
+
+.oicon-keycdn:before {
+    content: "\e9e7";
+}
+
+.oicon-kickstarter:before {
+    content: "\e9e8";
+}
+
+.oicon-kickstarter-k:before {
+    content: "\e9e9";
+}
+
+.oicon-korvue:before {
+    content: "\e9ea";
+}
+
+.oicon-laravel:before {
+    content: "\e9eb";
+}
+
+.oicon-lastfm:before {
+    content: "\e9ec";
+}
+
+.oicon-lastfm-square:before {
+    content: "\e9ed";
+}
+
+.oicon-leanpub:before {
+    content: "\e9ee";
+}
+
+.oicon-less:before {
+    content: "\e9ef";
+}
+
+.oicon-line:before {
+    content: "\e9f0";
+}
+
+.oicon-linkedin:before {
+    content: "\e9f1";
+}
+
+.oicon-linkedin-in:before {
+    content: "\e9f2";
+}
+
+.oicon-linode:before {
+    content: "\e9f3";
+}
+
+.oicon-linux:before {
+    content: "\e9f4";
+}
+
+.oicon-lyft:before {
+    content: "\e9f5";
+}
+
+.oicon-mgovermento:before {
+    content: "\e9f6";
+}
+
+.oicon-mailchimp:before {
+    content: "\e9f7";
+}
+
+.oicon-mandalorian:before {
+    content: "\e9f8";
+}
+
+.oicon-markdown:before {
+    content: "\e9f9";
+}
+
+.oicon-mastodon:before {
+    content: "\e9fa";
+}
+
+.oicon-maxcdn:before {
+    content: "\e9fb";
+}
+
+.oicon-mdb:before {
+    content: "\e9fc";
+}
+
+.oicon-medapps:before {
+    content: "\e9fd";
+}
+
+.oicon-medium:before {
+    content: "\e9fe";
+}
+
+.oicon-medrt:before {
+    content: "\e9ff";
+}
+
+.oicon-meetup:before {
+    content: "\ea00";
+}
+
+.oicon-megaport:before {
+    content: "\ea01";
+}
+
+.oicon-mendeley:before {
+    content: "\ea02";
+}
+
+.oicon-microblog:before {
+    content: "\ea03";
+}
+
+.oicon-microsoft:before {
+    content: "\ea04";
+}
+
+.oicon-mix:before {
+    content: "\ea05";
+}
+
+.oicon-mixcloud:before {
+    content: "\ea06";
+}
+
+.oicon-mixer:before {
+    content: "\ea07";
+}
+
+.oicon-mizuni:before {
+    content: "\ea08";
+}
+
+.oicon-modx:before {
+    content: "\ea09";
+}
+
+.oicon-monero:before {
+    content: "\ea0a";
+}
+
+.oicon-napster:before {
+    content: "\ea0b";
+}
+
+.oicon-neos:before {
+    content: "\ea0c";
+}
+
+.oicon-nimblr:before {
+    content: "\ea0d";
+}
+
+.oicon-node:before {
+    content: "\ea0e";
+}
+
+.oicon-node-js:before {
+    content: "\ea0f";
+}
+
+.oicon-npm:before {
+    content: "\ea10";
+}
+
+.oicon-ns8:before {
+    content: "\ea11";
+}
+
+.oicon-nutritionix:before {
+    content: "\ea12";
+}
+
+.oicon-octopus-deploy:before {
+    content: "\ea13";
+}
+
+.oicon-odnoklassniki:before {
+    content: "\ea14";
+}
+
+.oicon-odnoklassniki-square:before {
+    content: "\ea15";
+}
+
+.oicon-old-republic:before {
+    content: "\ea16";
+}
+
+.oicon-opencart:before {
+    content: "\ea17";
+}
+
+.oicon-openid:before {
+    content: "\ea18";
+}
+
+.oicon-opera:before {
+    content: "\ea19";
+}
+
+.oicon-optin-monster:before {
+    content: "\ea1a";
+}
+
+.oicon-orcid:before {
+    content: "\ea1b";
+}
+
+.oicon-osi:before {
+    content: "\ea1c";
+}
+
+.oicon-page4:before {
+    content: "\ea1d";
+}
+
+.oicon-pagelines:before {
+    content: "\ea1e";
+}
+
+.oicon-palfed:before {
+    content: "\ea1f";
+}
+
+.oicon-patreon:before {
+    content: "\ea20";
+}
+
+.oicon-paypal:before {
+    content: "\ea21";
+}
+
+.oicon-penny-arcade:before {
+    content: "\ea22";
+}
+
+.oicon-perbyte:before {
+    content: "\ea23";
+}
+
+.oicon-periscope:before {
+    content: "\ea24";
+}
+
+.oicon-phabricator:before {
+    content: "\ea25";
+}
+
+.oicon-phoenix-framework:before {
+    content: "\ea26";
+}
+
+.oicon-phoenix-squadron:before {
+    content: "\ea27";
+}
+
+.oicon-php:before {
+    content: "\ea28";
+}
+
+.oicon-pied-piper:before {
+    content: "\ea29";
+}
+
+.oicon-pied-piper-alt:before {
+    content: "\ea2a";
+}
+
+.oicon-pied-piper-hat:before {
+    content: "\ea2b";
+}
+
+.oicon-pied-piper-pp:before {
+    content: "\ea2c";
+}
+
+.oicon-pied-piper-square:before {
+    content: "\ea2d";
+}
+
+.oicon-pinterest:before {
+    content: "\ea2e";
+}
+
+.oicon-pinterest-p:before {
+    content: "\ea2f";
+}
+
+.oicon-pinterest-square:before {
+    content: "\ea30";
+}
+
+.oicon-pix:before {
+    content: "\ea31";
+}
+
+.oicon-playstation:before {
+    content: "\ea32";
+}
+
+.oicon-product-hunt:before {
+    content: "\ea33";
+}
+
+.oicon-pushed:before {
+    content: "\ea34";
+}
+
+.oicon-python:before {
+    content: "\ea35";
+}
+
+.oicon-qq:before {
+    content: "\ea36";
+}
+
+.oicon-quinscape:before {
+    content: "\ea37";
+}
+
+.oicon-quora:before {
+    content: "\ea38";
+}
+
+.oicon-raspberry-pi:before {
+    content: "\ea39";
+}
+
+.oicon-ravelry:before {
+    content: "\ea3a";
+}
+
+.oicon-react:before {
+    content: "\ea3b";
+}
+
+.oicon-reacteurope:before {
+    content: "\ea3c";
+}
+
+.oicon-readme:before {
+    content: "\ea3d";
+}
+
+.oicon-rebel:before {
+    content: "\ea3e";
+}
+
+.oicon-reddit:before {
+    content: "\ea3f";
+}
+
+.oicon-reddit-alien:before {
+    content: "\ea40";
+}
+
+.oicon-reddit-square:before {
+    content: "\ea41";
+}
+
+.oicon-redhat:before {
+    content: "\ea42";
+}
+
+.oicon-red-river:before {
+    content: "\ea43";
+}
+
+.oicon-renren:before {
+    content: "\ea44";
+}
+
+.oicon-replyd:before {
+    content: "\ea45";
+}
+
+.oicon-researchgate:before {
+    content: "\ea46";
+}
+
+.oicon-resolving:before {
+    content: "\ea47";
+}
+
+.oicon-rev:before {
+    content: "\ea48";
+}
+
+.oicon-rocketchat:before {
+    content: "\ea49";
+}
+
+.oicon-rockrms:before {
+    content: "\ea4a";
+}
+
+.oicon-r-project:before {
+    content: "\ea4b";
+}
+
+.oicon-rust:before {
+    content: "\ea4c";
+}
+
+.oicon-safari:before {
+    content: "\ea4d";
+}
+
+.oicon-salesforce:before {
+    content: "\ea4e";
+}
+
+.oicon-sass:before {
+    content: "\ea4f";
+}
+
+.oicon-schlix:before {
+    content: "\ea50";
+}
+
+.oicon-scribd:before {
+    content: "\ea51";
+}
+
+.oicon-searchengin:before {
+    content: "\ea52";
+}
+
+.oicon-sellcast:before {
+    content: "\ea53";
+}
+
+.oicon-sellsy:before {
+    content: "\ea54";
+}
+
+.oicon-servicestack:before {
+    content: "\ea55";
+}
+
+.oicon-shirtsinbulk:before {
+    content: "\ea56";
+}
+
+.oicon-shopify:before {
+    content: "\ea57";
+}
+
+.oicon-shopware:before {
+    content: "\ea58";
+}
+
+.oicon-simplybuilt:before {
+    content: "\ea59";
+}
+
+.oicon-sistrix:before {
+    content: "\ea5a";
+}
+
+.oicon-sith:before {
+    content: "\ea5b";
+}
+
+.oicon-sitrox:before {
+    content: "\ea5c";
+}
+
+.oicon-sketch:before {
+    content: "\ea5d";
+}
+
+.oicon-skyatlas:before {
+    content: "\ea5e";
+}
+
+.oicon-skype:before {
+    content: "\ea5f";
+}
+
+.oicon-slack:before {
+    content: "\ea60";
+}
+
+.oicon-slideshare:before {
+    content: "\ea61";
+}
+
+.oicon-snapchat:before {
+    content: "\ea62";
+}
+
+.oicon-snapchat-square:before {
+    content: "\ea63";
+}
+
+.oicon-soundcloud:before {
+    content: "\ea64";
+}
+
+.oicon-sourcetree:before {
+    content: "\ea65";
+}
+
+.oicon-speakap:before {
+    content: "\ea66";
+}
+
+.oicon-speaker-deck:before {
+    content: "\ea67";
+}
+
+.oicon-spotify:before {
+    content: "\ea68";
+}
+
+.oicon-square-font-awesome:before {
+    content: "\ea69";
+}
+
+.oicon-square-font-awesome-stroke:before {
+    content: "\ea6a";
+}
+
+.oicon-squarespace:before {
+    content: "\ea6b";
+}
+
+.oicon-stack-exchange:before {
+    content: "\ea6c";
+}
+
+.oicon-stack-overflow:before {
+    content: "\ea6d";
+}
+
+.oicon-stackpath:before {
+    content: "\ea6e";
+}
+
+.oicon-staylinked:before {
+    content: "\ea6f";
+}
+
+.oicon-steam:before {
+    content: "\ea70";
+}
+
+.oicon-steam-square:before {
+    content: "\ea71";
+}
+
+.oicon-steam-symbol:before {
+    content: "\ea72";
+}
+
+.oicon-sticker-mule:before {
+    content: "\ea73";
+}
+
+.oicon-strava:before {
+    content: "\ea74";
+}
+
+.oicon-stripe:before {
+    content: "\ea75";
+}
+
+.oicon-stripe-s:before {
+    content: "\ea76";
+}
+
+.oicon-studiovinari:before {
+    content: "\ea77";
+}
+
+.oicon-stumbleupon:before {
+    content: "\ea78";
+}
+
+.oicon-stumbleupon-circle:before {
+    content: "\ea79";
+}
+
+.oicon-superpowers:before {
+    content: "\ea7a";
+}
+
+.oicon-supple:before {
+    content: "\ea7b";
+}
+
+.oicon-suse:before {
+    content: "\ea7c";
+}
+
+.oicon-swift:before {
+    content: "\ea7d";
+}
+
+.oicon-symfony:before {
+    content: "\ea7e";
+}
+
+.oicon-teamspeak:before {
+    content: "\ea7f";
+}
+
+.oicon-telegram:before {
+    content: "\ea80";
+}
+
+.oicon-tencent-weibo:before {
+    content: "\ea81";
+}
+
+.oicon-themeco:before {
+    content: "\ea82";
+}
+
+.oicon-themeisle:before {
+    content: "\ea83";
+}
+
+.oicon-the-red-yeti:before {
+    content: "\ea84";
+}
+
+.oicon-think-peaks:before {
+    content: "\ea85";
+}
+
+.oicon-tiktok:before {
+    content: "\ea86";
+}
+
+.oicon-Portal-federation:before {
+    content: "\ea87";
+}
+
+.oicon-trello:before {
+    content: "\ea88";
+}
+
+.oicon-tumblr:before {
+    content: "\ea89";
+}
+
+.oicon-tumblr-square:before {
+    content: "\ea8a";
+}
+
+.oicon-twitch:before {
+    content: "\ea8b";
+}
+
+.oicon-twitter:before {
+    content: "\ea8c";
+}
+
+.oicon-twitter-square:before {
+    content: "\ea8d";
+}
+
+.oicon-typo3:before {
+    content: "\ea8e";
+}
+
+.oicon-uber:before {
+    content: "\ea8f";
+}
+
+.oicon-ubuntu:before {
+    content: "\ea90";
+}
+
+.oicon-uikit:before {
+    content: "\ea91";
+}
+
+.oicon-umbraco:before {
+    content: "\ea92";
+}
+
+.oicon-uncharted:before {
+    content: "\ea93";
+}
+
+.oicon-uniregistry:before {
+    content: "\ea94";
+}
+
+.oicon-unity:before {
+    content: "\ea95";
+}
+
+.oicon-unsplash:before {
+    content: "\ea96";
+}
+
+.oicon-untappd:before {
+    content: "\ea97";
+}
+
+.oicon-ups:before {
+    content: "\ea98";
+}
+
+.oicon-usb:before {
+    content: "\ea99";
+}
+
+.oicon-usps:before {
+    content: "\ea9a";
+}
+
+.oicon-ussunnah:before {
+    content: "\ea9b";
+}
+
+.oicon-vaadin:before {
+    content: "\ea9c";
+}
+
+.oicon-viacoin:before {
+    content: "\ea9d";
+}
+
+.oicon-viadeo:before {
+    content: "\ea9e";
+}
+
+.oicon-viadeo-square:before {
+    content: "\ea9f";
+}
+
+.oicon-viber:before {
+    content: "\eaa0";
+}
+
+.oicon-vimeo:before {
+    content: "\eaa1";
+}
+
+.oicon-vimeo-square:before {
+    content: "\eaa2";
+}
+
+.oicon-vimeo-v:before {
+    content: "\eaa3";
+}
+
+.oicon-vine:before {
+    content: "\eaa4";
+}
+
+.oicon-vk:before {
+    content: "\eaa5";
+}
+
+.oicon-vnv:before {
+    content: "\eaa6";
+}
+
+.oicon-vuejs:before {
+    content: "\eaa7";
+}
+
+.oicon-watchman-monitoring:before {
+    content: "\eaa8";
+}
+
+.oicon-waze:before {
+    content: "\eaa9";
+}
+
+.oicon-weebly:before {
+    content: "\eaaa";
+}
+
+.oicon-weibo:before {
+    content: "\eaab";
+}
+
+.oicon-weixin:before {
+    content: "\eaac";
+}
+
+.oicon-whatsapp:before {
+    content: "\eaad";
+}
+
+.oicon-whatsapp-square:before {
+    content: "\eaae";
+}
+
+.oicon-whmcs:before {
+    content: "\eaaf";
+}
+
+.oicon-wikipedia-w:before {
+    content: "\eab0";
+}
+
+.oicon-windows:before {
+    content: "\eab1";
+}
+
+.oicon-wirsindhandwerk:before {
+    content: "\eab2";
+}
+
+.oicon-wix:before {
+    content: "\eab3";
+}
+
+.oicon-wizards-of-the-coast:before {
+    content: "\eab4";
+}
+
+.oicon-wodu:before {
+    content: "\eab5";
+}
+
+.oicon-wolf-pack-battalion:before {
+    content: "\eab6";
+}
+
+.oicon-wordpress:before {
+    content: "\eab7";
+}
+
+.oicon-wordpress-simple:before {
+    content: "\eab8";
+}
+
+.oicon-wpbeginner:before {
+    content: "\eab9";
+}
+
+.oicon-wpexplorer:before {
+    content: "\eaba";
+}
+
+.oicon-wpforms:before {
+    content: "\eabb";
+}
+
+.oicon-wpressr:before {
+    content: "\eabc";
+}
+
+.oicon-xbox:before {
+    content: "\eabd";
+}
+
+.oicon-xing:before {
+    content: "\eabe";
+}
+
+.oicon-xing-square:before {
+    content: "\eabf";
+}
+
+.oicon-yahoo:before {
+    content: "\eac0";
+}
+
+.oicon-yammer:before {
+    content: "\eac1";
+}
+
+.oicon-yandex:before {
+    content: "\eac2";
+}
+
+.oicon-yandex-international:before {
+    content: "\eac3";
+}
+
+.oicon-yarn:before {
+    content: "\eac4";
+}
+
+.oicon-y-combinator:before {
+    content: "\eac5";
+}
+
+.oicon-yelp:before {
+    content: "\eac6";
+}
+
+.oicon-yoast:before {
+    content: "\eac7";
+}
+
+.oicon-youtube:before {
+    content: "\eac8";
+}
+
+.oicon-youtube-square:before {
+    content: "\eac9";
+}
+
+.oicon-zhihu:before {
+    content: "\eaca";
+}
+
+.oicon-address-book:before {
+    content: "\eacb";
+}
+
+.oicon-address-card:before {
+    content: "\eacc";
+}
+
+.oicon-bell:before {
+    content: "\eacd";
+}
+
+.oicon-bell-slash:before {
+    content: "\eace";
+}
+
+.oicon-bookmark:before {
+    content: "\eacf";
+}
+
+.oicon-building:before {
+    content: "\ead0";
+}
+
+.oicon-calendar:before {
+    content: "\ead1";
+}
+
+.oicon-calendar-check:before {
+    content: "\ead2";
+}
+
+.oicon-calendar-days:before {
+    content: "\ead3";
+}
+
+.oicon-calendar-minus:before {
+    content: "\ead4";
+}
+
+.oicon-calendar-plus:before {
+    content: "\ead5";
+}
+
+.oicon-calendar-xmark:before {
+    content: "\ead6";
+}
+
+.oicon-chart-bar:before {
+    content: "\ead7";
+}
+
+.oicon-chess-bishop:before {
+    content: "\ead8";
+}
+
+.oicon-chess-king:before {
+    content: "\ead9";
+}
+
+.oicon-chess-knight:before {
+    content: "\eada";
+}
+
+.oicon-chess-pawn:before {
+    content: "\eadb";
+}
+
+.oicon-chess-queen:before {
+    content: "\eadc";
+}
+
+.oicon-chess-rook:before {
+    content: "\eadd";
+}
+
+.oicon-circle:before {
+    content: "\eade";
+}
+
+.oicon-circle-check:before {
+    content: "\eadf";
+}
+
+.oicon-circle-dot:before {
+    content: "\eae0";
+}
+
+.oicon-circle-down:before {
+    content: "\eae1";
+}
+
+.oicon-circle-left:before {
+    content: "\eae2";
+}
+
+.oicon-circle-pause:before {
+    content: "\eae3";
+}
+
+.oicon-circle-play:before {
+    content: "\eae4";
+}
+
+.oicon-circle-question:before {
+    content: "\eae5";
+}
+
+.oicon-circle-right:before {
+    content: "\eae6";
+}
+
+.oicon-circle-stop:before {
+    content: "\eae7";
+}
+
+.oicon-circle-up:before {
+    content: "\eae8";
+}
+
+.oicon-circle-user:before {
+    content: "\eae9";
+}
+
+.oicon-circle-xmark:before {
+    content: "\eaea";
+}
+
+.oicon-clipboard:before {
+    content: "\eaeb";
+}
+
+.oicon-clock:before {
+    content: "\eaec";
+}
+
+.oicon-clone:before {
+    content: "\eaed";
+}
+
+.oicon-closed-captioning:before {
+    content: "\eaee";
+}
+
+.oicon-comment:before {
+    content: "\eaef";
+}
+
+.oicon-comment-dots:before {
+    content: "\eaf0";
+}
+
+.oicon-comments:before {
+    content: "\eaf1";
+}
+
+.oicon-compass:before {
+    content: "\eaf2";
+}
+
+.oicon-copy:before {
+    content: "\eaf3";
+}
+
+.oicon-copyright:before {
+    content: "\eaf4";
+}
+
+.oicon-credit-card:before {
+    content: "\eaf5";
+}
+
+.oicon-envelope:before {
+    content: "\eaf6";
+}
+
+.oicon-envelope-open:before {
+    content: "\eaf7";
+}
+
+.oicon-eye:before {
+    content: "\eaf8";
+}
+
+.oicon-eye-slash:before {
+    content: "\eaf9";
+}
+
+.oicon-face-angry:before {
+    content: "\eafa";
+}
+
+.oicon-face-dizzy:before {
+    content: "\eafb";
+}
+
+.oicon-face-flushed:before {
+    content: "\eafc";
+}
+
+.oicon-face-frown:before {
+    content: "\eafd";
+}
+
+.oicon-face-frown-open:before {
+    content: "\eafe";
+}
+
+.oicon-face-grimace:before {
+    content: "\eaff";
+}
+
+.oicon-face-grin:before {
+    content: "\eb00";
+}
+
+.oicon-face-grin-beam:before {
+    content: "\eb01";
+}
+
+.oicon-face-grin-beam-sweat:before {
+    content: "\eb02";
+}
+
+.oicon-face-grin-hearts:before {
+    content: "\eb03";
+}
+
+.oicon-face-grin-squint:before {
+    content: "\eb04";
+}
+
+.oicon-face-grin-squint-tears:before {
+    content: "\eb05";
+}
+
+.oicon-face-grin-stars:before {
+    content: "\eb06";
+}
+
+.oicon-face-grin-tears:before {
+    content: "\eb07";
+}
+
+.oicon-face-grin-tongue:before {
+    content: "\eb08";
+}
+
+.oicon-face-grin-tongue-squint:before {
+    content: "\eb09";
+}
+
+.oicon-face-grin-tongue-wink:before {
+    content: "\eb0a";
+}
+
+.oicon-face-grin-wide:before {
+    content: "\eb0b";
+}
+
+.oicon-face-grin-wink:before {
+    content: "\eb0c";
+}
+
+.oicon-face-kiss:before {
+    content: "\eb0d";
+}
+
+.oicon-face-kiss-beam:before {
+    content: "\eb0e";
+}
+
+.oicon-face-kiss-wink-heart:before {
+    content: "\eb0f";
+}
+
+.oicon-face-laugh:before {
+    content: "\eb10";
+}
+
+.oicon-face-laugh-beam:before {
+    content: "\eb11";
+}
+
+.oicon-face-laugh-squint:before {
+    content: "\eb12";
+}
+
+.oicon-face-laugh-wink:before {
+    content: "\eb13";
+}
+
+.oicon-face-meh:before {
+    content: "\eb14";
+}
+
+.oicon-face-meh-blank:before {
+    content: "\eb15";
+}
+
+.oicon-face-rolling-eyes:before {
+    content: "\eb16";
+}
+
+.oicon-face-sad-cry:before {
+    content: "\eb17";
+}
+
+.oicon-face-sad-tear:before {
+    content: "\eb18";
+}
+
+.oicon-face-smile:before {
+    content: "\eb19";
+}
+
+.oicon-face-smile-beam:before {
+    content: "\eb1a";
+}
+
+.oicon-face-smile-wink:before {
+    content: "\eb1b";
+}
+
+.oicon-face-surprise:before {
+    content: "\eb1c";
+}
+
+.oicon-face-tired:before {
+    content: "\eb1d";
+}
+
+.oicon-file:before {
+    content: "\eb1e";
+}
+
+.oicon-file-audio:before {
+    content: "\eb1f";
+}
+
+.oicon-file-code:before {
+    content: "\eb20";
+}
+
+.oicon-file-excel:before {
+    content: "\eb21";
+}
+
+.oicon-file-image:before {
+    content: "\eb22";
+}
+
+.oicon-file-lines:before {
+    content: "\eb23";
+}
+
+.oicon-file-pdf:before {
+    content: "\eb24";
+}
+
+.oicon-file-powerpoint:before {
+    content: "\eb25";
+}
+
+.oicon-file-video:before {
+    content: "\eb26";
+}
+
+.oicon-file-word:before {
+    content: "\eb27";
+}
+
+.oicon-file-zipper:before {
+    content: "\eb28";
+}
+
+.oicon-flag:before {
+    content: "\eb29";
+}
+
+.oicon-floppy-disk:before {
+    content: "\eb2a";
+}
+
+.oicon-folder:before {
+    content: "\eb2b";
+}
+
+.oicon-folder-open:before {
+    content: "\eb2c";
+}
+
+.oicon-font-awesome1:before {
+    content: "\eb2d";
+}
+
+.oicon-futbol:before {
+    content: "\eb2e";
+}
+
+.oicon-gem:before {
+    content: "\eb2f";
+}
+
+.oicon-hand:before {
+    content: "\eb30";
+}
+
+.oicon-hand-back-fist:before {
+    content: "\eb31";
+}
+
+.oicon-hand-lizard:before {
+    content: "\eb32";
+}
+
+.oicon-hand-peace:before {
+    content: "\eb33";
+}
+
+.oicon-hand-point-down:before {
+    content: "\eb34";
+}
+
+.oicon-hand-pointer:before {
+    content: "\eb35";
+}
+
+.oicon-hand-point-left:before {
+    content: "\eb36";
+}
+
+.oicon-hand-point-right:before {
+    content: "\eb37";
+}
+
+.oicon-hand-point-up:before {
+    content: "\eb38";
+}
+
+.oicon-hand-scissors:before {
+    content: "\eb39";
+}
+
+.oicon-handshake:before {
+    content: "\eb3a";
+}
+
+.oicon-hand-spock:before {
+    content: "\eb3b";
+}
+
+.oicon-hard-drive:before {
+    content: "\eb3c";
+}
+
+.oicon-heart:before {
+    content: "\eb3d";
+}
+
+.oicon-hospital:before {
+    content: "\eb3e";
+}
+
+.oicon-hourglass:before {
+    content: "\eb3f";
+}
+
+.oicon-id-badge:before {
+    content: "\eb40";
+}
+
+.oicon-id-card:before {
+    content: "\eb41";
+}
+
+.oicon-image:before {
+    content: "\eb42";
+}
+
+.oicon-images:before {
+    content: "\eb43";
+}
+
+.oicon-keyboard:before {
+    content: "\eb44";
+}
+
+.oicon-lemon:before {
+    content: "\eb45";
+}
+
+.oicon-life-ring:before {
+    content: "\eb46";
+}
+
+.oicon-lightbulb:before {
+    content: "\eb47";
+}
+
+.oicon-map:before {
+    content: "\eb48";
+}
+
+.oicon-message:before {
+    content: "\eb49";
+}
+
+.oicon-money-bill-1:before {
+    content: "\eb4a";
+}
+
+.oicon-moon:before {
+    content: "\eb4b";
+}
+
+.oicon-newspaper:before {
+    content: "\eb4c";
+}
+
+.oicon-note-sticky:before {
+    content: "\eb4d";
+}
+
+.oicon-object-group:before {
+    content: "\eb4e";
+}
+
+.oicon-object-ungroup:before {
+    content: "\eb4f";
+}
+
+.oicon-paper-plane:before {
+    content: "\eb50";
+}
+
+.oicon-pen-to-square:before {
+    content: "\eb51";
+}
+
+.oicon-rectangle-list:before {
+    content: "\eb52";
+}
+
+.oicon-rectangle-xmark:before {
+    content: "\eb53";
+}
+
+.oicon-registered:before {
+    content: "\eb54";
+}
+
+.oicon-share-from-square:before {
+    content: "\eb55";
+}
+
+.oicon-snowflake:before {
+    content: "\eb56";
+}
+
+.oicon-square:before {
+    content: "\eb57";
+}
+
+.oicon-square-caret-down:before {
+    content: "\eb58";
+}
+
+.oicon-square-caret-left:before {
+    content: "\eb59";
+}
+
+.oicon-square-caret-right:before {
+    content: "\eb5a";
+}
+
+.oicon-square-caret-up:before {
+    content: "\eb5b";
+}
+
+.oicon-square-check:before {
+    content: "\eb5c";
+}
+
+.oicon-square-full:before {
+    content: "\eb5d";
+}
+
+.oicon-square-minus:before {
+    content: "\eb5e";
+}
+
+.oicon-square-plus:before {
+    content: "\eb5f";
+}
+
+.oicon-star:before {
+    content: "\eb60";
+}
+
+.oicon-star-half:before {
+    content: "\eb61";
+}
+
+.oicon-sun:before {
+    content: "\eb62";
+}
+
+.oicon-thumbs-down:before {
+    content: "\eb63";
+}
+
+.oicon-thumbs-up:before {
+    content: "\eb64";
+}
+
+.oicon-trash-can:before {
+    content: "\eb65";
+}
+
+.oicon-user:before {
+    content: "\eb66";
+}
+
+.oicon-window-maximize:before {
+    content: "\eb67";
+}
+
+.oicon-window-minimize:before {
+    content: "\eb68";
+}
+
+.oicon-window-restore:before {
+    content: "\eb69";
+}
+
+.oicon-0:before {
+    content: "\eb6a";
+}
+
+.oicon-1:before {
+    content: "\eb6b";
+}
+
+.oicon-2:before {
+    content: "\eb6c";
+}
+
+.oicon-3:before {
+    content: "\eb6d";
+}
+
+.oicon-4:before {
+    content: "\eb6e";
+}
+
+.oicon-5:before {
+    content: "\eb6f";
+}
+
+.oicon-6:before {
+    content: "\eb70";
+}
+
+.oicon-7:before {
+    content: "\eb71";
+}
+
+.oicon-8:before {
+    content: "\eb72";
+}
+
+.oicon-9:before {
+    content: "\eb73";
+}
+
+.oicon-a:before {
+    content: "\eb74";
+}
+
+.oicon-address-book1:before {
+    content: "\eb75";
+}
+
+.oicon-address-card1:before {
+    content: "\eb76";
+}
+
+.oicon-align-center:before {
+    content: "\eb77";
+}
+
+.oicon-align-justify:before {
+    content: "\eb78";
+}
+
+.oicon-align-left:before {
+    content: "\eb79";
+}
+
+.oicon-align-right:before {
+    content: "\eb7a";
+}
+
+.oicon-anchor:before {
+    content: "\eb7b";
+}
+
+.oicon-angle-down:before {
+    content: "\eb7c";
+}
+
+.oicon-angle-left:before {
+    content: "\eb7d";
+}
+
+.oicon-angle-right:before {
+    content: "\eb7e";
+}
+
+.oicon-angles-down:before {
+    content: "\eb7f";
+}
+
+.oicon-angles-left:before {
+    content: "\eb80";
+}
+
+.oicon-angles-right:before {
+    content: "\eb81";
+}
+
+.oicon-angles-up:before {
+    content: "\eb82";
+}
+
+.oicon-angle-up:before {
+    content: "\eb83";
+}
+
+.oicon-ankh:before {
+    content: "\eb84";
+}
+
+.oicon-apple-whole:before {
+    content: "\eb85";
+}
+
+.oicon-archway:before {
+    content: "\eb86";
+}
+
+.oicon-arrow-down:before {
+    content: "\eb87";
+}
+
+.oicon-arrow-down-1-9:before {
+    content: "\eb88";
+}
+
+.oicon-arrow-down-9-1:before {
+    content: "\eb89";
+}
+
+.oicon-arrow-down-a-z:before {
+    content: "\eb8a";
+}
+
+.oicon-arrow-down-short-wide:before {
+    content: "\eb8b";
+}
+
+.oicon-arrow-down-wide-short:before {
+    content: "\eb8c";
+}
+
+.oicon-arrow-down-z-a:before {
+    content: "\eb8d";
+}
+
+.oicon-arrow-left:before {
+    content: "\eb8e";
+}
+
+.oicon-arrow-pointer:before {
+    content: "\eb8f";
+}
+
+.oicon-arrow-right:before {
+    content: "\eb90";
+}
+
+.oicon-arrow-rotate-left:before {
+    content: "\eb91";
+}
+
+.oicon-arrow-rotate-right:before {
+    content: "\eb92";
+}
+
+.oicon-arrows-rotate:before {
+    content: "\eb93";
+}
+
+.oicon-arrow-trend-down:before {
+    content: "\eb94";
+}
+
+.oicon-arrow-trend-up:before {
+    content: "\eb95";
+}
+
+.oicon-arrow-up:before {
+    content: "\eb96";
+}
+
+.oicon-arrow-up-1-9:before {
+    content: "\eb97";
+}
+
+.oicon-arrow-up-9-1:before {
+    content: "\eb98";
+}
+
+.oicon-arrow-up-a-z:before {
+    content: "\eb99";
+}
+
+.oicon-arrow-up-from-bracket:before {
+    content: "\eb9a";
+}
+
+.oicon-arrow-up-short-wide:before {
+    content: "\eb9b";
+}
+
+.oicon-arrow-up-wide-short:before {
+    content: "\eb9c";
+}
+
+.oicon-arrow-up-z-a:before {
+    content: "\eb9d";
+}
+
+.oicon-asterisk:before {
+    content: "\eb9e";
+}
+
+.oicon-at:before {
+    content: "\eb9f";
+}
+
+.oicon-atom:before {
+    content: "\eba0";
+}
+
+.oicon-audio-description:before {
+    content: "\eba1";
+}
+
+.oicon-austral-sign:before {
+    content: "\eba2";
+}
+
+.oicon-award:before {
+    content: "\eba3";
+}
+
+.oicon-b:before {
+    content: "\eba4";
+}
+
+.oicon-baby:before {
+    content: "\eba5";
+}
+
+.oicon-baby-carriage:before {
+    content: "\eba6";
+}
+
+.oicon-backward:before {
+    content: "\eba7";
+}
+
+.oicon-backward-fast:before {
+    content: "\eba8";
+}
+
+.oicon-backward-step:before {
+    content: "\eba9";
+}
+
+.oicon-bacon:before {
+    content: "\ebaa";
+}
+
+.oicon-bacteria:before {
+    content: "\ebab";
+}
+
+.oicon-bacterium:before {
+    content: "\ebac";
+}
+
+.oicon-bag-shopping:before {
+    content: "\ebad";
+}
+
+.oicon-bahai:before {
+    content: "\ebae";
+}
+
+.oicon-baht-sign:before {
+    content: "\ebaf";
+}
+
+.oicon-ban:before {
+    content: "\ebb0";
+}
+
+.oicon-bandage:before {
+    content: "\ebb1";
+}
+
+.oicon-bank:before {
+    content: "\ebb2";
+}
+
+.oicon-ban-smoking:before {
+    content: "\ebb3";
+}
+
+.oicon-barcode:before {
+    content: "\ebb4";
+}
+
+.oicon-bars:before {
+    content: "\ebb5";
+}
+
+.oicon-bars-staggered:before {
+    content: "\ebb6";
+}
+
+.oicon-baseball:before {
+    content: "\ebb7";
+}
+
+.oicon-basketball:before {
+    content: "\ebb8";
+}
+
+.oicon-basket-shopping:before {
+    content: "\ebb9";
+}
+
+.oicon-bath:before {
+    content: "\ebba";
+}
+
+.oicon-battery-empty:before {
+    content: "\ebbb";
+}
+
+.oicon-battery-full:before {
+    content: "\ebbc";
+}
+
+.oicon-battery-half:before {
+    content: "\ebbd";
+}
+
+.oicon-battery-quarter:before {
+    content: "\ebbe";
+}
+
+.oicon-battery-three-quarters:before {
+    content: "\ebbf";
+}
+
+.oicon-bed:before {
+    content: "\ebc0";
+}
+
+.oicon-bed-pulse:before {
+    content: "\ebc1";
+}
+
+.oicon-beer-mug-empty:before {
+    content: "\ebc2";
+}
+
+.oicon-bell1:before {
+    content: "\ebc3";
+}
+
+.oicon-bell-concierge:before {
+    content: "\ebc4";
+}
+
+.oicon-bell-slash1:before {
+    content: "\ebc5";
+}
+
+.oicon-bezier-curve:before {
+    content: "\ebc6";
+}
+
+.oicon-bicycle:before {
+    content: "\ebc7";
+}
+
+.oicon-binoculars:before {
+    content: "\ebc8";
+}
+
+.oicon-biohazard:before {
+    content: "\ebc9";
+}
+
+.oicon-bitcoin-sign:before {
+    content: "\ebca";
+}
+
+.oicon-blender:before {
+    content: "\ebcb";
+}
+
+.oicon-blender-phone:before {
+    content: "\ebcc";
+}
+
+.oicon-blog:before {
+    content: "\ebcd";
+}
+
+.oicon-bold:before {
+    content: "\ebce";
+}
+
+.oicon-bolt:before {
+    content: "\ebcf";
+}
+
+.oicon-bomb:before {
+    content: "\ebd0";
+}
+
+.oicon-bone:before {
+    content: "\ebd1";
+}
+
+.oicon-bong:before {
+    content: "\ebd2";
+}
+
+.oicon-book:before {
+    content: "\ebd3";
+}
+
+.oicon-book-atlas:before {
+    content: "\ebd4";
+}
+
+.oicon-book-bible:before {
+    content: "\ebd5";
+}
+
+.oicon-book-journal-whills:before {
+    content: "\ebd6";
+}
+
+.oicon-bookmark1:before {
+    content: "\ebd7";
+}
+
+.oicon-book-medical:before {
+    content: "\ebd8";
+}
+
+.oicon-book-open:before {
+    content: "\ebd9";
+}
+
+.oicon-book-open-reader:before {
+    content: "\ebda";
+}
+
+.oicon-book-quran:before {
+    content: "\ebdb";
+}
+
+.oicon-book-skull:before {
+    content: "\ebdc";
+}
+
+.oicon-border-all:before {
+    content: "\ebdd";
+}
+
+.oicon-border-none:before {
+    content: "\ebde";
+}
+
+.oicon-border-top-left:before {
+    content: "\ebdf";
+}
+
+.oicon-bowling-ball:before {
+    content: "\ebe0";
+}
+
+.oicon-box:before {
+    content: "\ebe1";
+}
+
+.oicon-box-archive:before {
+    content: "\ebe2";
+}
+
+.oicon-boxes-stacked:before {
+    content: "\ebe3";
+}
+
+.oicon-box-open:before {
+    content: "\ebe4";
+}
+
+.oicon-box-tissue:before {
+    content: "\ebe5";
+}
+
+.oicon-braille:before {
+    content: "\ebe6";
+}
+
+.oicon-brain:before {
+    content: "\ebe7";
+}
+
+.oicon-bread-slice:before {
+    content: "\ebe8";
+}
+
+.oicon-briefcase:before {
+    content: "\ebe9";
+}
+
+.oicon-briefcase-medical:before {
+    content: "\ebea";
+}
+
+.oicon-broom:before {
+    content: "\ebeb";
+}
+
+.oicon-brush:before {
+    content: "\ebec";
+}
+
+.oicon-bug:before {
+    content: "\ebed";
+}
+
+.oicon-building1:before {
+    content: "\ebee";
+}
+
+.oicon-bullhorn:before {
+    content: "\ebef";
+}
+
+.oicon-bullseye:before {
+    content: "\ebf0";
+}
+
+.oicon-burger:before {
+    content: "\ebf1";
+}
+
+.oicon-bus:before {
+    content: "\ebf2";
+}
+
+.oicon-business-time:before {
+    content: "\ebf3";
+}
+
+.oicon-bus-simple:before {
+    content: "\ebf4";
+}
+
+.oicon-c:before {
+    content: "\ebf5";
+}
+
+.oicon-cake-candles:before {
+    content: "\ebf6";
+}
+
+.oicon-calculator:before {
+    content: "\ebf7";
+}
+
+.oicon-calendar1:before {
+    content: "\ebf8";
+}
+
+.oicon-calendar-check1:before {
+    content: "\ebf9";
+}
+
+.oicon-calendar-day:before {
+    content: "\ebfa";
+}
+
+.oicon-calendar-days1:before {
+    content: "\ebfb";
+}
+
+.oicon-calendar-minus1:before {
+    content: "\ebfc";
+}
+
+.oicon-calendar-plus1:before {
+    content: "\ebfd";
+}
+
+.oicon-calendar-week:before {
+    content: "\ebfe";
+}
+
+.oicon-calendar-xmark1:before {
+    content: "\ebff";
+}
+
+.oicon-camera:before {
+    content: "\ec00";
+}
+
+.oicon-camera-retro:before {
+    content: "\ec01";
+}
+
+.oicon-camera-rotate:before {
+    content: "\ec02";
+}
+
+.oicon-campground:before {
+    content: "\ec03";
+}
+
+.oicon-candy-cane:before {
+    content: "\ec04";
+}
+
+.oicon-cannabis:before {
+    content: "\ec05";
+}
+
+.oicon-capsules:before {
+    content: "\ec06";
+}
+
+.oicon-car:before {
+    content: "\ec07";
+}
+
+.oicon-caravan:before {
+    content: "\ec08";
+}
+
+.oicon-car-battery:before {
+    content: "\ec09";
+}
+
+.oicon-car-crash:before {
+    content: "\ec0a";
+}
+
+.oicon-caret-down:before {
+    content: "\ec0b";
+}
+
+.oicon-caret-left:before {
+    content: "\ec0c";
+}
+
+.oicon-caret-right:before {
+    content: "\ec0d";
+}
+
+.oicon-caret-up:before {
+    content: "\ec0e";
+}
+
+.oicon-car-rear:before {
+    content: "\ec0f";
+}
+
+.oicon-carrot:before {
+    content: "\ec10";
+}
+
+.oicon-car-side:before {
+    content: "\ec11";
+}
+
+.oicon-cart-arrow-down:before {
+    content: "\ec12";
+}
+
+.oicon-cart-flatbed:before {
+    content: "\ec13";
+}
+
+.oicon-cart-flatbed-suitcase:before {
+    content: "\ec14";
+}
+
+.oicon-cart-plus:before {
+    content: "\ec15";
+}
+
+.oicon-cart-shopping:before {
+    content: "\ec16";
+}
+
+.oicon-cash-register:before {
+    content: "\ec17";
+}
+
+.oicon-cat:before {
+    content: "\ec18";
+}
+
+.oicon-cedi-sign:before {
+    content: "\ec19";
+}
+
+.oicon-cent-sign:before {
+    content: "\ec1a";
+}
+
+.oicon-certificate:before {
+    content: "\ec1b";
+}
+
+.oicon-chair:before {
+    content: "\ec1c";
+}
+
+.oicon-chalkboard:before {
+    content: "\ec1d";
+}
+
+.oicon-chalkboard-user:before {
+    content: "\ec1e";
+}
+
+.oicon-champagne-glasses:before {
+    content: "\ec1f";
+}
+
+.oicon-charging-station:before {
+    content: "\ec20";
+}
+
+.oicon-chart-area:before {
+    content: "\ec21";
+}
+
+.oicon-chart-bar1:before {
+    content: "\ec22";
+}
+
+.oicon-chart-gantt:before {
+    content: "\ec23";
+}
+
+.oicon-chart-line:before {
+    content: "\ec24";
+}
+
+.oicon-chart-pie:before {
+    content: "\ec25";
+}
+
+.oicon-check:before {
+    content: "\ec26";
+}
+
+.oicon-check-double:before {
+    content: "\ec27";
+}
+
+.oicon-check-to-slot:before {
+    content: "\ec28";
+}
+
+.oicon-cheese:before {
+    content: "\ec29";
+}
+
+.oicon-chess:before {
+    content: "\ec2a";
+}
+
+.oicon-chess-bishop1:before {
+    content: "\ec2b";
+}
+
+.oicon-chess-board:before {
+    content: "\ec2c";
+}
+
+.oicon-chess-king1:before {
+    content: "\ec2d";
+}
+
+.oicon-chess-knight1:before {
+    content: "\ec2e";
+}
+
+.oicon-chess-pawn1:before {
+    content: "\ec2f";
+}
+
+.oicon-chess-queen1:before {
+    content: "\ec30";
+}
+
+.oicon-chess-rook1:before {
+    content: "\ec31";
+}
+
+.oicon-chevron-down:before {
+    content: "\ec32";
+}
+
+.oicon-chevron-left:before {
+    content: "\ec33";
+}
+
+.oicon-chevron-right:before {
+    content: "\ec34";
+}
+
+.oicon-chevron-up:before {
+    content: "\ec35";
+}
+
+.oicon-child:before {
+    content: "\ec36";
+}
+
+.oicon-church:before {
+    content: "\ec37";
+}
+
+.oicon-circle1:before {
+    content: "\ec38";
+}
+
+.oicon-circle-arrow-down:before {
+    content: "\ec39";
+}
+
+.oicon-circle-arrow-left:before {
+    content: "\ec3a";
+}
+
+.oicon-circle-arrow-right:before {
+    content: "\ec3b";
+}
+
+.oicon-circle-arrow-up:before {
+    content: "\ec3c";
+}
+
+.oicon-circle-check1:before {
+    content: "\ec3d";
+}
+
+.oicon-circle-chevron-down:before {
+    content: "\ec3e";
+}
+
+.oicon-circle-chevron-left:before {
+    content: "\ec3f";
+}
+
+.oicon-circle-chevron-right:before {
+    content: "\ec40";
+}
+
+.oicon-circle-chevron-up:before {
+    content: "\ec41";
+}
+
+.oicon-circle-dollar-to-slot:before {
+    content: "\ec42";
+}
+
+.oicon-circle-dot1:before {
+    content: "\ec43";
+}
+
+.oicon-circle-down1:before {
+    content: "\ec44";
+}
+
+.oicon-circle-exclamation:before {
+    content: "\ec45";
+}
+
+.oicon-circle-h:before {
+    content: "\ec46";
+}
+
+.oicon-circle-half-stroke:before {
+    content: "\ec47";
+}
+
+.oicon-circle-info:before {
+    content: "\ec48";
+}
+
+.oicon-circle-left1:before {
+    content: "\ec49";
+}
+
+.oicon-circle-minus:before {
+    content: "\ec4a";
+}
+
+.oicon-circle-notch:before {
+    content: "\ec4b";
+}
+
+.oicon-circle-pause1:before {
+    content: "\ec4c";
+}
+
+.oicon-circle-play1:before {
+    content: "\ec4d";
+}
+
+.oicon-circle-plus:before {
+    content: "\ec4e";
+}
+
+.oicon-circle-question1:before {
+    content: "\ec4f";
+}
+
+.oicon-circle-radiation:before {
+    content: "\ec50";
+}
+
+.oicon-circle-right1:before {
+    content: "\ec51";
+}
+
+.oicon-circle-stop1:before {
+    content: "\ec52";
+}
+
+.oicon-circle-up1:before {
+    content: "\ec53";
+}
+
+.oicon-circle-user1:before {
+    content: "\ec54";
+}
+
+.oicon-circle-xmark1:before {
+    content: "\ec55";
+}
+
+.oicon-city:before {
+    content: "\ec56";
+}
+
+.oicon-clapperboard:before {
+    content: "\ec57";
+}
+
+.oicon-clipboard1:before {
+    content: "\ec58";
+}
+
+.oicon-clipboard-check:before {
+    content: "\ec59";
+}
+
+.oicon-clipboard-list:before {
+    content: "\ec5a";
+}
+
+.oicon-clock1:before {
+    content: "\ec5b";
+}
+
+.oicon-clock-rotate-left:before {
+    content: "\ec5c";
+}
+
+.oicon-clone1:before {
+    content: "\ec5d";
+}
+
+.oicon-closed-captioning1:before {
+    content: "\ec5e";
+}
+
+.oicon-cloud:before {
+    content: "\ec5f";
+}
+
+.oicon-cloud-arrow-down:before {
+    content: "\ec60";
+}
+
+.oicon-cloud-arrow-up:before {
+    content: "\ec61";
+}
+
+.oicon-cloud-meatball:before {
+    content: "\ec62";
+}
+
+.oicon-cloud-moon:before {
+    content: "\ec63";
+}
+
+.oicon-cloud-moon-rain:before {
+    content: "\ec64";
+}
+
+.oicon-cloud-rain:before {
+    content: "\ec65";
+}
+
+.oicon-cloud-showers-heavy:before {
+    content: "\ec66";
+}
+
+.oicon-cloud-sun:before {
+    content: "\ec67";
+}
+
+.oicon-cloud-sun-rain:before {
+    content: "\ec68";
+}
+
+.oicon-clover:before {
+    content: "\ec69";
+}
+
+.oicon-code:before {
+    content: "\ec6a";
+}
+
+.oicon-code-branch:before {
+    content: "\ec6b";
+}
+
+.oicon-code-commit:before {
+    content: "\ec6c";
+}
+
+.oicon-code-compare:before {
+    content: "\ec6d";
+}
+
+.oicon-code-fork:before {
+    content: "\ec6e";
+}
+
+.oicon-code-merge:before {
+    content: "\ec6f";
+}
+
+.oicon-code-pull-request:before {
+    content: "\ec70";
+}
+
+.oicon-coins:before {
+    content: "\ec71";
+}
+
+.oicon-colon-sign:before {
+    content: "\ec72";
+}
+
+.oicon-comment1:before {
+    content: "\ec73";
+}
+
+.oicon-comment-dollar:before {
+    content: "\ec74";
+}
+
+.oicon-comment-dots1:before {
+    content: "\ec75";
+}
+
+.oicon-comment-medical:before {
+    content: "\ec76";
+}
+
+.oicon-comments1:before {
+    content: "\ec77";
+}
+
+.oicon-comments-dollar:before {
+    content: "\ec78";
+}
+
+.oicon-comment-slash:before {
+    content: "\ec79";
+}
+
+.oicon-comment-sms:before {
+    content: "\ec7a";
+}
+
+.oicon-compact-disc:before {
+    content: "\ec7b";
+}
+
+.oicon-compass1:before {
+    content: "\ec7c";
+}
+
+.oicon-compass-drafting:before {
+    content: "\ec7d";
+}
+
+.oicon-compress:before {
+    content: "\ec7e";
+}
+
+.oicon-computer-mouse:before {
+    content: "\ec7f";
+}
+
+.oicon-cookie:before {
+    content: "\ec80";
+}
+
+.oicon-cookie-bite:before {
+    content: "\ec81";
+}
+
+.oicon-copy1:before {
+    content: "\ec82";
+}
+
+.oicon-copyright1:before {
+    content: "\ec83";
+}
+
+.oicon-couch:before {
+    content: "\ec84";
+}
+
+.oicon-credit-card1:before {
+    content: "\ec85";
+}
+
+.oicon-crop:before {
+    content: "\ec86";
+}
+
+.oicon-crop-simple:before {
+    content: "\ec87";
+}
+
+.oicon-cross:before {
+    content: "\ec88";
+}
+
+.oicon-crosshairs:before {
+    content: "\ec89";
+}
+
+.oicon-crow:before {
+    content: "\ec8a";
+}
+
+.oicon-crown:before {
+    content: "\ec8b";
+}
+
+.oicon-crutch:before {
+    content: "\ec8c";
+}
+
+.oicon-cruzeiro-sign:before {
+    content: "\ec8d";
+}
+
+.oicon-cube:before {
+    content: "\ec8e";
+}
+
+.oicon-cubes:before {
+    content: "\ec8f";
+}
+
+.oicon-d:before {
+    content: "\ec90";
+}
+
+.oicon-database:before {
+    content: "\ec91";
+}
+
+.oicon-delete-left:before {
+    content: "\ec92";
+}
+
+.oicon-democrat:before {
+    content: "\ec93";
+}
+
+.oicon-desktop:before {
+    content: "\ec94";
+}
+
+.oicon-dharmachakra:before {
+    content: "\ec95";
+}
+
+.oicon-diagram-project:before {
+    content: "\ec96";
+}
+
+.oicon-diamond-turn-right:before {
+    content: "\ec97";
+}
+
+.oicon-dice:before {
+    content: "\ec98";
+}
+
+.oicon-dice-d6:before {
+    content: "\ec99";
+}
+
+.oicon-dice-d20:before {
+    content: "\ec9a";
+}
+
+.oicon-dice-five:before {
+    content: "\ec9b";
+}
+
+.oicon-dice-four:before {
+    content: "\ec9c";
+}
+
+.oicon-dice-one:before {
+    content: "\ec9d";
+}
+
+.oicon-dice-six:before {
+    content: "\ec9e";
+}
+
+.oicon-dice-three:before {
+    content: "\ec9f";
+}
+
+.oicon-dice-two:before {
+    content: "\eca0";
+}
+
+.oicon-disease:before {
+    content: "\eca1";
+}
+
+.oicon-divide:before {
+    content: "\eca2";
+}
+
+.oicon-dna:before {
+    content: "\eca3";
+}
+
+.oicon-dog:before {
+    content: "\eca4";
+}
+
+.oicon-dollar-sign:before {
+    content: "\eca5";
+}
+
+.oicon-dolly:before {
+    content: "\eca6";
+}
+
+.oicon-dong-sign:before {
+    content: "\eca7";
+}
+
+.oicon-door-closed:before {
+    content: "\eca8";
+}
+
+.oicon-door-open:before {
+    content: "\eca9";
+}
+
+.oicon-dove:before {
+    content: "\ecaa";
+}
+
+.oicon-down-left-and-up-right-to-center:before {
+    content: "\ecab";
+}
+
+.oicon-download:before {
+    content: "\ecac";
+}
+
+.oicon-down-long:before {
+    content: "\ecad";
+}
+
+.oicon-dragon:before {
+    content: "\ecae";
+}
+
+.oicon-draw-polygon:before {
+    content: "\ecaf";
+}
+
+.oicon-droplet:before {
+    content: "\ecb0";
+}
+
+.oicon-droplet-slash:before {
+    content: "\ecb1";
+}
+
+.oicon-drum:before {
+    content: "\ecb2";
+}
+
+.oicon-drum-steelpan:before {
+    content: "\ecb3";
+}
+
+.oicon-drumstick-bite:before {
+    content: "\ecb4";
+}
+
+.oicon-dumbbell:before {
+    content: "\ecb5";
+}
+
+.oicon-dumpster:before {
+    content: "\ecb6";
+}
+
+.oicon-dumpster-fire:before {
+    content: "\ecb7";
+}
+
+.oicon-dungeon:before {
+    content: "\ecb8";
+}
+
+.oicon-e:before {
+    content: "\ecb9";
+}
+
+.oicon-ear-deaf:before {
+    content: "\ecba";
+}
+
+.oicon-ear-listen:before {
+    content: "\ecbb";
+}
+
+.oicon-earth-africa:before {
+    content: "\ecbc";
+}
+
+.oicon-earth-americas:before {
+    content: "\ecbd";
+}
+
+.oicon-earth-asia:before {
+    content: "\ecbe";
+}
+
+.oicon-earth-europa:before {
+    content: "\ecbf";
+}
+
+.oicon-egg:before {
+    content: "\ecc0";
+}
+
+.oicon-eject:before {
+    content: "\ecc1";
+}
+
+.oicon-elevator:before {
+    content: "\ecc2";
+}
+
+.oicon-ellipsis:before {
+    content: "\ecc3";
+}
+
+.oicon-ellipsis-vertical:before {
+    content: "\ecc4";
+}
+
+.oicon-envelope1:before {
+    content: "\ecc5";
+}
+
+.oicon-envelope-open1:before {
+    content: "\ecc6";
+}
+
+.oicon-envelope-open-text:before {
+    content: "\ecc7";
+}
+
+.oicon-envelopes-bulk:before {
+    content: "\ecc8";
+}
+
+.oicon-equals:before {
+    content: "\ecc9";
+}
+
+.oicon-eraser:before {
+    content: "\ecca";
+}
+
+.oicon-ethernet:before {
+    content: "\eccb";
+}
+
+.oicon-euro-sign:before {
+    content: "\eccc";
+}
+
+.oicon-exclamation:before {
+    content: "\eccd";
+}
+
+.oicon-expand:before {
+    content: "\ecce";
+}
+
+.oicon-eye1:before {
+    content: "\eccf";
+}
+
+.oicon-eye-dropper:before {
+    content: "\ecd0";
+}
+
+.oicon-eye-low-vision:before {
+    content: "\ecd1";
+}
+
+.oicon-eye-slash1:before {
+    content: "\ecd2";
+}
+
+.oicon-f:before {
+    content: "\ecd3";
+}
+
+.oicon-face-angry1:before {
+    content: "\ecd4";
+}
+
+.oicon-face-dizzy1:before {
+    content: "\ecd5";
+}
+
+.oicon-face-flushed1:before {
+    content: "\ecd6";
+}
+
+.oicon-face-frown1:before {
+    content: "\ecd7";
+}
+
+.oicon-face-frown-open1:before {
+    content: "\ecd8";
+}
+
+.oicon-face-grimace1:before {
+    content: "\ecd9";
+}
+
+.oicon-face-grin1:before {
+    content: "\ecda";
+}
+
+.oicon-face-grin-beam1:before {
+    content: "\ecdb";
+}
+
+.oicon-face-grin-beam-sweat1:before {
+    content: "\ecdc";
+}
+
+.oicon-face-grin-hearts1:before {
+    content: "\ecdd";
+}
+
+.oicon-face-grin-squint1:before {
+    content: "\ecde";
+}
+
+.oicon-face-grin-squint-tears1:before {
+    content: "\ecdf";
+}
+
+.oicon-face-grin-stars1:before {
+    content: "\ece0";
+}
+
+.oicon-face-grin-tears1:before {
+    content: "\ece1";
+}
+
+.oicon-face-grin-tongue1:before {
+    content: "\ece2";
+}
+
+.oicon-face-grin-tongue-squint1:before {
+    content: "\ece3";
+}
+
+.oicon-face-grin-tongue-wink1:before {
+    content: "\ece4";
+}
+
+.oicon-face-grin-wide1:before {
+    content: "\ece5";
+}
+
+.oicon-face-grin-wink1:before {
+    content: "\ece6";
+}
+
+.oicon-face-kiss1:before {
+    content: "\ece7";
+}
+
+.oicon-face-kiss-beam1:before {
+    content: "\ece8";
+}
+
+.oicon-face-kiss-wink-heart1:before {
+    content: "\ece9";
+}
+
+.oicon-face-laugh1:before {
+    content: "\ecea";
+}
+
+.oicon-face-laugh-beam1:before {
+    content: "\eceb";
+}
+
+.oicon-face-laugh-squint1:before {
+    content: "\ecec";
+}
+
+.oicon-face-laugh-wink1:before {
+    content: "\eced";
+}
+
+.oicon-face-meh1:before {
+    content: "\ecee";
+}
+
+.oicon-face-meh-blank1:before {
+    content: "\ecef";
+}
+
+.oicon-face-rolling-eyes1:before {
+    content: "\ecf0";
+}
+
+.oicon-face-sad-cry1:before {
+    content: "\ecf1";
+}
+
+.oicon-face-sad-tear1:before {
+    content: "\ecf2";
+}
+
+.oicon-face-smile1:before {
+    content: "\ecf3";
+}
+
+.oicon-face-smile-beam1:before {
+    content: "\ecf4";
+}
+
+.oicon-face-smile-wink1:before {
+    content: "\ecf5";
+}
+
+.oicon-face-surprise1:before {
+    content: "\ecf6";
+}
+
+.oicon-face-tired1:before {
+    content: "\ecf7";
+}
+
+.oicon-fan:before {
+    content: "\ecf8";
+}
+
+.oicon-faucet:before {
+    content: "\ecf9";
+}
+
+.oicon-fax:before {
+    content: "\ecfa";
+}
+
+.oicon-feather:before {
+    content: "\ecfb";
+}
+
+.oicon-feather-pointed:before {
+    content: "\ecfc";
+}
+
+.oicon-file1:before {
+    content: "\ecfd";
+}
+
+.oicon-file-arrow-down:before {
+    content: "\ecfe";
+}
+
+.oicon-file-arrow-up:before {
+    content: "\ecff";
+}
+
+.oicon-file-audio1:before {
+    content: "\ed00";
+}
+
+.oicon-file-code1:before {
+    content: "\ed01";
+}
+
+.oicon-file-contract:before {
+    content: "\ed02";
+}
+
+.oicon-file-csv:before {
+    content: "\ed03";
+}
+
+.oicon-file-excel1:before {
+    content: "\ed04";
+}
+
+.oicon-file-export:before {
+    content: "\ed05";
+}
+
+.oicon-file-image1:before {
+    content: "\ed06";
+}
+
+.oicon-file-import:before {
+    content: "\ed07";
+}
+
+.oicon-file-invoice:before {
+    content: "\ed08";
+}
+
+.oicon-file-invoice-dollar:before {
+    content: "\ed09";
+}
+
+.oicon-file-lines1:before {
+    content: "\ed0a";
+}
+
+.oicon-file-medical:before {
+    content: "\ed0b";
+}
+
+.oicon-file-pdf1:before {
+    content: "\ed0c";
+}
+
+.oicon-file-powerpoint1:before {
+    content: "\ed0d";
+}
+
+.oicon-file-prescription:before {
+    content: "\ed0e";
+}
+
+.oicon-file-signature:before {
+    content: "\ed0f";
+}
+
+.oicon-file-video1:before {
+    content: "\ed10";
+}
+
+.oicon-file-waveform:before {
+    content: "\ed11";
+}
+
+.oicon-file-word1:before {
+    content: "\ed12";
+}
+
+.oicon-file-zipper1:before {
+    content: "\ed13";
+}
+
+.oicon-fill:before {
+    content: "\ed14";
+}
+
+.oicon-fill-drip:before {
+    content: "\ed15";
+}
+
+.oicon-film:before {
+    content: "\ed16";
+}
+
+.oicon-filter:before {
+    content: "\ed17";
+}
+
+.oicon-filter-circle-dollar:before {
+    content: "\ed18";
+}
+
+.oicon-filter-circle-xmark:before {
+    content: "\ed19";
+}
+
+.oicon-fingerprint:before {
+    content: "\ed1a";
+}
+
+.oicon-fire:before {
+    content: "\ed1b";
+}
+
+.oicon-fire-extinguisher:before {
+    content: "\ed1c";
+}
+
+.oicon-fire-flame-curved:before {
+    content: "\ed1d";
+}
+
+.oicon-fire-flame-simple:before {
+    content: "\ed1e";
+}
+
+.oicon-fish:before {
+    content: "\ed1f";
+}
+
+.oicon-flag1:before {
+    content: "\ed20";
+}
+
+.oicon-flag-checkered:before {
+    content: "\ed21";
+}
+
+.oicon-flag-usa:before {
+    content: "\ed22";
+}
+
+.oicon-flask:before {
+    content: "\ed23";
+}
+
+.oicon-floppy-disk1:before {
+    content: "\ed24";
+}
+
+.oicon-florin-sign:before {
+    content: "\ed25";
+}
+
+.oicon-folder1:before {
+    content: "\ed26";
+}
+
+.oicon-folder-minus:before {
+    content: "\ed27";
+}
+
+.oicon-folder-open1:before {
+    content: "\ed28";
+}
+
+.oicon-folder-plus:before {
+    content: "\ed29";
+}
+
+.oicon-folder-tree:before {
+    content: "\ed2a";
+}
+
+.oicon-font:before {
+    content: "\ed2b";
+}
+
+.oicon-font-awesome2:before {
+    content: "\ed2c";
+}
+
+.oicon-football:before {
+    content: "\ed2d";
+}
+
+.oicon-forward:before {
+    content: "\ed2e";
+}
+
+.oicon-forward-fast:before {
+    content: "\ed2f";
+}
+
+.oicon-forward-step:before {
+    content: "\ed30";
+}
+
+.oicon-franc-sign:before {
+    content: "\ed31";
+}
+
+.oicon-frog:before {
+    content: "\ed32";
+}
+
+.oicon-futbol1:before {
+    content: "\ed33";
+}
+
+.oicon-g:before {
+    content: "\ed34";
+}
+
+.oicon-gamepad:before {
+    content: "\ed35";
+}
+
+.oicon-gas-pump:before {
+    content: "\ed36";
+}
+
+.oicon-gauge-simple:before {
+    content: "\ed37";
+}
+
+.oicon-gavel:before {
+    content: "\ed38";
+}
+
+.oicon-gear:before {
+    content: "\ed39";
+}
+
+.oicon-gears:before {
+    content: "\ed3a";
+}
+
+.oicon-gem1:before {
+    content: "\ed3b";
+}
+
+.oicon-genderless:before {
+    content: "\ed3c";
+}
+
+.oicon-ghost:before {
+    content: "\ed3d";
+}
+
+.oicon-gift:before {
+    content: "\ed3e";
+}
+
+.oicon-gifts:before {
+    content: "\ed3f";
+}
+
+.oicon-glasses:before {
+    content: "\ed40";
+}
+
+.oicon-globe:before {
+    content: "\ed41";
+}
+
+.oicon-golf-ball-tee:before {
+    content: "\ed42";
+}
+
+.oicon-gopuram:before {
+    content: "\ed43";
+}
+
+.oicon-graduation-cap:before {
+    content: "\ed44";
+}
+
+.oicon-greater-than:before {
+    content: "\ed45";
+}
+
+.oicon-greater-than-equal:before {
+    content: "\ed46";
+}
+
+.oicon-grip:before {
+    content: "\ed47";
+}
+
+.oicon-grip-lines:before {
+    content: "\ed48";
+}
+
+.oicon-grip-lines-vertical:before {
+    content: "\ed49";
+}
+
+.oicon-grip-vertical:before {
+    content: "\ed4a";
+}
+
+.oicon-guarani-sign:before {
+    content: "\ed4b";
+}
+
+.oicon-guitar:before {
+    content: "\ed4c";
+}
+
+.oicon-gun:before {
+    content: "\ed4d";
+}
+
+.oicon-h:before {
+    content: "\ed4e";
+}
+
+.oicon-hammer:before {
+    content: "\ed4f";
+}
+
+.oicon-hamsa:before {
+    content: "\ed50";
+}
+
+.oicon-hand1:before {
+    content: "\ed51";
+}
+
+.oicon-hand-back-fist1:before {
+    content: "\ed52";
+}
+
+.oicon-hand-dots:before {
+    content: "\ed53";
+}
+
+.oicon-hand-fist:before {
+    content: "\ed54";
+}
+
+.oicon-hand-holding:before {
+    content: "\ed55";
+}
+
+.oicon-hand-holding-dollar:before {
+    content: "\ed56";
+}
+
+.oicon-hand-holding-droplet:before {
+    content: "\ed57";
+}
+
+.oicon-hand-holding-heart:before {
+    content: "\ed58";
+}
+
+.oicon-hand-holding-medical:before {
+    content: "\ed59";
+}
+
+.oicon-hand-lizard1:before {
+    content: "\ed5a";
+}
+
+.oicon-hand-middle-finger:before {
+    content: "\ed5b";
+}
+
+.oicon-hand-peace1:before {
+    content: "\ed5c";
+}
+
+.oicon-hand-point-down1:before {
+    content: "\ed5d";
+}
+
+.oicon-hand-pointer1:before {
+    content: "\ed5e";
+}
+
+.oicon-hand-point-left1:before {
+    content: "\ed5f";
+}
+
+.oicon-hand-point-right1:before {
+    content: "\ed60";
+}
+
+.oicon-hand-point-up1:before {
+    content: "\ed61";
+}
+
+.oicon-hands:before {
+    content: "\ed62";
+}
+
+.oicon-hands-asl-interpreting:before {
+    content: "\ed63";
+}
+
+.oicon-hands-bubbles:before {
+    content: "\ed64";
+}
+
+.oicon-hand-scissors1:before {
+    content: "\ed65";
+}
+
+.oicon-hands-clapping:before {
+    content: "\ed66";
+}
+
+.oicon-handshake1:before {
+    content: "\ed67";
+}
+
+.oicon-handshake-angle:before {
+    content: "\ed68";
+}
+
+.oicon-handshake-simple-slash:before {
+    content: "\ed69";
+}
+
+.oicon-handshake-slash:before {
+    content: "\ed6a";
+}
+
+.oicon-hands-holding:before {
+    content: "\ed6b";
+}
+
+.oicon-hand-sparkles:before {
+    content: "\ed6c";
+}
+
+.oicon-hand-spock1:before {
+    content: "\ed6d";
+}
+
+.oicon-hands-praying:before {
+    content: "\ed6e";
+}
+
+.oicon-hanukiah:before {
+    content: "\ed6f";
+}
+
+.oicon-hard-drive1:before {
+    content: "\ed70";
+}
+
+.oicon-hashtag:before {
+    content: "\ed71";
+}
+
+.oicon-hat-cowboy:before {
+    content: "\ed72";
+}
+
+.oicon-hat-cowboy-side:before {
+    content: "\ed73";
+}
+
+.oicon-hat-wizard:before {
+    content: "\ed74";
+}
+
+.oicon-heading:before {
+    content: "\ed75";
+}
+
+.oicon-headphones:before {
+    content: "\ed76";
+}
+
+.oicon-headphones-simple:before {
+    content: "\ed77";
+}
+
+.oicon-headset:before {
+    content: "\ed78";
+}
+
+.oicon-head-side-cough:before {
+    content: "\ed79";
+}
+
+.oicon-head-side-cough-slash:before {
+    content: "\ed7a";
+}
+
+.oicon-head-side-mask:before {
+    content: "\ed7b";
+}
+
+.oicon-head-side-virus:before {
+    content: "\ed7c";
+}
+
+.oicon-heart1:before {
+    content: "\ed7d";
+}
+
+.oicon-heart-crack:before {
+    content: "\ed7e";
+}
+
+.oicon-heart-pulse:before {
+    content: "\ed7f";
+}
+
+.oicon-helicopter:before {
+    content: "\ed80";
+}
+
+.oicon-helmet-safety:before {
+    content: "\ed81";
+}
+
+.oicon-highlighter:before {
+    content: "\ed82";
+}
+
+.oicon-hippo:before {
+    content: "\ed83";
+}
+
+.oicon-hockey-puck:before {
+    content: "\ed84";
+}
+
+.oicon-holly-berry:before {
+    content: "\ed85";
+}
+
+.oicon-horse:before {
+    content: "\ed86";
+}
+
+.oicon-horse-head:before {
+    content: "\ed87";
+}
+
+.oicon-hospital1:before {
+    content: "\ed88";
+}
+
+.oicon-hospital-user:before {
+    content: "\ed89";
+}
+
+.oicon-hospital-wide:before {
+    content: "\ed8a";
+}
+
+.oicon-hotdog:before {
+    content: "\ed8b";
+}
+
+.oicon-hotel:before {
+    content: "\ed8c";
+}
+
+.oicon-hot-tub-person:before {
+    content: "\ed8d";
+}
+
+.oicon-hourglass1:before {
+    content: "\ed8e";
+}
+
+.oicon-hourglass-empty:before {
+    content: "\ed8f";
+}
+
+.oicon-hourglass-end:before {
+    content: "\ed90";
+}
+
+.oicon-hourglass-start:before {
+    content: "\ed91";
+}
+
+.oicon-house:before {
+    content: "\ed92";
+}
+
+.oicon-house-chimney:before {
+    content: "\ed93";
+}
+
+.oicon-house-crack:before {
+    content: "\ed94";
+}
+
+.oicon-house-laptop:before {
+    content: "\ed95";
+}
+
+.oicon-house-medical:before {
+    content: "\ed96";
+}
+
+.oicon-house-user:before {
+    content: "\ed97";
+}
+
+.oicon-hryvnia-sign:before {
+    content: "\ed98";
+}
+
+.oicon-i:before {
+    content: "\ed99";
+}
+
+.oicon-ice-cream:before {
+    content: "\ed9a";
+}
+
+.oicon-icicles:before {
+    content: "\ed9b";
+}
+
+.oicon-icons:before {
+    content: "\ed9c";
+}
+
+.oicon-i-cursor:before {
+    content: "\ed9d";
+}
+
+.oicon-id-badge1:before {
+    content: "\ed9e";
+}
+
+.oicon-id-card1:before {
+    content: "\ed9f";
+}
+
+.oicon-id-card-clip:before {
+    content: "\eda0";
+}
+
+.oicon-igloo:before {
+    content: "\eda1";
+}
+
+.oicon-image1:before {
+    content: "\eda2";
+}
+
+.oicon-image-portrait:before {
+    content: "\eda3";
+}
+
+.oicon-images1:before {
+    content: "\eda4";
+}
+
+.oicon-inbox:before {
+    content: "\eda5";
+}
+
+.oicon-indent:before {
+    content: "\eda6";
+}
+
+.oicon-indian-rupee-sign:before {
+    content: "\eda7";
+}
+
+.oicon-industry:before {
+    content: "\eda8";
+}
+
+.oicon-infinity:before {
+    content: "\eda9";
+}
+
+.oicon-info:before {
+    content: "\edaa";
+}
+
+.oicon-italic:before {
+    content: "\edab";
+}
+
+.oicon-j:before {
+    content: "\edac";
+}
+
+.oicon-jedi:before {
+    content: "\edad";
+}
+
+.oicon-jet-fighter:before {
+    content: "\edae";
+}
+
+.oicon-joint:before {
+    content: "\edaf";
+}
+
+.oicon-k:before {
+    content: "\edb0";
+}
+
+.oicon-kaaba:before {
+    content: "\edb1";
+}
+
+.oicon-key:before {
+    content: "\edb2";
+}
+
+.oicon-keyboard1:before {
+    content: "\edb3";
+}
+
+.oicon-khanda:before {
+    content: "\edb4";
+}
+
+.oicon-kip-sign:before {
+    content: "\edb5";
+}
+
+.oicon-kit-medical:before {
+    content: "\edb6";
+}
+
+.oicon-kiwi-bird:before {
+    content: "\edb7";
+}
+
+.oicon-l:before {
+    content: "\edb8";
+}
+
+.oicon-landmark:before {
+    content: "\edb9";
+}
+
+.oicon-language:before {
+    content: "\edba";
+}
+
+.oicon-laptop:before {
+    content: "\edbb";
+}
+
+.oicon-laptop-code:before {
+    content: "\edbc";
+}
+
+.oicon-laptop-medical:before {
+    content: "\edbd";
+}
+
+.oicon-lari-sign:before {
+    content: "\edbe";
+}
+
+.oicon-layer-group:before {
+    content: "\edbf";
+}
+
+.oicon-leaf:before {
+    content: "\edc0";
+}
+
+.oicon-left-long:before {
+    content: "\edc1";
+}
+
+.oicon-left-right:before {
+    content: "\edc2";
+}
+
+.oicon-lemon1:before {
+    content: "\edc3";
+}
+
+.oicon-less-than:before {
+    content: "\edc4";
+}
+
+.oicon-less-than-equal:before {
+    content: "\edc5";
+}
+
+.oicon-life-ring1:before {
+    content: "\edc6";
+}
+
+.oicon-lightbulb1:before {
+    content: "\edc7";
+}
+
+.oicon-link:before {
+    content: "\edc8";
+}
+
+.oicon-link-slash:before {
+    content: "\edc9";
+}
+
+.oicon-lira-sign:before {
+    content: "\edca";
+}
+
+.oicon-list:before {
+    content: "\edcb";
+}
+
+.oicon-list-check:before {
+    content: "\edcc";
+}
+
+.oicon-list-ol:before {
+    content: "\edcd";
+}
+
+.oicon-list-ul:before {
+    content: "\edce";
+}
+
+.oicon-litecoin-sign:before {
+    content: "\edcf";
+}
+
+.oicon-location-arrow:before {
+    content: "\edd0";
+}
+
+.oicon-location-crosshairs:before {
+    content: "\edd1";
+}
+
+.oicon-location-dot:before {
+    content: "\edd2";
+}
+
+.oicon-location-pin:before {
+    content: "\edd3";
+}
+
+.oicon-lock:before {
+    content: "\edd4";
+}
+
+.oicon-lock-open:before {
+    content: "\edd5";
+}
+
+.oicon-lungs:before {
+    content: "\edd6";
+}
+
+.oicon-lungs-virus:before {
+    content: "\edd7";
+}
+
+.oicon-m:before {
+    content: "\edd8";
+}
+
+.oicon-magnet:before {
+    content: "\edd9";
+}
+
+.oicon-magnifying-glass:before {
+    content: "\edda";
+}
+
+.oicon-magnifying-glass-dollar:before {
+    content: "\eddb";
+}
+
+.oicon-magnifying-glass-location:before {
+    content: "\eddc";
+}
+
+.oicon-magnifying-glass-minus:before {
+    content: "\eddd";
+}
+
+.oicon-magnifying-glass-plus:before {
+    content: "\edde";
+}
+
+.oicon-manat-sign:before {
+    content: "\eddf";
+}
+
+.oicon-map1:before {
+    content: "\ede0";
+}
+
+.oicon-map-location:before {
+    content: "\ede1";
+}
+
+.oicon-map-location-dot:before {
+    content: "\ede2";
+}
+
+.oicon-map-pin:before {
+    content: "\ede3";
+}
+
+.oicon-marker:before {
+    content: "\ede4";
+}
+
+.oicon-mars:before {
+    content: "\ede5";
+}
+
+.oicon-mars-and-venus:before {
+    content: "\ede6";
+}
+
+.oicon-mars-double:before {
+    content: "\ede7";
+}
+
+.oicon-mars-stroke:before {
+    content: "\ede8";
+}
+
+.oicon-mars-stroke-right:before {
+    content: "\ede9";
+}
+
+.oicon-mars-stroke-up:before {
+    content: "\edea";
+}
+
+.oicon-martini-glass:before {
+    content: "\edeb";
+}
+
+.oicon-martini-glass-citrus:before {
+    content: "\edec";
+}
+
+.oicon-martini-glass-empty:before {
+    content: "\eded";
+}
+
+.oicon-mask:before {
+    content: "\edee";
+}
+
+.oicon-mask-face:before {
+    content: "\edef";
+}
+
+.oicon-masks-theater:before {
+    content: "\edf0";
+}
+
+.oicon-maximize:before {
+    content: "\edf1";
+}
+
+.oicon-medal:before {
+    content: "\edf2";
+}
+
+.oicon-memory:before {
+    content: "\edf3";
+}
+
+.oicon-menorah:before {
+    content: "\edf4";
+}
+
+.oicon-mercury:before {
+    content: "\edf5";
+}
+
+.oicon-message1:before {
+    content: "\edf6";
+}
+
+.oicon-meteor:before {
+    content: "\edf7";
+}
+
+.oicon-microchip:before {
+    content: "\edf8";
+}
+
+.oicon-microphone:before {
+    content: "\edf9";
+}
+
+.oicon-microphone-lines:before {
+    content: "\edfa";
+}
+
+.oicon-microphone-lines-slash:before {
+    content: "\edfb";
+}
+
+.oicon-microphone-slash:before {
+    content: "\edfc";
+}
+
+.oicon-microscope:before {
+    content: "\edfd";
+}
+
+.oicon-mill-sign:before {
+    content: "\edfe";
+}
+
+.oicon-minimize:before {
+    content: "\edff";
+}
+
+.oicon-minus:before {
+    content: "\ee00";
+}
+
+.oicon-mitten:before {
+    content: "\ee01";
+}
+
+.oicon-mobile-button:before {
+    content: "\ee02";
+}
+
+.oicon-mobile-screen-button:before {
+    content: "\ee03";
+}
+
+.oicon-money-bill:before {
+    content: "\ee04";
+}
+
+.oicon-money-bill-11:before {
+    content: "\ee05";
+}
+
+.oicon-money-bill-1-wave:before {
+    content: "\ee06";
+}
+
+.oicon-money-bill-wave:before {
+    content: "\ee07";
+}
+
+.oicon-money-check:before {
+    content: "\ee08";
+}
+
+.oicon-money-check-dollar:before {
+    content: "\ee09";
+}
+
+.oicon-monument:before {
+    content: "\ee0a";
+}
+
+.oicon-moon1:before {
+    content: "\ee0b";
+}
+
+.oicon-mortar-pestle:before {
+    content: "\ee0c";
+}
+
+.oicon-mosque:before {
+    content: "\ee0d";
+}
+
+.oicon-motorcycle:before {
+    content: "\ee0e";
+}
+
+.oicon-mountain:before {
+    content: "\ee0f";
+}
+
+.oicon-mug-hot:before {
+    content: "\ee10";
+}
+
+.oicon-mug-saucer:before {
+    content: "\ee11";
+}
+
+.oicon-music:before {
+    content: "\ee12";
+}
+
+.oicon-n:before {
+    content: "\ee13";
+}
+
+.oicon-naira-sign:before {
+    content: "\ee14";
+}
+
+.oicon-network-wired:before {
+    content: "\ee15";
+}
+
+.oicon-neuter:before {
+    content: "\ee16";
+}
+
+.oicon-newspaper1:before {
+    content: "\ee17";
+}
+
+.oicon-not-equal:before {
+    content: "\ee18";
+}
+
+.oicon-notes-medical:before {
+    content: "\ee19";
+}
+
+.oicon-note-sticky1:before {
+    content: "\ee1a";
+}
+
+.oicon-o:before {
+    content: "\ee1b";
+}
+
+.oicon-object-group1:before {
+    content: "\ee1c";
+}
+
+.oicon-object-ungroup1:before {
+    content: "\ee1d";
+}
+
+.oicon-oil-can:before {
+    content: "\ee1e";
+}
+
+.oicon-om:before {
+    content: "\ee1f";
+}
+
+.oicon-otter:before {
+    content: "\ee20";
+}
+
+.oicon-outdent:before {
+    content: "\ee21";
+}
+
+.oicon-p:before {
+    content: "\ee22";
+}
+
+.oicon-pager:before {
+    content: "\ee23";
+}
+
+.oicon-paint-brush:before {
+    content: "\ee24";
+}
+
+.oicon-paint-roller:before {
+    content: "\ee25";
+}
+
+.oicon-palette:before {
+    content: "\ee26";
+}
+
+.oicon-pallet:before {
+    content: "\ee27";
+}
+
+.oicon-panorama:before {
+    content: "\ee28";
+}
+
+.oicon-paperclip:before {
+    content: "\ee29";
+}
+
+.oicon-paper-plane1:before {
+    content: "\ee2a";
+}
+
+.oicon-parachute-box:before {
+    content: "\ee2b";
+}
+
+.oicon-paragraph:before {
+    content: "\ee2c";
+}
+
+.oicon-passport:before {
+    content: "\ee2d";
+}
+
+.oicon-paste:before {
+    content: "\ee2e";
+}
+
+.oicon-pause:before {
+    content: "\ee2f";
+}
+
+.oicon-paw:before {
+    content: "\ee30";
+}
+
+.oicon-peace:before {
+    content: "\ee31";
+}
+
+.oicon-pen:before {
+    content: "\ee32";
+}
+
+.oicon-pencil:before {
+    content: "\ee33";
+}
+
+.oicon-pen-clip:before {
+    content: "\ee34";
+}
+
+.oicon-pen-fancy:before {
+    content: "\ee35";
+}
+
+.oicon-pen-nib:before {
+    content: "\ee36";
+}
+
+.oicon-pen-ruler:before {
+    content: "\ee37";
+}
+
+.oicon-pen-to-square1:before {
+    content: "\ee38";
+}
+
+.oicon-people-arrows-left-right:before {
+    content: "\ee39";
+}
+
+.oicon-people-carry-box:before {
+    content: "\ee3a";
+}
+
+.oicon-pepper-hot:before {
+    content: "\ee3b";
+}
+
+.oicon-percent:before {
+    content: "\ee3c";
+}
+
+.oicon-person:before {
+    content: "\ee3d";
+}
+
+.oicon-person-biking:before {
+    content: "\ee3e";
+}
+
+.oicon-person-booth:before {
+    content: "\ee3f";
+}
+
+.oicon-person-dots-from-line:before {
+    content: "\ee40";
+}
+
+.oicon-person-dress:before {
+    content: "\ee41";
+}
+
+.oicon-person-hiking:before {
+    content: "\ee42";
+}
+
+.oicon-person-praying:before {
+    content: "\ee43";
+}
+
+.oicon-person-running:before {
+    content: "\ee44";
+}
+
+.oicon-person-skating:before {
+    content: "\ee45";
+}
+
+.oicon-person-skiing:before {
+    content: "\ee46";
+}
+
+.oicon-person-skiing-nordic:before {
+    content: "\ee47";
+}
+
+.oicon-person-snowboarding:before {
+    content: "\ee48";
+}
+
+.oicon-person-swimming:before {
+    content: "\ee49";
+}
+
+.oicon-person-walking:before {
+    content: "\ee4a";
+}
+
+.oicon-person-walking-with-cane:before {
+    content: "\ee4b";
+}
+
+.oicon-peseta-sign:before {
+    content: "\ee4c";
+}
+
+.oicon-peso-sign:before {
+    content: "\ee4d";
+}
+
+.oicon-phone:before {
+    content: "\ee4e";
+}
+
+.oicon-phone-flip:before {
+    content: "\ee4f";
+}
+
+.oicon-phone-slash:before {
+    content: "\ee50";
+}
+
+.oicon-phone-volume:before {
+    content: "\ee51";
+}
+
+.oicon-photo-film:before {
+    content: "\ee52";
+}
+
+.oicon-piggy-bank:before {
+    content: "\ee53";
+}
+
+.oicon-pills:before {
+    content: "\ee54";
+}
+
+.oicon-pizza-slice:before {
+    content: "\ee55";
+}
+
+.oicon-place-of-worship:before {
+    content: "\ee56";
+}
+
+.oicon-plane:before {
+    content: "\ee57";
+}
+
+.oicon-plane-arrival:before {
+    content: "\ee58";
+}
+
+.oicon-plane-departure:before {
+    content: "\ee59";
+}
+
+.oicon-plane-slash:before {
+    content: "\ee5a";
+}
+
+.oicon-play:before {
+    content: "\ee5b";
+}
+
+.oicon-plug:before {
+    content: "\ee5c";
+}
+
+.oicon-plus:before {
+    content: "\ee5d";
+}
+
+.oicon-plus-minus:before {
+    content: "\ee5e";
+}
+
+.oicon-podcast:before {
+    content: "\ee5f";
+}
+
+.oicon-poo:before {
+    content: "\ee60";
+}
+
+.oicon-poop:before {
+    content: "\ee61";
+}
+
+.oicon-poo-storm:before {
+    content: "\ee62";
+}
+
+.oicon-power-off:before {
+    content: "\ee63";
+}
+
+.oicon-prescription:before {
+    content: "\ee64";
+}
+
+.oicon-prescription-bottle:before {
+    content: "\ee65";
+}
+
+.oicon-prescription-bottle-medical:before {
+    content: "\ee66";
+}
+
+.oicon-print:before {
+    content: "\ee67";
+}
+
+.oicon-pump-medical:before {
+    content: "\ee68";
+}
+
+.oicon-pump-soap:before {
+    content: "\ee69";
+}
+
+.oicon-puzzle-piece:before {
+    content: "\ee6a";
+}
+
+.oicon-q:before {
+    content: "\ee6b";
+}
+
+.oicon-qrcode:before {
+    content: "\ee6c";
+}
+
+.oicon-question:before {
+    content: "\ee6d";
+}
+
+.oicon-quidditch:before {
+    content: "\ee6e";
+}
+
+.oicon-quote-left:before {
+    content: "\ee6f";
+}
+
+.oicon-quote-right:before {
+    content: "\ee70";
+}
+
+.oicon-r:before {
+    content: "\ee71";
+}
+
+.oicon-radiation:before {
+    content: "\ee72";
+}
+
+.oicon-rainbow:before {
+    content: "\ee73";
+}
+
+.oicon-receipt:before {
+    content: "\ee74";
+}
+
+.oicon-record-vinyl:before {
+    content: "\ee75";
+}
+
+.oicon-rectangle-ad:before {
+    content: "\ee76";
+}
+
+.oicon-rectangle-list1:before {
+    content: "\ee77";
+}
+
+.oicon-rectangle-xmark1:before {
+    content: "\ee78";
+}
+
+.oicon-recycle:before {
+    content: "\ee79";
+}
+
+.oicon-registered1:before {
+    content: "\ee7a";
+}
+
+.oicon-repeat:before {
+    content: "\ee7b";
+}
+
+.oicon-reply:before {
+    content: "\ee7c";
+}
+
+.oicon-reply-all:before {
+    content: "\ee7d";
+}
+
+.oicon-republican:before {
+    content: "\ee7e";
+}
+
+.oicon-restroom:before {
+    content: "\ee7f";
+}
+
+.oicon-retweet:before {
+    content: "\ee80";
+}
+
+.oicon-ribbon:before {
+    content: "\ee81";
+}
+
+.oicon-right-from-bracket:before {
+    content: "\ee82";
+}
+
+.oicon-right-left:before {
+    content: "\ee83";
+}
+
+.oicon-right-long:before {
+    content: "\ee84";
+}
+
+.oicon-right-to-bracket:before {
+    content: "\ee85";
+}
+
+.oicon-ring:before {
+    content: "\ee86";
+}
+
+.oicon-road:before {
+    content: "\ee87";
+}
+
+.oicon-robot:before {
+    content: "\ee88";
+}
+
+.oicon-rocket:before {
+    content: "\ee89";
+}
+
+.oicon-rotate:before {
+    content: "\ee8a";
+}
+
+.oicon-rotate-left:before {
+    content: "\ee8b";
+}
+
+.oicon-route:before {
+    content: "\ee8c";
+}
+
+.oicon-rss:before {
+    content: "\ee8d";
+}
+
+.oicon-ruble-sign:before {
+    content: "\ee8e";
+}
+
+.oicon-ruler:before {
+    content: "\ee8f";
+}
+
+.oicon-ruler-combined:before {
+    content: "\ee90";
+}
+
+.oicon-ruler-horizontal:before {
+    content: "\ee91";
+}
+
+.oicon-ruler-vertical:before {
+    content: "\ee92";
+}
+
+.oicon-rupee-sign:before {
+    content: "\ee93";
+}
+
+.oicon-rupiah-sign:before {
+    content: "\ee94";
+}
+
+.oicon-s:before {
+    content: "\ee95";
+}
+
+.oicon-sailboat:before {
+    content: "\ee96";
+}
+
+.oicon-satellite:before {
+    content: "\ee97";
+}
+
+.oicon-satellite-dish:before {
+    content: "\ee98";
+}
+
+.oicon-scale-balanced:before {
+    content: "\ee99";
+}
+
+.oicon-scale-unbalanced:before {
+    content: "\ee9a";
+}
+
+.oicon-scale-unbalanced-flip:before {
+    content: "\ee9b";
+}
+
+.oicon-school:before {
+    content: "\ee9c";
+}
+
+.oicon-scissors:before {
+    content: "\ee9d";
+}
+
+.oicon-screwdriver:before {
+    content: "\ee9e";
+}
+
+.oicon-screwdriver-wrench:before {
+    content: "\ee9f";
+}
+
+.oicon-scroll:before {
+    content: "\eea0";
+}
+
+.oicon-scroll-torah:before {
+    content: "\eea1";
+}
+
+.oicon-sd-card:before {
+    content: "\eea2";
+}
+
+.oicon-section:before {
+    content: "\eea3";
+}
+
+.oicon-seedling:before {
+    content: "\eea4";
+}
+
+.oicon-server:before {
+    content: "\eea5";
+}
+
+.oicon-shapes:before {
+    content: "\eea6";
+}
+
+.oicon-share:before {
+    content: "\eea7";
+}
+
+.oicon-share-from-square1:before {
+    content: "\eea8";
+}
+
+.oicon-share-nodes:before {
+    content: "\eea9";
+}
+
+.oicon-shekel-sign:before {
+    content: "\eeaa";
+}
+
+.oicon-shield-blank:before {
+    content: "\eeab";
+}
+
+.oicon-shield-virus:before {
+    content: "\eeac";
+}
+
+.oicon-ship:before {
+    content: "\eead";
+}
+
+.oicon-shirt:before {
+    content: "\eeae";
+}
+
+.oicon-shoe-prints:before {
+    content: "\eeaf";
+}
+
+.oicon-shop:before {
+    content: "\eeb0";
+}
+
+.oicon-shop-slash:before {
+    content: "\eeb1";
+}
+
+.oicon-shower:before {
+    content: "\eeb2";
+}
+
+.oicon-shuffle:before {
+    content: "\eeb3";
+}
+
+.oicon-shuttle-space:before {
+    content: "\eeb4";
+}
+
+.oicon-signal:before {
+    content: "\eeb5";
+}
+
+.oicon-signature:before {
+    content: "\eeb6";
+}
+
+.oicon-sign-hanging:before {
+    content: "\eeb7";
+}
+
+.oicon-signs-post:before {
+    content: "\eeb8";
+}
+
+.oicon-sim-card:before {
+    content: "\eeb9";
+}
+
+.oicon-sink:before {
+    content: "\eeba";
+}
+
+.oicon-sitemap:before {
+    content: "\eebb";
+}
+
+.oicon-skull:before {
+    content: "\eebc";
+}
+
+.oicon-skull-crossbones:before {
+    content: "\eebd";
+}
+
+.oicon-slash:before {
+    content: "\eebe";
+}
+
+.oicon-sleigh:before {
+    content: "\eebf";
+}
+
+.oicon-sliders:before {
+    content: "\eec0";
+}
+
+.oicon-smog:before {
+    content: "\eec1";
+}
+
+.oicon-smoking:before {
+    content: "\eec2";
+}
+
+.oicon-snowflake1:before {
+    content: "\eec3";
+}
+
+.oicon-snowman:before {
+    content: "\eec4";
+}
+
+.oicon-snowplow:before {
+    content: "\eec5";
+}
+
+.oicon-soap:before {
+    content: "\eec6";
+}
+
+.oicon-socks:before {
+    content: "\eec7";
+}
+
+.oicon-solar-panel:before {
+    content: "\eec8";
+}
+
+.oicon-sort:before {
+    content: "\eec9";
+}
+
+.oicon-sort-down:before {
+    content: "\eeca";
+}
+
+.oicon-sort-up:before {
+    content: "\eecb";
+}
+
+.oicon-spa:before {
+    content: "\eecc";
+}
+
+.oicon-spaghetti-monster-flying:before {
+    content: "\eecd";
+}
+
+.oicon-spell-check:before {
+    content: "\eece";
+}
+
+.oicon-spider:before {
+    content: "\eecf";
+}
+
+.oicon-spinner:before {
+    content: "\eed0";
+}
+
+.oicon-splotch:before {
+    content: "\eed1";
+}
+
+.oicon-spoon:before {
+    content: "\eed2";
+}
+
+.oicon-spray-can:before {
+    content: "\eed3";
+}
+
+.oicon-spray-can-sparkles:before {
+    content: "\eed4";
+}
+
+.oicon-square1:before {
+    content: "\eed5";
+}
+
+.oicon-square-caret-down1:before {
+    content: "\eed6";
+}
+
+.oicon-square-caret-left1:before {
+    content: "\eed7";
+}
+
+.oicon-square-caret-right1:before {
+    content: "\eed8";
+}
+
+.oicon-square-caret-up1:before {
+    content: "\eed9";
+}
+
+.oicon-square-check1:before {
+    content: "\eeda";
+}
+
+.oicon-square-envelope:before {
+    content: "\eedb";
+}
+
+.oicon-square-full1:before {
+    content: "\eedc";
+}
+
+.oicon-square-h:before {
+    content: "\eedd";
+}
+
+.oicon-square-minus1:before {
+    content: "\eede";
+}
+
+.oicon-square-parking:before {
+    content: "\eedf";
+}
+
+.oicon-square-pen:before {
+    content: "\eee0";
+}
+
+.oicon-square-phone:before {
+    content: "\eee1";
+}
+
+.oicon-square-phone-flip:before {
+    content: "\eee2";
+}
+
+.oicon-square-plus1:before {
+    content: "\eee3";
+}
+
+.oicon-square-poll-horizontal:before {
+    content: "\eee4";
+}
+
+.oicon-square-poll-vertical:before {
+    content: "\eee5";
+}
+
+.oicon-square-root-variable:before {
+    content: "\eee6";
+}
+
+.oicon-square-rss:before {
+    content: "\eee7";
+}
+
+.oicon-square-share-nodes:before {
+    content: "\eee8";
+}
+
+.oicon-square-up-right:before {
+    content: "\eee9";
+}
+
+.oicon-stairs:before {
+    content: "\eeea";
+}
+
+.oicon-stamp:before {
+    content: "\eeeb";
+}
+
+.oicon-star1:before {
+    content: "\eeec";
+}
+
+.oicon-star-and-crescent:before {
+    content: "\eeed";
+}
+
+.oicon-star-half1:before {
+    content: "\eeee";
+}
+
+.oicon-star-half-stroke:before {
+    content: "\eeef";
+}
+
+.oicon-star-of-david:before {
+    content: "\eef0";
+}
+
+.oicon-star-of-life:before {
+    content: "\eef1";
+}
+
+.oicon-sterling-sign:before {
+    content: "\eef2";
+}
+
+.oicon-stethoscope:before {
+    content: "\eef3";
+}
+
+.oicon-stop:before {
+    content: "\eef4";
+}
+
+.oicon-stopwatch:before {
+    content: "\eef5";
+}
+
+.oicon-stopwatch-20:before {
+    content: "\eef6";
+}
+
+.oicon-store:before {
+    content: "\eef7";
+}
+
+.oicon-store-slash:before {
+    content: "\eef8";
+}
+
+.oicon-street-view:before {
+    content: "\eef9";
+}
+
+.oicon-strikethrough:before {
+    content: "\eefa";
+}
+
+.oicon-stroopwafel:before {
+    content: "\eefb";
+}
+
+.oicon-subscript:before {
+    content: "\eefc";
+}
+
+.oicon-suitcase:before {
+    content: "\eefd";
+}
+
+.oicon-suitcase-medical:before {
+    content: "\eefe";
+}
+
+.oicon-suitcase-rolling:before {
+    content: "\eeff";
+}
+
+.oicon-sun1:before {
+    content: "\ef00";
+}
+
+.oicon-superscript:before {
+    content: "\ef01";
+}
+
+.oicon-swatchbook:before {
+    content: "\ef02";
+}
+
+.oicon-synagogue:before {
+    content: "\ef03";
+}
+
+.oicon-syringe:before {
+    content: "\ef04";
+}
+
+.oicon-t:before {
+    content: "\ef05";
+}
+
+.oicon-table:before {
+    content: "\ef06";
+}
+
+.oicon-table-cells:before {
+    content: "\ef07";
+}
+
+.oicon-table-cells-large:before {
+    content: "\ef08";
+}
+
+.oicon-table-columns:before {
+    content: "\ef09";
+}
+
+.oicon-table-list:before {
+    content: "\ef0a";
+}
+
+.oicon-tablet-button:before {
+    content: "\ef0b";
+}
+
+.oicon-table-tennis-paddle-ball:before {
+    content: "\ef0c";
+}
+
+.oicon-tablets:before {
+    content: "\ef0d";
+}
+
+.oicon-tablet-screen-button:before {
+    content: "\ef0e";
+}
+
+.oicon-tachograph-digital:before {
+    content: "\ef0f";
+}
+
+.oicon-tag:before {
+    content: "\ef10";
+}
+
+.oicon-tags:before {
+    content: "\ef11";
+}
+
+.oicon-tape:before {
+    content: "\ef12";
+}
+
+.oicon-taxi:before {
+    content: "\ef13";
+}
+
+.oicon-teeth:before {
+    content: "\ef14";
+}
+
+.oicon-teeth-open:before {
+    content: "\ef15";
+}
+
+.oicon-temperature-empty:before {
+    content: "\ef16";
+}
+
+.oicon-temperature-full:before {
+    content: "\ef17";
+}
+
+.oicon-temperature-half:before {
+    content: "\ef18";
+}
+
+.oicon-temperature-high:before {
+    content: "\ef19";
+}
+
+.oicon-temperature-low:before {
+    content: "\ef1a";
+}
+
+.oicon-temperature-quarter:before {
+    content: "\ef1b";
+}
+
+.oicon-temperature-three-quarters:before {
+    content: "\ef1c";
+}
+
+.oicon-tenge-sign:before {
+    content: "\ef1d";
+}
+
+.oicon-terminal:before {
+    content: "\ef1e";
+}
+
+.oicon-text-height:before {
+    content: "\ef1f";
+}
+
+.oicon-text-slash:before {
+    content: "\ef20";
+}
+
+.oicon-text-width:before {
+    content: "\ef21";
+}
+
+.oicon-thermometer:before {
+    content: "\ef22";
+}
+
+.oicon-thumbs-down1:before {
+    content: "\ef23";
+}
+
+.oicon-thumbs-up1:before {
+    content: "\ef24";
+}
+
+.oicon-thumbtack:before {
+    content: "\ef25";
+}
+
+.oicon-ticket-simple:before {
+    content: "\ef26";
+}
+
+.oicon-timeline:before {
+    content: "\ef27";
+}
+
+.oicon-toggle-off:before {
+    content: "\ef28";
+}
+
+.oicon-toggle-on:before {
+    content: "\ef29";
+}
+
+.oicon-toilet:before {
+    content: "\ef2a";
+}
+
+.oicon-toilet-paper:before {
+    content: "\ef2b";
+}
+
+.oicon-toilet-paper-slash:before {
+    content: "\ef2c";
+}
+
+.oicon-toolbox:before {
+    content: "\ef2d";
+}
+
+.oicon-tooth:before {
+    content: "\ef2e";
+}
+
+.oicon-torii-gate:before {
+    content: "\ef2f";
+}
+
+.oicon-tower-broadcast:before {
+    content: "\ef30";
+}
+
+.oicon-tractor:before {
+    content: "\ef31";
+}
+
+.oicon-Portalmark:before {
+    content: "\ef32";
+}
+
+.oicon-traffic-light:before {
+    content: "\ef33";
+}
+
+.oicon-trailer:before {
+    content: "\ef34";
+}
+
+.oicon-train:before {
+    content: "\ef35";
+}
+
+.oicon-train-subway:before {
+    content: "\ef36";
+}
+
+.oicon-train-tram:before {
+    content: "\ef37";
+}
+
+.oicon-transgender:before {
+    content: "\ef38";
+}
+
+.oicon-trash:before {
+    content: "\ef39";
+}
+
+.oicon-trash-arrow-up:before {
+    content: "\ef3a";
+}
+
+.oicon-trash-can1:before {
+    content: "\ef3b";
+}
+
+.oicon-trash-can-arrow-up:before {
+    content: "\ef3c";
+}
+
+.oicon-tree:before {
+    content: "\ef3d";
+}
+
+.oicon-triangle-exclamation:before {
+    content: "\ef3e";
+}
+
+.oicon-trophy:before {
+    content: "\ef3f";
+}
+
+.oicon-truck:before {
+    content: "\ef40";
+}
+
+.oicon-truck-fast:before {
+    content: "\ef41";
+}
+
+.oicon-truck-medical:before {
+    content: "\ef42";
+}
+
+.oicon-truck-monster:before {
+    content: "\ef43";
+}
+
+.oicon-truck-moving:before {
+    content: "\ef44";
+}
+
+.oicon-truck-pickup:before {
+    content: "\ef45";
+}
+
+.oicon-truck-ramp-box:before {
+    content: "\ef46";
+}
+
+.oicon-tty:before {
+    content: "\ef47";
+}
+
+.oicon-turkish-lira-sign:before {
+    content: "\ef48";
+}
+
+.oicon-turn-down:before {
+    content: "\ef49";
+}
+
+.oicon-turn-up:before {
+    content: "\ef4a";
+}
+
+.oicon-tv:before {
+    content: "\ef4b";
+}
+
+.oicon-u:before {
+    content: "\ef4c";
+}
+
+.oicon-umbrella:before {
+    content: "\ef4d";
+}
+
+.oicon-umbrella-beach:before {
+    content: "\ef4e";
+}
+
+.oicon-underline:before {
+    content: "\ef4f";
+}
+
+.oicon-universal-access:before {
+    content: "\ef50";
+}
+
+.oicon-unlock:before {
+    content: "\ef51";
+}
+
+.oicon-unlock-keyhole:before {
+    content: "\ef52";
+}
+
+.oicon-up-down:before {
+    content: "\ef53";
+}
+
+.oicon-up-down-left-right:before {
+    content: "\ef54";
+}
+
+.oicon-upload:before {
+    content: "\ef55";
+}
+
+.oicon-up-long:before {
+    content: "\ef56";
+}
+
+.oicon-up-right-and-down-left-from-center:before {
+    content: "\ef57";
+}
+
+.oicon-up-right-from-square:before {
+    content: "\ef58";
+}
+
+.oicon-user1:before {
+    content: "\ef59";
+}
+
+.oicon-user-astronaut:before {
+    content: "\ef5a";
+}
+
+.oicon-user-check:before {
+    content: "\ef5b";
+}
+
+.oicon-user-clock:before {
+    content: "\ef5c";
+}
+
+.oicon-user-doctor:before {
+    content: "\ef5d";
+}
+
+.oicon-user-gear:before {
+    content: "\ef5e";
+}
+
+.oicon-user-graduate:before {
+    content: "\ef5f";
+}
+
+.oicon-user-group:before {
+    content: "\ef60";
+}
+
+.oicon-user-injured:before {
+    content: "\ef61";
+}
+
+.oicon-user-large:before {
+    content: "\ef62";
+}
+
+.oicon-user-large-slash:before {
+    content: "\ef63";
+}
+
+.oicon-user-lock:before {
+    content: "\ef64";
+}
+
+.oicon-user-minus:before {
+    content: "\ef65";
+}
+
+.oicon-user-ninja:before {
+    content: "\ef66";
+}
+
+.oicon-user-nurse:before {
+    content: "\ef67";
+}
+
+.oicon-user-pen:before {
+    content: "\ef68";
+}
+
+.oicon-user-plus:before {
+    content: "\ef69";
+}
+
+.oicon-users:before {
+    content: "\ef6a";
+}
+
+.oicon-user-secret:before {
+    content: "\ef6b";
+}
+
+.oicon-users-gear:before {
+    content: "\ef6c";
+}
+
+.oicon-user-shield:before {
+    content: "\ef6d";
+}
+
+.oicon-user-slash:before {
+    content: "\ef6e";
+}
+
+.oicon-users-slash:before {
+    content: "\ef6f";
+}
+
+.oicon-user-tag:before {
+    content: "\ef70";
+}
+
+.oicon-user-tie:before {
+    content: "\ef71";
+}
+
+.oicon-user-xmark:before {
+    content: "\ef72";
+}
+
+.oicon-utensils:before {
+    content: "\ef73";
+}
+
+.oicon-v:before {
+    content: "\ef74";
+}
+
+.oicon-van-shuttle:before {
+    content: "\ef75";
+}
+
+.oicon-vault:before {
+    content: "\ef76";
+}
+
+.oicon-vector-square:before {
+    content: "\ef77";
+}
+
+.oicon-venus:before {
+    content: "\ef78";
+}
+
+.oicon-venus-double:before {
+    content: "\ef79";
+}
+
+.oicon-venus-mars:before {
+    content: "\ef7a";
+}
+
+.oicon-vest:before {
+    content: "\ef7b";
+}
+
+.oicon-vest-patches:before {
+    content: "\ef7c";
+}
+
+.oicon-vial:before {
+    content: "\ef7d";
+}
+
+.oicon-vials:before {
+    content: "\ef7e";
+}
+
+.oicon-video:before {
+    content: "\ef7f";
+}
+
+.oicon-video-slash:before {
+    content: "\ef80";
+}
+
+.oicon-vihara:before {
+    content: "\ef81";
+}
+
+.oicon-virus:before {
+    content: "\ef82";
+}
+
+.oicon-viruses:before {
+    content: "\ef83";
+}
+
+.oicon-virus-slash:before {
+    content: "\ef84";
+}
+
+.oicon-voicemail:before {
+    content: "\ef85";
+}
+
+.oicon-volleyball:before {
+    content: "\ef86";
+}
+
+.oicon-volume-high:before {
+    content: "\ef87";
+}
+
+.oicon-volume-low:before {
+    content: "\ef88";
+}
+
+.oicon-volume-off:before {
+    content: "\ef89";
+}
+
+.oicon-volume-xmark:before {
+    content: "\ef8a";
+}
+
+.oicon-vr-cardboard:before {
+    content: "\ef8b";
+}
+
+.oicon-w:before {
+    content: "\ef8c";
+}
+
+.oicon-wallet:before {
+    content: "\ef8d";
+}
+
+.oicon-wand-magic:before {
+    content: "\ef8e";
+}
+
+.oicon-warehouse:before {
+    content: "\ef8f";
+}
+
+.oicon-water:before {
+    content: "\ef90";
+}
+
+.oicon-water-ladder:before {
+    content: "\ef91";
+}
+
+.oicon-wave-square:before {
+    content: "\ef92";
+}
+
+.oicon-weight-hanging:before {
+    content: "\ef93";
+}
+
+.oicon-weight-scale:before {
+    content: "\ef94";
+}
+
+.oicon-wheelchair:before {
+    content: "\ef95";
+}
+
+.oicon-whiskey-glass:before {
+    content: "\ef96";
+}
+
+.oicon-wifi:before {
+    content: "\ef97";
+}
+
+.oicon-wind:before {
+    content: "\ef98";
+}
+
+.oicon-window-maximize1:before {
+    content: "\ef99";
+}
+
+.oicon-window-minimize1:before {
+    content: "\ef9a";
+}
+
+.oicon-window-restore1:before {
+    content: "\ef9b";
+}
+
+.oicon-wine-bottle:before {
+    content: "\ef9c";
+}
+
+.oicon-wine-glass:before {
+    content: "\ef9d";
+}
+
+.oicon-wine-glass-empty:before {
+    content: "\ef9e";
+}
+
+.oicon-won-sign:before {
+    content: "\ef9f";
+}
+
+.oicon-wrench:before {
+    content: "\efa0";
+}
+
+.oicon-x:before {
+    content: "\efa1";
+}
+
+.oicon-xmark:before {
+    content: "\efa2";
+}
+
+.oicon-x-ray:before {
+    content: "\efa3";
+}
+
+.oicon-y:before {
+    content: "\efa4";
+}
+
+.oicon-yen-sign:before {
+    content: "\efa5";
+}
+
+.oicon-yin-yang:before {
+    content: "\efa6";
+}
+
+.oicon-z:before {
+    content: "\efa7";
+}

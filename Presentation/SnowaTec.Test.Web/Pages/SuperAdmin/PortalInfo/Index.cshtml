@@ -1,0 +1,179 @@
+﻿@page
+
+@model SnowaTec.Test.Web.Pages.SuperAdmin.PortalInfo.IndexModel
+
+@{
+    ViewData["Title"] = "اطلاعات پورتال";
+
+    string ImageUrl(byte[]? image)
+    {
+        if (image == null || image.Length == 0)
+            return "/Content/Image/default.jpg";
+
+        return $"data:image;base64,{Convert.ToBase64String(image)}";
+    }
+}
+
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper p-0">
+    <div class="content-header row">
+        @await Component.InvokeAsync("BreadcrumbControl")
+    </div>
+    <div class="content-body">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">مشخصات پورتال</h4>
+                    </div>
+                    <div class="card-body">
+                        <form class="form" method="post" enctype="multipart/form-data">
+
+                            <input asp-for="PortalInfo.Id" hidden="hidden" />
+
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="mb-1 ">
+                                        <label asp-for="PortalInfo.Title">عنوان پورتال (پارسی)</label><span class="text-danger"><b>*</b></span>
+                                        <input type="text" class="form-control" asp-for="PortalInfo.Title" placeholder="عنوان پورتال" required />
+                                        <span asp-validation-for="PortalInfo.Title" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="mb-1">
+                                        <label asp-for="PortalInfo.EnglishTitle">عنوان پورتال (انگلیسی)</label><span class="text-danger"><b>*</b></span>
+                                        <input type="text" class="form-control" asp-for="PortalInfo.EnglishTitle" placeholder="عنوان پورتال" required />
+                                        <span asp-validation-for="PortalInfo.EnglishTitle" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="mb-1">
+                                        <label asp-for="PortalInfo.SiteUrl">آدرس سایت</label><span class="text-danger"><b>*</b></span>
+                                        <input type="text" class="form-control" asp-for="PortalInfo.SiteUrl" placeholder="آدرس سایت" required />
+                                        <span asp-validation-for="PortalInfo.SiteUrl" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="mb-1">
+                                        <label asp-for="PortalInfo.Slogan">شعار</label><span class="text-danger"><b>*</b></span>
+                                        <input type="text" class="form-control" asp-for="PortalInfo.Slogan" placeholder="شعار" required />
+                                        <span asp-validation-for="PortalInfo.Slogan" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="mb-1">
+                                        <label asp-for="PortalInfo.DeveloperTitle">عنوان توسعه دهنده (پارسی)</label><span class="text-danger"><b>*</b></span>
+                                        <input type="text" class="form-control" asp-for="PortalInfo.DeveloperTitle" placeholder="عنوان توسعه دهنده" required />
+                                        <span asp-validation-for="PortalInfo.DeveloperTitle" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="mb-1">
+                                        <label asp-for="PortalInfo.DeveloperEnglishTitle">عنوان توسعه دهنده (انگلیسی)</label><span class="text-danger"><b>*</b></span>
+                                        <input type="text" class="form-control" asp-for="PortalInfo.DeveloperEnglishTitle" placeholder="عنوان توسعه دهنده" required />
+                                        <span asp-validation-for="PortalInfo.DeveloperEnglishTitle" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="mb-1">
+                                        <label asp-for="PortalInfo.DeveloperUrl">آدرس سایت توسعه دهنده</label><span class="text-danger"><b>*</b></span>
+                                        <input type="text" class="form-control" asp-for="PortalInfo.DeveloperUrl" placeholder="آدرس سایت توسعه دهنده" required />
+                                        <span asp-validation-for="PortalInfo.DeveloperUrl" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="mb-1">
+                                        <br />
+                                        <div class="form-check">
+                                            <input asp-for="@Model.PortalInfo.RetentionOfPreviousData" type="checkbox" class="form-check-input" checked="@(Model.PortalInfo.RetentionOfPreviousData)" />
+                                            <label asp-for="PortalInfo.RetentionOfPreviousData" class="form-check-label">حفظ داده های قبلی</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Logo</h4>
+                                            <input asp-for="PortalInfo.LogoFile" hidden="hidden" />
+                                            <img id="imgLogo" class="img-fluid my-2" src="@ImageUrl(Model.PortalInfo.Logo)" alt="Logo" />
+                                            <input type="file" class="form-control" asp-for="PortalInfo.LogoFile" />
+                                            <span asp-validation-for="PortalInfo.LogoFile" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">FavIcon</h4>
+                                            <input asp-for="PortalInfo.FavIconFile" hidden="hidden" />
+                                            <img id="imgFavIcon" class="img-fluid my-2" src="@ImageUrl(Model.PortalInfo.FavIcon)" alt="FavIcon" />
+                                            <input type="file" class="form-control" asp-for="PortalInfo.FavIconFile" />
+                                            <span asp-validation-for="PortalInfo.FavIconFile" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Small Logo</h4>
+                                            <input asp-for="PortalInfo.SmallLogoFile" hidden="hidden" />
+                                            <img id="imgSmallLogo" class="img-fluid my-2" src="@ImageUrl(Model.PortalInfo.SmallLogo)" alt="Small Logo" />
+                                            <input type="file" class="form-control" asp-for="PortalInfo.SmallLogoFile" />
+                                            <span asp-validation-for="PortalInfo.SmallLogoFile" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Developer Logo</h4>
+                                            <input asp-for="PortalInfo.DeveloperLogoFile" hidden="hidden" />
+                                            <img id="imgDeveloperLogo" class="img-fluid my-2" src="@ImageUrl(Model.PortalInfo.DeveloperLogo)" alt="Developer Logo" />
+                                            <input type="file" class="form-control" asp-for="PortalInfo.DeveloperLogoFile" />
+                                            <span asp-validation-for="PortalInfo.DeveloperLogoFile" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary me-1">ثبت</button>
+                                    <a asp-page="/SuperAdmin/Dashboard" class="btn btn-outline-secondary">انصراف</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $(document).on('change', '[id*="File"]', function () {
+                if (this.files[0]) {
+
+                    let imgId = this.name.replace("PortalInfo.", "");
+                    imgId = imgId.replace("File", "");
+                    imgId = "img" + imgId;
+
+                    var uploadimg = new FileReader();
+
+                    uploadimg.onload = function (displayimg) {
+                        $("#" + imgId).attr('src', displayimg.target.result);
+                    }
+
+                    uploadimg.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+}

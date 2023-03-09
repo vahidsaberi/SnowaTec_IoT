@@ -1,0 +1,331 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/Bundle/errorPanel-rtl.min.css",
+    "inputFiles": [
+      "wwwroot/Content/Font/css/iranyekan.css",
+      "wwwroot/Content/Font/css/iransans.css",
+      "wwwroot/Content/Admin/css-rtl/bootstrap.css",
+      "wwwroot/Content/Admin/css-rtl/bootstrap-extended.css",
+      "wwwroot/Content/Admin/css-rtl/colors.css",
+      "wwwroot/Content/Admin/css-rtl/components.css",
+      "wwwroot/Content/Admin/css-rtl/themes/dark-layout.css",
+      "wwwroot/Content/Admin/css-rtl/themes/bordered-layout.css",
+      "wwwroot/Content/Admin/css-rtl/themes/semi-dark-layout.css",
+      "wwwroot/Content/Admin/css-rtl/core/menu/menu-types/vertical-menu.css",
+      "wwwroot/Content/Admin/css-rtl/pages/page-misc.css",
+      "wwwroot/Content/Admin/css-rtl/custom.css",
+      "wwwroot/Content/Admin/css-rtl/style.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "commentMode": "all",
+      "gzip": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/Bundle/errorPanel.min.css",
+    "inputFiles": [
+      "wwwroot/Content/Font/css/iranyekan.css",
+      "wwwroot/Content/Font/css/iransans.css",
+      "wwwroot/Content/Admin/css/bootstrap.css",
+      "wwwroot/Content/Admin/css/bootstrap-extended.css",
+      "wwwroot/Content/Admin/css/colors.css",
+      "wwwroot/Content/Admin/css/components.css",
+      "wwwroot/Content/Admin/css/themes/dark-layout.css",
+      "wwwroot/Content/Admin/css/themes/bordered-layout.css",
+      "wwwroot/Content/Admin/css/themes/semi-dark-layout.css",
+      "wwwroot/Content/Admin/css/core/menu/menu-types/vertical-menu.css",
+      "wwwroot/Content/Admin/css/pages/page-misc.css",
+      "wwwroot/Content/Admin/css/custom.css",
+      "wwwroot/Content/Admin/css/style.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "commentMode": "all",
+      "gzip": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/Bundle/loginPanel-rtl.min.css",
+    "inputFiles": [
+      "wwwroot/Content/Library/vendors/css/vendors.min.css",
+      "wwwroot/Content/Library/vendors/css/forms/wizard/bs-stepper.min.css",
+      "wwwroot/Content/Library/vendors/css/forms/select/select2.min.css",
+      "wwwroot/Content/Admin/css-rtl/plugins/forms/form-wizard.css",
+      "wwwroot/Content/Admin/css-rtl/plugins/forms/form-validation.css",
+      "wwwroot/Content/Font/css/iranyekan.css",
+      "wwwroot/Content/Font/css/iransans.css",
+      "wwwroot/Content/Library/loading/css/loading.css",
+      "wwwroot/Content/Library/vendors/css/extensions/toastr.min.css",
+      "wwwroot/Content/Admin/css-rtl/bootstrap.css",
+      "wwwroot/Content/Admin/css-rtl/bootstrap-extended.css",
+      "wwwroot/Content/Admin/css-rtl/colors.css",
+      "wwwroot/Content/Admin/css-rtl/components.css",
+      "wwwroot/Content/Admin/css-rtl/themes/dark-layout.css",
+      "wwwroot/Content/Admin/css-rtl/themes/bordered-layout.css",
+      "wwwroot/Content/Admin/css-rtl/themes/semi-dark-layout.css",
+      "wwwroot/Content/Admin/css-rtl/core/menu/menu-types/vertical-menu.css",
+      "wwwroot/Content/Admin/css-rtl/pages/authentication.css",
+      "wwwroot/Content/Admin/css-rtl/custom.css",
+      "wwwroot/Content/Admin/css-rtl/style.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "commentMode": "all",
+      "gzip": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/Bundle/loginPanel.min.css",
+    "inputFiles": [
+      "wwwroot/Content/Library/vendors/css/vendors.min.css",
+      "wwwroot/Content/Library/vendors/css/forms/wizard/bs-stepper.min.css",
+      "wwwroot/Content/Library/vendors/css/forms/select/select2.min.css",
+      "wwwroot/Content/Admin/css/plugins/forms/form-wizard.css",
+      "wwwroot/Content/Admin/css/plugins/forms/form-validation.css",
+      "wwwroot/Content/Font/css/iranyekan.css",
+      "wwwroot/Content/Font/css/iransans.css",
+      "wwwroot/Content/Library/loading/css/loading.css",
+      "wwwroot/Content/Library/vendors/css/extensions/toastr.min.css",
+      "wwwroot/Content/Admin/css/bootstrap.css",
+      "wwwroot/Content/Admin/css/bootstrap-extended.css",
+      "wwwroot/Content/Admin/css/colors.css",
+      "wwwroot/Content/Admin/css/components.css",
+      "wwwroot/Content/Admin/css/themes/dark-layout.css",
+      "wwwroot/Content/Admin/css/themes/bordered-layout.css",
+      "wwwroot/Content/Admin/css/themes/semi-dark-layout.css",
+      "wwwroot/Content/Admin/css/core/menu/menu-types/vertical-menu.css",
+      "wwwroot/Content/Admin/css/pages/authentication.css",
+      "wwwroot/Content/Admin/css/custom.css",
+      "wwwroot/Content/Admin/css/style.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "commentMode": "all",
+      "gzip": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/Bundle/loginPanel.min.js",
+    "inputFiles": [
+      "wwwroot/Content/Library/vendors/js/vendors.min.js",
+      "wwwroot/Content/Library/vendors/js/forms/wizard/bs-stepper.min.js",
+      "wwwroot/Content/Library/vendors/js/forms/select/select2.full.min.js",
+      "wwwroot/Content/Structure/jqueryjs/jquery.validate.min.js",
+      "wwwroot/Content/Structure/jqueryjs/jquery-validation-unobtrusive.min.js",
+      "wwwroot/Content/Structure/jqueryjs/jquery.unobtrusive-ajax.min.js",
+      "wwwroot/Content/Library/loading/js/loading.js",
+      "wwwroot/Content/Library/vendors/js/extensions/toastr.min.js",
+      "wwwroot/Content/Admin/js/scripts/extensions/ext-component-toastr.js",
+      "wwwroot/Content/Admin/js/core/app-menu.js",
+      "wwwroot/Content/Admin/js/core/app.js",
+      "wwwroot/Content/Library/vendors/js/forms/cleave/cleave.min.js",
+      "wwwroot/Content/Library/vendors/js/forms/cleave/addons/cleave-phone.us.js"
+      //"wwwroot/Content/Admin/js/scripts/pages/auth-two-steps.js",
+      //"wwwroot/Content/Structure/js/login-panel.js"
+      //"wwwroot/Content/Structure/jqueryjs/jquery.min.js",
+      //"wwwroot/Content/Structure/jqueryjs/jquery-ui.min.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "commentMode": "all",
+      "gzip": false
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/Bundle/basePanel-rtl.min.css",
+    "inputFiles": [
+      "wwwroot/Content/Library/vendors/css/vendors.min.css",
+      "wwwroot/Content/Library/vendors/css/animate/animate.min.css",
+      "wwwroot/Content/Library/vendors/css/extensions/sweetalert2.min.css",
+      "wwwroot/Content/Library/vendors/css/forms/select/select2.min.css",
+      "wwwroot/Content/Library/loading/css/loading.css",
+      "wwwroot/Content/Library/vendors/css/extensions/toastr.min.css",
+      "wwwroot/Content/Library/vendors/css/tables/datatable/dataTables.bootstrap5.min.css",
+      "wwwroot/Content/Library/vendors/css/tables/datatable/responsive.bootstrap5.min.css",
+      "wwwroot/Content/Font/css/iranyekan.css",
+      "wwwroot/Content/Font/css/iransans.css",
+      "wwwroot/Content/Font/css/orodicon.css",
+      "wwwroot/Content/Font/css/orodicon2.css",
+      "wwwroot/Content/Library/persianDate/css/persian.datepicker.css",
+      "wwwroot/Content/Library/spectrum/css/spectrum.css",
+      "wwwroot/Content/Admin/css-rtl/bootstrap.css",
+      "wwwroot/Content/Admin/css-rtl/bootstrap-extended.css",
+      "wwwroot/Content/Admin/css-rtl/colors.css",
+      "wwwroot/Content/Admin/css-rtl/components.css",
+      "wwwroot/Content/Admin/css-rtl/themes/dark-layout.css",
+      "wwwroot/Content/Admin/css-rtl/themes/bordered-layout.css",
+      "wwwroot/Content/Admin/css-rtl/themes/semi-dark-layout.css",
+      "wwwroot/Content/Admin/css-rtl/core/menu/menu-types/vertical-menu.css",
+      "wwwroot/Content/Admin/css-rtl/plugins/extensions/ext-component-toastr.css",
+      "wwwroot/Content/Admin/css-rtl/plugins/extensions/ext-component-sweet-alerts.css",
+      "wwwroot/Content/Admin/css-rtl/plugins/forms/form-validation.css",
+      "wwwroot/Content/Admin/css-rtl/plugins/forms/pickers/form-flat-pickr.css",
+      "wwwroot/Content/Admin/css-rtl/pages/app-invoice.css",
+      "wwwroot/Content/Admin/css-rtl/custom.css",
+      "wwwroot/Content/Admin/css-rtl/style.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "commentMode": "all",
+      "gzip": false
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/Bundle/basePanel.min.css",
+    "inputFiles": [
+      "wwwroot/Content/Library/vendors/css/vendors.min.css",
+      "wwwroot/Content/Library/vendors/css/animate/animate.min.css",
+      "wwwroot/Content/Library/vendors/css/extensions/sweetalert2.min.css",
+      "wwwroot/Content/Library/vendors/css/forms/select/select2.min.css",
+      "wwwroot/Content/Library/loading/css/loading.css",
+      "wwwroot/Content/Library/vendors/css/extensions/toastr.min.css",
+      "wwwroot/Content/Library/vendors/css/tables/datatable/dataTables.bootstrap5.min.css",
+      "wwwroot/Content/Library/vendors/css/tables/datatable/responsive.bootstrap5.min.css",
+      "wwwroot/Content/Font/css/iranyekan.css",
+      "wwwroot/Content/Font/css/iransans.css",
+      "wwwroot/Content/Font/css/orodicon.css",
+      "wwwroot/Content/Font/css/orodicon2.css",
+      "wwwroot/Content/Library/persianDate/css/persian.datepicker.css",
+      "wwwroot/Content/Library/spectrum/css/spectrum.css",
+      "wwwroot/Content/Admin/css/bootstrap.css",
+      "wwwroot/Content/Admin/css/bootstrap-extended.css",
+      "wwwroot/Content/Admin/css/colors.css",
+      "wwwroot/Content/Admin/css/components.css",
+      "wwwroot/Content/Admin/css/themes/dark-layout.css",
+      "wwwroot/Content/Admin/css/themes/bordered-layout.css",
+      "wwwroot/Content/Admin/css/themes/semi-dark-layout.css",
+      "wwwroot/Content/Admin/css/core/menu/menu-types/vertical-menu.css",
+      "wwwroot/Content/Admin/css/plugins/extensions/ext-component-toastr.css",
+      "wwwroot/Content/Admin/css/plugins/extensions/ext-component-sweet-alerts.css",
+      "wwwroot/Content/Admin/css/plugins/forms/form-validation.css",
+      "wwwroot/Content/Admin/css/plugins/forms/pickers/form-flat-pickr.css",
+      "wwwroot/Content/Admin/css/pages/app-invoice.css",
+      "wwwroot/Content/Admin/css/custom.css",
+      "wwwroot/Content/Admin/css/style.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "commentMode": "all",
+      "gzip": false
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/Bundle/basePanel.min.js",
+    "inputFiles": [
+      "wwwroot/Content/Library/vendors/js/vendors.min.js",
+      "wwwroot/Content/Library/vendors/js/extensions/sweetalert2.all.min.js",
+      "wwwroot/Content/Library/vendors/js/extensions/polyfill.min.js",
+      "wwwroot/Content/Structure/jqueryjs/jquery.validate.min.js",
+      "wwwroot/Content/Structure/jqueryjs/jquery-validation-unobtrusive.min.js",
+      "wwwroot/Content/Structure/jqueryjs/jquery.unobtrusive-ajax.min.js",
+      "wwwroot/Content/Library/vendors/js/forms/select/select2.full.min.js",
+      "wwwroot/Content/Library/persianDate/js/persian.date.js",
+      "wwwroot/Content/Library/persianDate/js/persian.datepicker.js",
+      "wwwroot/Content/Library/spectrum/js/spectrum.js",
+      "wwwroot/Content/Admin/js/scripts/forms/form-select2.js",
+      "wwwroot/Content/Library/vendors/js/tables/datatable/jquery.dataTables.min.js",
+      "wwwroot/Content/Library/vendors/js/tables/datatable/dataTables.bootstrap5.min.js",
+      "wwwroot/Content/Library/vendors/js/tables/datatable/dataTables.responsive.min.js",
+      "wwwroot/Content/Library/vendors/js/tables/datatable/responsive.bootstrap5.min.js",
+      "wwwroot/Content/Library/loading/js/loading.js",
+      "wwwroot/Content/Library/vendors/js/extensions/toastr.min.js",
+      "wwwroot/Content/Admin/js/core/app-menu.js",
+      "wwwroot/Content/Admin/js/core/app.js",
+      "wwwroot/Content/Library/vendors/js/forms/repeater/jquery.repeater.min.js",
+      "wwwroot/Content/Library/vendors/js/pickers/flatpicker/flatpickr.min.js",
+      //"wwwroot/Content/Structure/js/sg.stagedirection.js",
+      "wwwroot/Content/Structure/js/product-info.js",
+      "wwwroot/Content/Library/vendors/js/forms/cleave/cleave.min.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "commentMode": "all",
+      "gzip": false
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/Bundle/print-rtl.min.css",
+    "inputFiles": [
+      "wwwroot/Content/Library/vendors/css/vendors.min.css",
+      "wwwroot/Content/Admin/css-rtl/bootstrap.css",
+      "wwwroot/Content/Admin/css-rtl/bootstrap-extended.css",
+      "wwwroot/Content/Admin/css-rtl/colors.css",
+      "wwwroot/Content/Admin/css-rtl/components.css",
+      "wwwroot/Content/Admin/css-rtl/themes/dark-layout.css",
+      "wwwroot/Content/Admin/css-rtl/themes/bordered-layout.css",
+      "wwwroot/Content/Admin/css-rtl/themes/semi-dark-layout.css",
+      "wwwroot/Content/Admin/css-rtl/core/menu/menu-types/vertical-menu.css",
+      "wwwroot/Content/Admin/css-rtl/pages/app-invoice-print.css",
+      "wwwroot/Content/Admin/css-rtl/custom.css",
+      "wwwroot/Content/Admin/css-rtl/style.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "commentMode": "all",
+      "gzip": false
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/Bundle/print.min.css",
+    "inputFiles": [
+      "wwwroot/Content/Library/vendors/css/vendors.min.css",
+      "wwwroot/Content/Admin/css/bootstrap.css",
+      "wwwroot/Content/Admin/css/bootstrap-extended.css",
+      "wwwroot/Content/Admin/css/colors.css",
+      "wwwroot/Content/Admin/css/components.css",
+      "wwwroot/Content/Admin/css/themes/dark-layout.css",
+      "wwwroot/Content/Admin/css/themes/bordered-layout.css",
+      "wwwroot/Content/Admin/css/themes/semi-dark-layout.css",
+      "wwwroot/Content/Admin/css/core/menu/menu-types/vertical-menu.css",
+      "wwwroot/Content/Admin/css/pages/app-invoice-print.css",
+      "wwwroot/Content/Admin/css/custom.css",
+      "wwwroot/Content/Admin/css/style.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "commentMode": "all",
+      "gzip": false
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/Bundle/print.min.js",
+    "inputFiles": [
+      "wwwroot/Content/Library/vendors/js/vendors.min.js",
+      "wwwroot/Content/Admin/js/core/app-menu.js",
+      "wwwroot/Content/Admin/js/core/app.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "commentMode": "all",
+      "gzip": false
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/Bundle/reportFiles.min.js",
+    "inputFiles": [
+      "wwwroot/Content/Structure/highchart/stock/highstock.js",
+      "wwwroot/Content/Structure/highchart/stock/highcharts-more.js",
+      "wwwroot/Content/Structure/highchart/stock/exporting.js",
+      "wwwroot/Content/Structure/highchart/stock/drilldown.js",
+      "wwwroot/Content/Structure/highchart/stock/solid-gauge.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "commentMode": "all",
+      "gzip": false
+    },
+    "sourceMap": false
+  }
+]

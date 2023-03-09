@@ -1,0 +1,11 @@
+﻿@using Microsoft.Extensions.Options
+@using SnowaTec.Test.Domain.Entities.Possibility
+@using SnowaTec.Test.Web.Models
+
+@model PortalInfo
+
+@inject IOptions<APIServer> _server;
+
+<img src="@(_server.Value.BaseAddress)api/v1/documents/GetFileByKey/Logo" alt="logo" height="32" />
+<h2 class="brand-text text-primary ps-1"> | </h2>
+<h2 class="brand-text text-primary ps-1">@(Model != null && Model.Title.Length > 0 ? Model.Title : "Snowa")</h2>

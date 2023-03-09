@@ -1,0 +1,114 @@
+﻿@using SnowaTec.Test.Domain.DTO.Security
+
+@model UserDto
+
+<form id="edit-form-page" style="width:100%">
+    <div class="card">
+
+        <div class="card-header">
+            <h4 class="card-title"> کاربر <em id="form-header-text"></em></h4>
+        </div>
+
+        <div class="card-body">
+            <ul id="user-options" class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="baseInfo-tab" data-bs-toggle="tab" href="#baseInfo" aria-controls="baseInfo" role="tab" aria-selected="true"><i data-feather='info'></i> اطلاعات اصلی</a>
+                </li>
+
+                <li class="nav-item" onclick="selectRoleTab()">
+                    <a class="nav-link" id="field-tab" data-bs-toggle="tab" href="#role" aria-controls="field" role="tab" aria-selected="false"><i data-feather='key'></i> نقش های کاربری </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="baseInfo" aria-labelledby="baseInfo-tab" role="tabpanel">
+                    <div class="row g-1 mb-md-1">
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(x=>x.Id)
+
+                        <div class="col-md-6">
+                            @Html.LabelFor(x => x.Prefix,new { @class = "form-label"})
+                            @Html.DropDownListFor(x => x.Prefix, Model.PrefixSelect, new { @class = "select2 form-select select-input"})
+                            @Html.ValidationMessageFor(x => x.Prefix)
+                        </div>
+                        <div class="col-md-6">
+                            @Html.LabelFor(x => x.FullName,new { @class = "form-label"})
+                            @Html.TextBoxFor(x => x.FullName,new { @class = "form-control"})
+                            @Html.ValidationMessageFor(x => x.FullName)
+                        </div>
+                        <div class="col-md-6">
+                            @Html.LabelFor(x => x.NickName,new { @class = "form-label"})
+                            @Html.TextBoxFor(x => x.NickName,new { @class = "form-control"})
+                            @Html.ValidationMessageFor(x => x.NickName)
+                        </div>
+
+                        <div class="col-md-6">
+                            @Html.LabelFor(x => x.PhoneNumber,new { @class = "form-label"})
+                            @Html.TextBoxFor(x => x.PhoneNumber,new { @class = "form-control"})
+                            @Html.ValidationMessageFor(x => x.PhoneNumber)
+                        </div>
+
+                        @if (Model.Id == 0)
+                        {
+                            <div class="col-md-6">
+                                @Html.LabelFor(x => x.UserName,new { @class = "form-label"})
+                                @Html.TextBoxFor(x => x.UserName,new { @class = "form-control"})
+                                @Html.ValidationMessageFor(x => x.UserName)
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="@Model.Password" class="form-label">@Html.DisplayNameFor(m => m.Password)</label>
+                                <div class="input-group form-password-toggle input-group-merge">
+                                    <input type="password" asp-for="@Model.Password" class="form-control" />
+                                    <div class="input-group-text cursor-pointer"><i data-feather="eye"></i></div>
+                                    <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="@Model.ConfirmPassword" class="form-label">@Html.DisplayNameFor(m => m.ConfirmPassword)</label>
+                                <div class="input-group form-password-toggle input-group-merge">
+                                    <input type="password" asp-for="@Model.ConfirmPassword" class="form-control" />
+                                    <div class="input-group-text cursor-pointer"><i data-feather="eye"></i></div>
+                                    <span asp-validation-for="@Model.ConfirmPassword" class="text-danger"></span>
+                                </div>
+                            </div>
+                        }
+
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                @Html.CheckBoxFor(x=> x.Active, new { @class = "form-check-input"})
+                                @*<input id="Active" name="Active" type="checkbox" class="form-check-input" @(Model.Active ? "checked":"") />*@
+                                <label for="Active" class="form-check-label">@Html.DisplayNameFor(m=>m.Active)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="role" aria-labelledby="role-tab" role="tabpanel">
+
+                    <div id="roles" data-repeater-list="roles">
+                        @foreach (var item in Model.Roles.OrderBy(x => x.RoleName))
+                        {
+                            @await Html.PartialAsync("_UserRoleRow.cshtml", item)
+                        }
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="btn btn-icon btn-primary internal-new-row-btn" type="button" data-repeater-create data-tableName="roles" data-action="roleRow">
+                                <i data-feather="plus" class="me-25"></i>
+                                <span>نقش جدید</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <div class="col-md-12">
+                <button type="button" data-type="in-page" class="save-btn btn btn-primary me-1 waves-effect waves-float waves-light">ثبت</button>
+                <button type="button" class="btn-close-inpage btn btn-outline-secondary waves-effect">انصراف</button>
+            </div>
+        </div>
+
+    </div>
+</form>

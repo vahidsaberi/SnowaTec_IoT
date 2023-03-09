@@ -1,0 +1,63 @@
+﻿@using SnowaTec.Test.Domain.Entities.Security;
+
+@model SystemPart
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="py-1">Type</th>
+                <th class="py-1">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="py-1">
+                    Title
+                </td>
+                <td class="py-1">
+                    @Model.PersianTitle
+                </td>
+            </tr>
+            <tr class="border-bottom">
+                <td class="py-1">
+                    Name / Code
+                </td>
+                <td class="py-1">
+                    @Model.EnglishTitle
+                </td>
+            </tr>
+            <tr class="border-bottom">
+                <td class="py-1">
+                    Type
+                </td>
+                <td class="py-1">
+                    @Model.MenuType
+                </td>
+            </tr>
+            <tr class="border-bottom">
+                <td class="py-1">
+                    Additional Permissions
+                </td>
+                <td class="py-1">
+                    @if(Model.AdditionalPermissions)
+                    {
+                        <i class='oicon-check'></i>
+                    }
+                    else
+                    {
+                        <i class='oicon-xmark'></i>
+                    }
+                </td>
+            </tr>
+            <tr class="border-bottom">
+                <td class="py-1">
+                    Icon
+                </td>
+                <td class="py-1">
+                    <div id="showIcon" class="icon-wrapper">@Model.IconName</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

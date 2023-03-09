@@ -1,0 +1,30 @@
+﻿<div class="modal fade undelete-container">
+    <div class="modal-dialog modal-dialog-centered">
+        @using (Html.BeginForm("UnDelete", "Data"))
+        {
+            @Html.AntiForgeryToken()
+            <input type="hidden" id="hidden-id-undelete" />
+            <div class="modal-content">
+                <div class="modal-header bg-transparent">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="delete-modal-content">
+                    <h1 class="text-center mb-1" id="shareProjectTitle">بازگردانی اطلاعات</h1>
+                    <p class="text-center">بازیابی اطلاعاتی که به صورت منطقی حذف شده</p>
+                    <p class="text-center">
+                        <span style="font-size: 20px">آیا از بازگردانی  </span>
+                        <span id="undelete-modal-object" style="font-size: 22px; font-weight:bold; color: #800"></span>
+                        <span style="font-size: 20px">  اطمینان دارید؟</span>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <div class="delete-element w-100 text-center">
+                        <h5>حالت بازگردانی</h5>
+                        <button class="btn btn-warning waves-effect waves-float waves-light undelete-btn" data-type="1">رکورد</button>
+                        <button class="btn btn-warning waves-effect waves-float waves-light undelete-btn" data-type="2">رکورد + وابستگی ها</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

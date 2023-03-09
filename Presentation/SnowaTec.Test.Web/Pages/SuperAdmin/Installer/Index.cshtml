@@ -1,0 +1,167 @@
+﻿@page
+
+@model SnowaTec.Test.Web.Pages.SuperAdmin.Installer.IndexModel
+
+@{
+    ViewData["Title"] = "پلاگین ها";
+}
+
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper p-0">
+    <div class="content-header row">
+        @await Component.InvokeAsync("BreadcrumbControl")
+    </div>
+    <div class="content-body show-container">
+        <section id="">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header border-bottom">
+                            <h4 class="card-title">مشاهده داده ها</h4>
+                            <div class="dt-action-buttons text-end">
+                                <div class="dt-buttons d-inline-flex">
+                                    <button class="dt-button btn btn-outline-secondary me-2 refresh-btn" type="button">
+                                        <span>
+                                            <i data-feather='rotate-cw'></i>
+                                            بروزرسانی
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body mt-2">
+                            <div class="row g-1 mb-md-1">
+                                <div class="col-md-4">
+                                    <label class="form-label">نام</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">
+                                            <i data-feather='search'></i>
+                                        </span>
+                                        <input type="text" class="form-control searchString" data-col-no="4" placeholder="..." aria-describedby="inputGroupPrepend">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">وضعیت کاربر</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">
+                                            <i data-feather='filter'></i>
+                                        </span>
+                                        <select id="recordstatustype" class="select2 form-select filterString" data-col-no="7" aria-describedby="inputGroupPrepend">
+                                            <option value="0">همه</option>
+                                            <option value="1">نصب شده</option>
+                                            <option value="2">نصب نشده</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-datatable">
+                            <table id="tabledata" class="table">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th></th>
+                                        <th>ردیف</th>
+                                        <th>حذف</th>
+                                        <th>نام</th>
+                                        <th>توضیحات</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        var columns =
+            [
+                {
+                    "class": "details-control text-center",
+                    "orderable": false,
+                    "data": null,
+                    render: function (data, type, row, meta) {
+                        return '<svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+                    },
+                    "width": 40
+                },
+                {
+                    data: 'id',
+                    render: function (data, type, row, meta) {
+                        return meta.row + meta.settings._iDisplayStart + 1;
+                    },
+                    "orderable": true,
+                    "width": 50
+                },
+                {
+                    data: 'deleted',
+                    visible: false
+                },
+                {
+                    data: 'name',
+                },
+                {
+                    data: 'description',
+                },
+                {
+                    "class": "text-center",
+                    render: function (data, type, row, meta) {
+                        var btn = '<div class="text-nowrap">';
+                        btn += row.installed === true ? '<i class="mx-1 float-start cursor-pointer oicon2-minus btn-uninstall" data-name="' + row.name + '"></i>' : '<i class="mx-1 float-start cursor-pointer oicon2-plus btn-install" data-name="' + row.name + '"></i>';
+                        btn += '</div>';
+
+                        return btn;
+                    },
+                    "orderable": false,
+                    "width": 200
+                }
+            ];
+
+        function format(d) {
+            return '<div class="detail"> نام: ' + d.name + '<br> توضیحات: ' + d.description + '</div>';
+        }
+
+        createDatatable('tabledata', columns, format);
+
+        $(function () {
+            $(document).on('click', '.btn-install', function (e) {
+                e.preventDefault();
+
+                var pluginName = $(this).attr('data-name');
+
+                callAjax('Install', AjaxType.Post, { pluginName }).then(function (response) {
+                    if (response.succeeded) {
+                        showNotification("نصب پلاگین", response.message, NotificationType.Success);
+                        location.reload();
+                    }
+                    else {
+                        showNotification("نصب پلاگین", response.message + '\n' + response.errors.join(" | "), NotificationType.Error);
+                    }
+                });
+            });
+
+            $(document).on('click', '.btn-uninstall', function (e) {
+                e.preventDefault();
+
+                var pluginName = $(this).attr('data-name');
+
+                callAjax('Uninstall', AjaxType.Post, { pluginName }).then(function (response) {
+                    if (response.succeeded) {
+                        showNotification("حذف پلاگین", response.message, NotificationType.Success);
+                        location.reload();
+                    }
+                    else {
+                        showNotification("حذف پلاگین", response.message + '\n' + response.errors.join(" | "), NotificationType.Error);
+                    }
+                });
+            });
+        });
+    </script>
+}

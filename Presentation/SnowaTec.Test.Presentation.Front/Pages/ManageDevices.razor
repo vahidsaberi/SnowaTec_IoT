@@ -1,0 +1,139 @@
+﻿@page "/managedevices"
+@    using Blazored.Toast.Services;
+@    using SnowaTec.Test.Domain.Common;
+@    using SnowaTec.Test.Domain.Entities;
+@    using SnowaTec.Test.Presentation.Front.Enums;
+@    using SnowaTec.Test.Presentation.Front.Interfaces;
+@    using System.Linq.Expressions;
+@    using SnowaTec.Test.Presentation.Front.Models;
+@    using SnowaTec.Test.RealTime;
+    using SnowaTec.Test.Domain.Entities.Test;
+
+@inject ICallApiService _service;
+@inject IToastService  _toastService
+@inject MqttNetClient _mqttClient;
+@inject Settings Settings
+
+<h3>Manage devices</h3>
+
+<EditForm Model="@device" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <InputText @bind-Value=device.Name class="form-control" id="Name" />
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <InputText @bind-Value=device.Description class="form-control" id="Description" />
+    </div>
+    <div class="form-group">
+        <label for="Topic">Topic</label>
+        <InputText @bind-Value=device.Topic class="form-control" id="Topic" />
+    </div>
+    <br />
+    <input type="submit" class="btn btn-primary" value="Save" />
+</EditForm>
+
+<br/>
+
+@if (devices == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Client Id</th>
+                <th>Topic</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var device in devices.Data)
+            {
+                <tr>
+                    <td>@device.Name</td>
+                    <td>@device.Description</td>
+                    <td>@device.ClientId</td>
+                    <td>@device.Topic</td>
+                    <td>
+                        <button class="btn btn-success" @onclick="@(e => ConnectDevice(device.ClientId, device.Topic))">Connect</button>
+                        <button class="btn btn-warning" @onclick="@(e => SendDevice(device.Topic))">On / Off</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<BlazoredToasts Position="ToastPosition.BottomRight"
+                Timeout="10"
+                IconType="IconType.FontAwesome"
+                SuccessClass="success-toast-override"
+                SuccessIcon="fa fa-thumbs-up"
+                ErrorIcon="fa fa-bug" />
+
+@code {
+    private Response<List<Device>>? devices;
+
+    Device device = new Device();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ReloadData();
+    }
+
+    private async Task ReloadData()
+    {
+        devices = await _service.Call<List<Device>>(null, ApiRoutes.Devices.GetAll, CallMethodType.Get);
+    }
+
+    private async Task HandleValidSubmit(EditContext? editContex)
+    {
+        if (!editContex.Validate())
+            return;
+
+        device.ClientId = Guid.NewGuid().ToString();
+        var result = await _service.Call<Device>(null, ApiRoutes.Devices.Create, CallMethodType.Post, device);
+        if (result.Succeeded)
+        {
+            _toastService.ShowSuccess(result.Message);
+            device = new Device();
+
+            await ReloadData();
+        }
+        else
+        {
+            _toastService.ShowError(result.Message);
+        }
+    }
+
+    public async Task ReceiveMessage(string message)
+    {
+
+    }
+
+    private async Task ConnectDevice(string clientId, string topic)
+    {
+        var message = await _mqttClient.Connect(clientId, ReceiveMessage);
+
+        _toastService.ShowSuccess(message);
+
+        Thread.Sleep(200);
+
+        message = await _mqttClient.Subscribe(topic, MQTTnet.Protocol.MqttQualityOfServiceLevel.AtMostOnce);
+
+        _toastService.ShowSuccess(message);
+    }
+
+    private async Task SendDevice(string topic)
+    {
+        var message = await _mqttClient.Send(topic, "1", MQTTnet.Protocol.MqttQualityOfServiceLevel.AtMostOnce);
+
+        _toastService.ShowSuccess(message);
+    }
+}
