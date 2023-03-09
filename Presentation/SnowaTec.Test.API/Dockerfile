@@ -3,11 +3,11 @@ WORKDIR /app
 EXPOSE 5001
 EXPOSE 5002
 
-COPY ["SnowaTec.Test.API/SnowaTec.Test.API.csproj", "SnowaTec.Test.API/"]
-COPY ["SnowaTec.Test.Domain/SnowaTec.Test.Domain.csproj", "SnowaTec.Test.Domain/"]
-COPY ["SnowaTec.Test.Infrastructure/SnowaTec.Test.Infrastructure.csproj", "SnowaTec.Test.Infrastructure/"]
-COPY ["SnowaTec.Test.Service/SnowaTec.Test.Service.csproj", "SnowaTec.Test.Service/"]
-COPY ["SnowaTec.Test.Persistence/SnowaTec.Test.Persistence.csproj", "SnowaTec.Test.Persistence/"]
+COPY ["../../Core/SnowaTec.Test.API/SnowaTec.Test.API.csproj", "SnowaTec.Test.API/"]
+COPY ["../../Core/SnowaTec.Test.Domain/SnowaTec.Test.Domain.csproj", "SnowaTec.Test.Domain/"]
+COPY ["../../Core/SnowaTec.Test.Infrastructure/SnowaTec.Test.Infrastructure.csproj", "SnowaTec.Test.Infrastructure/"]
+COPY ["../../Core/SnowaTec.Test.Service/SnowaTec.Test.Service.csproj", "SnowaTec.Test.Service/"]
+COPY ["../../Core/SnowaTec.Test.Persistence/SnowaTec.Test.Persistence.csproj", "SnowaTec.Test.Persistence/"]
 
 RUN dotnet restore "SnowaTec.Test.API/SnowaTec.Test.API.csproj"
 
